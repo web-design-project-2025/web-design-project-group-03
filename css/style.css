@@ -1,0 +1,19 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+nav {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
