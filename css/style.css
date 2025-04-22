@@ -116,3 +116,41 @@ footer img {
   padding-bottom: 0%;
   color: rgba(226, 220, 203, 1);
 }
+
+/*about page*/
+
+.about {
+  max-width: 800px;
+  padding: 30px;
+  margin: 6% 10%;
+  border-radius: 12px;
+}
+
+.about img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.intro h2,
+.features h3,
+.team h3 {
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.intro p,
+.team p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}

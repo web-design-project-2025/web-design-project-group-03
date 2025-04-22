@@ -33,7 +33,6 @@
         <div class="dropdown-container">
           <button class="dropdown-button">Current goals</button>
           <div class="dropdown-panel">
-            <p>current goals</p>
             <ul>
               <li>goal 1</li>
               <li>goal 2</li>
@@ -42,9 +41,30 @@
             </ul>
           </div>
         </div>
-        <div class="create-goal">
-          <p>create new goal</p>
-          <button>+</button>
+        <div class="completed-goals">
+          <h2>completed goals</h2>
+          <p>you have completed 15 goals</p>
+          <p>click here to see your completed goals</p>
+        </div>
+        <!--graph or something with complete goals -->
+        <div class="dropdown-container2">
+          <p>Create a new goal</p>
+          <button class="dropdown-button2">+</button>
+          <div class="dropdown-panel2">
+            <form action="submit_goal.php" method="post" class="goal-form">
+              <p>What type of goal is it?</p>
+              <label> <input type="radio" name="type" />Strength</label>
+              <label> <input type="radio" name="type" />Flexibility</label>
+              <label> <input type="radio" name="type" />Endurance</label>
+              <label> <input type="radio" name="type" />Balance</label>
+
+              <label for="goal">Goal:</label>
+              <input type="text" id="goal" name="goal" required />
+              <label for="deadline">Deadline:</label>
+              <input type="date" id="deadline" name="deadline" required />
+              <button id="submit" type="submit">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </main>
