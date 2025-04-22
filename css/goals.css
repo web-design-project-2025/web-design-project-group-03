@@ -1,0 +1,45 @@
+.dropdown-container {
+  width: 100%;
+  margin: auto;
+  background-color: rgb(34, 33, 34);
+  border-radius: 40px 40px;
+}
+
+.dropdown-button {
+  width: 100rem;
+  padding: 1rem;
+  background-color: rgb(34, 33, 34);
+  color: rgb(226, 220, 203);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.dropdown-panel {
+  max-height: 0;
+  width: 100rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: rgb(34, 33, 34);
+  padding: 0 1rem;
+  border-radius: 40px;
+}
+.dropdown-panel p {
+  color: rgb(226, 220, 203);
+  font-size: 1.2rem;
+  margin: 0%;
+}
+
+.dropdown-panel ul,
+li {
+  color: rgb(226, 220, 203);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-left: 2rem;
+}
+
+.dropdown-panel.active {
+  max-height: 300px;
+}
