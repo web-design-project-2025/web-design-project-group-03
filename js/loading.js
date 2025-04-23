@@ -18,3 +18,6 @@ function loadHandler() {
   loadData();
 }
 window.addEventListener("load", loadHandler);
+
+// references
+//https://chatgpt.com/share/6808d243-cee8-800b-9b6e-1f65af840893 for error explanation
