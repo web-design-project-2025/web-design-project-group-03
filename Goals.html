@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goals</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/goals.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" id="logo">home</a>
+
+      <ul class="nav-links">
+        <li><a href="community.html">community</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="goals.html">Goals</a></li>
+        <li><a href="inspiration.html">services</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <!-- search -->
+        <!-- account -->
+        <!-- settings -->
+      </div>
+    </nav>
+    <main>
+      <h1>Hello "name"</h1>
+
+      <div class="content">
+        <div class="dropdown-container">
+          <button class="dropdown-button">Current goals</button>
+          <div class="dropdown-panel">
+            <ul>
+              <li>goal 1</li>
+              <li>goal 2</li>
+              <li>goal 3</li>
+              <li>goal 4</li>
+            </ul>
+          </div>
+        </div>
+        <div class="completed-goals">
+          <h2>completed goals</h2>
+          <p>you have completed 15 goals</p>
+          <p>click here to see your completed goals</p>
+        </div>
+        <!--graph or something with complete goals -->
+        <div class="dropdown-container2">
+          <p>Create a new goal</p>
+          <button class="dropdown-button2">+</button>
+          <div class="dropdown-panel2">
+            <form action="submit_goal.php" method="post" class="goal-form">
+              <p>What type of goal is it?</p>
+              <label> <input type="radio" name="type" />Strength</label>
+              <label> <input type="radio" name="type" />Flexibility</label>
+              <label> <input type="radio" name="type" />Endurance</label>
+              <label> <input type="radio" name="type" />Balance</label>
+
+              <label for="goal">Goal:</label>
+              <input type="text" id="goal" name="goal" required />
+              <label for="deadline">Deadline:</label>
+              <input type="date" id="deadline" name="deadline" required />
+              <button id="submit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="end-links">
+        <div class="footer-left">
+          <p>exercises ></p>
+          <p>community ></p>
+          <p>get inspired ></p>
+          <p>set goals ></p>
+        </div>
+        <div class="footer-right">
+          <p>home ></p>
+          <p>about us ></p>
+          <p>products ></p>
+        </div>
+      </div>
+
+      <img src="img/Beige-blnce-logo.png" alt="blnce logo" />
+      <p>Jönköping, Sweden</p>
+      <p>© 2023 blnce</p>
+
+      <a href="https://www.instagram.com/blnce.se/" target="_blank"
+        >Instagram</a
+      >
+      <a href="biz@blnce.com" target="_blank">Facebook</a>
+      <p id="finalname">blnce</p>
+    </footer>
+  </body>
+</html>
