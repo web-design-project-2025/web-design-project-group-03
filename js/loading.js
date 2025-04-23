@@ -8,10 +8,10 @@ function loadData() {
   const request = new XMLHttpRequest();
   request.responseType = "json";
 
-  const url = "data.json";
+  const url = "json/data.json";
   const method = "GET";
   request.open(method, url);
-  addEventListener("load", finishedLoadingHandler);
+  request.addEventListener("load", finishedLoadingHandler);
   request.send();
 }
 function loadHandler() {
