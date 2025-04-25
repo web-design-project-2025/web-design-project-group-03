@@ -15,7 +15,7 @@
     <div class="nav-bar">
       <nav>
         <a href="index.html" id="logo">
-          <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. -->
+          <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. Svg used since border radius does not work if ONLY the lower corners should be rounded -->
           <svg
             width="200"
             height="123"
@@ -29,15 +29,16 @@
               left: 48%;
             "
           >
+            <!--Drawing the trapezoid-->
             <path
-              d="M0 0 H160 L120 123 Q120 133 110 133 H50 Q40 133 40 123 L0 0 Z"
+              d="M0 0 H160 L120 90 Q120 100 110 100 H50 Q40 100 40 90 L0 0 Z"
               fill="white"
             />
           </svg>
           <!-- Logo -->
           <img src="img/blnce-logo.png" alt="blnce logo" />
-          <!-- Search bar -->
 
+          <!-- Search bar -->
           <form action="#">
             <div class="search">
               <span class="material-symbols-outlined">search</span>

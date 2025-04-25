@@ -24,22 +24,23 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 1500px; /* Optional: Set a maximum width for larger screens */
+  height: 60px;
+  max-width: 1500px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 1000; /* Ensures the navbar is above the video */
+  z-index: 1000; /* Ensures the navbar is above the "video" */
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for the hover effect */
-  border-radius: 100px; /* Optional: Adds rounded corners */
+  border-radius: 100px;
 }
 
 #logo {
-  position: absolute; /*Set to fixed when we want it to not move when scrolling */
-  top: 55%;
+  position: absolute;
+  top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -84,17 +85,21 @@ nav {
 /*off screen menu*/
 .off-screen-menu {
   position: fixed;
-  top: -100%;
+  top: -551%;
   left: 0;
-  width: 20%;
-  height: 50%;
-  background-color: #222122;
+  width: 30%;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for the hover effect */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: top 0.3s ease;
   z-index: 999;
+  border-radius: 46px;
 }
 
 .off-screen-menu.active {
@@ -109,7 +114,9 @@ nav {
   height: 50px;
   width: 50px;
   margin-right: auto;
+  margin-left: -160px;
   position: relative;
+  z-index: 1001; /* Ensure the hamburger menu is above the off-screen menu */
 }
 
 .ham-menu span {
