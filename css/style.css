@@ -89,9 +89,9 @@ nav {
   left: 0;
   width: 30%;
   height: 500px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for the hover effect */
   display: flex;
   flex-direction: column;
