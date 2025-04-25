@@ -5,27 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html" id="logo">home</a>
-      <!-- logo insted of text -->
+    <div class="nav-bar">
+      <nav>
+        <a href="index.html" id="logo">
+          <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. -->
+          <svg
+            width="200"
+            height="123"
+            viewBox="0 0 160 133"
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              position: absolute;
+              z-index: -1;
+              transform: translate(-50%, -50%);
+              top: 49%;
+              left: 48%;
+            "
+          >
+            <path
+              d="M0 0 H160 L120 123 Q120 133 110 133 H50 Q40 133 40 123 L0 0 Z"
+              fill="white"
+            />
+          </svg>
+          <!-- Logo -->
+          <img src="img/blnce-logo.png" alt="blnce logo" />
+          <!-- Search bar -->
 
-      <ul class="nav-links">
-        <li><a href="community.html">community</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="goals.html">Goals</a></li>
-        <li><a href="inspiration.html">services</a></li>
-      </ul>
+          <form action="#">
+            <div class="search">
+              <span class="material-symbols-outlined">search</span>
+            </div>
+          </form>
+        </a>
+        <!-- Hamburger menu -->
 
-      <div class="nav-icons">
-        <!-- search -->
-        <!-- account -->
-        <!-- settings -->
-      </div>
-    </nav>
+        <div class="off-screen-menu">
+          <li><a href="community.html">community</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="inspiration.html">services</a></li>
+        </div>
+        <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="nav-icons">
+          <!-- account -->
+          <!-- settings -->
+        </div>
+      </nav>
+    </div>
     <main>
       <div class="content">
         <video src="img/trailer-blnce.mp4"></video>
