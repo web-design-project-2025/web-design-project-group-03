@@ -106,11 +106,11 @@ footer p {
   color: rgba(226, 220, 203, 1);
   font-size: 1rem;
   margin: 0;
-  text-transform: uppercase;
 }
 
 .navigation-container {
   font-style: italic;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -119,6 +119,11 @@ footer p {
   padding-top: 10vh;
   padding-left: 10vw;
   padding-right: 10vw;
+}
+
+.contact-footer {
+  color: rgba(226, 220, 203, 1);
+  margin-top: -23rem;
 }
 
 #logo-footer {
@@ -139,6 +144,29 @@ footer p {
   font-weight: bold;
   text-align: center;
   color: rgba(226, 220, 203, 1);
+  line-height: 0.5;
+  display: block;
+  bottom: 0;
+  transform: translateY(33%);
+}
+
+#x-logo {
+  padding-left: 80vw;
+  width: 2vw;
+  height: auto;
+  cursor: pointer;
+  fill: #e2dccb;
+}
+
+#facebook-logo {
+  width: 2vw;
+  height: auto;
+  cursor: pointer;
+  fill: #e2dccb;
+}
+
+#x-logo:hover #facebook-logo {
+  fill: rgba(166, 163, 149, 1); /* not currently working*/
 }
 
 /* FEATURES */
