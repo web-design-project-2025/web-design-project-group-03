@@ -34,7 +34,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for the hover effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
 }
 
@@ -92,7 +92,7 @@ nav {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for the hover effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,12 +125,24 @@ nav {
   background-color: #e2dccb;
   border-radius: 25px;
   position: absolute;
-  top: 50%;
-  left: 200px;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translateX(-50%); /* Adjust for centering */
   transition: 0.3s ease;
+  z-index: 1003;
 }
+
+.ham-menu-button {
+  position: absolute;
+  top: 0;
+  left: 200px; /* Adjust to change x position */
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
 .ham-menu span:nth-child(1) {
   top: 25%;
 }
