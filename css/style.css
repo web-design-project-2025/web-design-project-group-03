@@ -313,6 +313,81 @@ footer img {
   color: rgba(226, 220, 203, 1);
 }
 
+.Explore,
+.Popular {
+  display: flex;
+  gap: 35%;
+}
+
+.Explore a,
+.Popular a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.Explore,
+.Popular h1 {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.explore-panels,
+.popular-panels {
+  display: flex;
+  width: 60vw;
+  height: 40vh;
+}
+
+.panel {
+  flex: 1;
+  transition: flex 0.5s ease;
+  margin: 10px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Panel Colors */
+#Cycling {
+  background-color: rgb(106, 142, 174);
+}
+
+#Powerlifting {
+  background-color: rgb(221, 124, 128);
+}
+
+#Yoga {
+  background-color: rgb(125, 120, 48);
+}
+
+#high,
+#medium,
+#low {
+  background-color: rgb(226, 220, 203);
+}
+
+.panel:hover {
+  flex: 1.5;
+  transition: flex 0.5s ease;
+}
+
+.panel h3 {
+  font-size: 2rem;
+  padding-left: 3%;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.panel p {
+  font-size: 1rem;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 0;
+}
+
 /*about page*/
 
 .about {
