@@ -3,6 +3,10 @@
   font-family: "Inter", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* NAVIGATION BAR */
 nav {
   display: flex;
@@ -112,13 +116,33 @@ footer p {
   font-style: italic;
   text-transform: uppercase;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2vw;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 55vw;
   padding-top: 10vh;
   padding-left: 10vw;
   padding-right: 10vw;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.nav-column a {
+  font-weight: 300;
+  color: rgba(226, 220, 203, 1);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.nav-column a:hover {
+  color: rgba(166, 163, 149, 1);
+}
+
+.navigation-container a:hover {
+  color: rgba(166, 163, 149, 1);
 }
 
 .contact-footer {
@@ -136,6 +160,25 @@ footer p {
   width: 7vw;
   margin: 0 auto;
   margin-bottom: 50vh;
+  cursor: pointer;
+}
+
+#footer-place {
+  position: relative;
+  padding-left: 21.5vw;
+  top: 10vh;
+}
+
+#footer-legal {
+  position: relative;
+  padding-left: 43vw;
+  top: 7.5vh;
+}
+
+#footer-email {
+  position: relative;
+  padding-left: 66vw;
+  top: 4.6vh;
 }
 
 #finalname {
@@ -143,7 +186,7 @@ footer p {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  color: rgba(226, 220, 203, 1);
+  color: rgba(166, 163, 149, 1);
   line-height: 0.5;
   display: block;
   bottom: 0;
@@ -165,8 +208,10 @@ footer p {
   fill: #e2dccb;
 }
 
-#x-logo:hover #facebook-logo {
-  fill: rgba(166, 163, 149, 1); /* not currently working*/
+#x-logo:hover,
+#facebook-logo:hover,
+#logo-footer:hover {
+  fill: rgba(166, 163, 149, 1);
 }
 
 /* FEATURES */
