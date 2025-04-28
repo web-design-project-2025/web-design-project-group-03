@@ -46,8 +46,12 @@
           <!-- Search bar -->
         </a>
         <form>
-          <div class="search">
-            <span class="search-icon material-symbols-outlined">search</span>
+          <div class="search" id="search-box">
+            <span
+              class="search-icon material-symbols-outlined"
+              onclick="searchPage()"
+              >search</span
+            >
             <input class="search-input" type="search" placeholder="search..." />
           </div>
         </form>
@@ -70,11 +74,6 @@
             <span></span>
             <span></span>
           </button>
-        </div>
-
-        <div class="nav-icons">
-          <!-- account -->
-          <!-- settings -->
         </div>
       </nav>
     </div>
