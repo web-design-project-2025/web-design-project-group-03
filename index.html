@@ -19,6 +19,21 @@
   <body>
     <div class="nav-bar">
       <nav>
+        <!-- Hamburger menu -->
+        <div class="off-screen-menu">
+          <li><a href="community.html">community</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="inspiration.html">services</a></li>
+        </div>
+        <div class="ham-menu">
+          <button class="ham-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
         <a href="index.html" id="logo">
           <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. Svg used since border radius does not work if ONLY the lower corners should be rounded -->
           <svg
@@ -42,40 +57,21 @@
           </svg>
           <!-- Logo -->
           <img src="img/blnce-logo.png" alt="blnce logo" />
-
-          <!-- Search bar -->
         </a>
-        <form>
-          <div class="search">
-            <span class="search-icon material-symbols-outlined">search</span>
-            <input class="search-input" type="search" placeholder="search..." />
-          </div>
-        </form>
+
+        <!-- Search bar -->
+
+        <input
+          type="text"
+          placeholder="Search.."
+          id="search-box"
+          class="search"
+        />
+
         <span class="person-icon material-symbols-outlined">
           account_circle
         </span>
         <span class="settings-icon material-symbols-outlined"> settings </span>
-        <!-- Hamburger menu -->
-
-        <div class="off-screen-menu">
-          <li><a href="community.html">community</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="goals.html">Goals</a></li>
-          <li><a href="inspiration.html">services</a></li>
-        </div>
-        <div class="ham-menu">
-          <button class="ham-menu-button">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-
-        <div class="nav-icons">
-          <!-- account -->
-          <!-- settings -->
-        </div>
       </nav>
     </div>
     <main>
@@ -94,68 +90,47 @@
           <button>join today</button>
         </div>
 
-        <div class="Explore">
-          <h1>Explore</h1>
-          <a href="inspiration.html">See all → </a>
+        <div class="explore">
+          <ul class="explore-list" style="--total: 4">
+            <li
+              class="explore-item"
+              style="--1: 0; color: var(--color-green)"
+              tabindex="1"
+            ></li>
+            <li
+              class="explore-item"
+              style="--1: 0; color: var(--color-yellow)"
+              tabindex="2"
+            ></li>
+            <li
+              class="explore-item"
+              style="--1: 0; color: var(--color-red)"
+              tabindex="3"
+            ></li>
+            <li
+              class="explore-item"
+              style="--1: 0; color: var(--color-purble)"
+              tabindex="4"
+            ></li>
+          </ul>
         </div>
-        <div class="explore-panels">
-          <div id="Cycling" class="panel">
-            <h3>Cycling</h3>
-            <p>
-              A low-impact way to boost you cardiovascular health (that’s your
-              heart and blood vessels!). This exercise type also builds
-              strength, without putting too much pressure on your knees.
-            </p>
-          </div>
-          <div id="Powerlifting" class="panel">
-            <h3>Powerlifting</h3>
-            <p>
-              A powerful way to boost your overall strength and support healthy
-              joints (including your knees and hips!). This exercise style also
-              improves muscle mass and bone health, without the high-impact
-              stress of activities like running.
-            </p>
-          </div>
-          <div id="Yoga" class="panel">
-            <h3>Yoga</h3>
-            <p>
-              A gentle way to enhance your flexibility and balance (great for
-              your muscles and joints!). This exercise type also helps build
-              strength and reduce stress, without putting too much strain on
-              your body."
-            </p>
-          </div>
-        </div>
-
-        <div class="Popular">
-          <h1>Popular</h1>
-          <a href="inspiration.html">See all →</a>
-        </div>
-        <div class="popular-panels">
-          <div id="high" class="panel">
-            <h3>high</h3>
-          </div>
-          <div id="medium" class="panel">
-            <h3>medium</h3>
-          </div>
-          <div id="low" class="panel">
-            <h3>low</h3>
-          </div>
+        <div class="popular">
+          <p>något</p>
         </div>
       </div>
     </main>
-
     <footer>
       <div class="end-links">
         <div class="footer-left">
-          <a href="Community.html">Community ></a>
-          <a href="inspiration.html">Get inspired ></a>
-          <a href="Goals.html">Set goals ></a>
+          <p>exercises ></p>
+          <p>community ></p>
+          <p>get inspired ></p>
+          <p>set goals ></p>
         </div>
         <div class="footer-right">
-          <a href="index.html">Home ></a>
-          <a href="about.html">About us ></a>
-          <a href="#">Poducts ></a>
+          <p>home ></p>
+          <p>about us ></p>
+          <p>products ></p>
         </div>
       </div>
 
