@@ -26,7 +26,6 @@ nav {
   padding: 10px;
 }
 
-
 .nav-bar {
   position: fixed;
   top: 7px; /* Adds space between the navbar and the top of the screen */
@@ -245,16 +244,6 @@ nav {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* info, about our cause */
-.joinrect {
-  width: 100%;
-  height: 20rem;
-  left: 437px;
-  top: 1321px;
-  background-color: rgba(166, 163, 149, 1);
-  border-radius: 40px;
-}
-
 /* ABOUT */
 .joinrect h2 {
   text-align: center;
@@ -350,6 +339,7 @@ footer p {
   color: rgba(166, 163, 149, 1);
 }
 
+/*  FOOTER  */
 .contact-footer {
   color: rgba(226, 220, 203, 1);
   margin-top: -23rem;
@@ -419,6 +409,31 @@ footer p {
   fill: rgba(166, 163, 149, 1);
 }
 
+/*  back to top logic  */
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  z-index: 1000;
+}
+
+#backToTop.visible {
+  opacity: 1;
+}
+
+#arrow-up {
+  width: 2vw;
+  height: auto;
+}
+
 /* FEATURES */
 .intro h2,
 .features h3,
@@ -442,4 +457,3 @@ footer p {
   margin-bottom: 10px;
   font-size: 1rem;
 }
-
