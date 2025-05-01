@@ -108,6 +108,12 @@ input[type="text"] {
   min-height: 100vh;
 }
 
+#bar {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(34, 33, 34);
+}
+
 .content {
   display: flex;
   flex-direction: column;
