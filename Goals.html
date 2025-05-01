@@ -7,26 +7,69 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/goals.css" />
     <script src="js/main.js" defer></script>
+    <script src="js/profile.js" defer></script>
   </head>
   <body>
-    <nav>
-      <a href="index.html" id="logo">home</a>
+    <div class="nav-bar">
+      <nav>
+        <!-- Hamburger menu -->
+        <div class="off-screen-menu">
+          <li><a href="community.html">community</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="inspiration.html">Inspiration</a></li>
+        </div>
+        <div class="ham-menu">
+          <button class="ham-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <a href="index.html" id="logo">
+          <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. Svg used since border radius does not work if ONLY the lower corners should be rounded -->
+          <svg
+            width="200"
+            height="123"
+            viewBox="0 0 160 133"
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              position: absolute;
+              z-index: -1;
+              transform: translate(-50%, -50%);
+              top: 49%;
+              left: 48%;
+            "
+          >
+            <!--Drawing the trapezoid-->
+            <path
+              d="M0 0 H160 L120 90 Q120 100 110 100 H50 Q40 100 40 90 L0 0 Z"
+              fill="white"
+            />
+          </svg>
+          <!-- Logo -->
+          <img src="img/blnce-logo.png" alt="blnce logo" />
+        </a>
 
-      <ul class="nav-links">
-        <li><a href="community.html">community</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="goals.html">Goals</a></li>
-        <li><a href="inspiration.html">services</a></li>
-      </ul>
+        <!-- Search bar -->
 
-      <div class="nav-icons">
-        <!-- search -->
-        <!-- account -->
-        <!-- settings -->
-      </div>
-    </nav>
+        <input
+          type="text"
+          placeholder="Search.."
+          id="search-box"
+          class="search"
+        />
+
+        <span class="person-icon material-symbols-outlined">
+          account_circle
+        </span>
+        <span class="settings-icon material-symbols-outlined"> settings </span>
+      </nav>
+    </div>
+
     <main>
+      <div id="bar"></div>
       <h1>Hello "name"</h1>
 
       <div class="content">
