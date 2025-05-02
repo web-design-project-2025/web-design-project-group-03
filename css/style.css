@@ -1,6 +1,12 @@
 * {
   font-family: "Inter", sans-serif;
 }
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 nav {
   display: flex;
@@ -86,7 +92,7 @@ input[type="text"] {
 .settings-icon {
   scale: 2;
   position: absolute;
-  left: 1400px;
+  left: 87%;
   color: #f6f6f6;
   top: 35px;
 }
@@ -94,7 +100,7 @@ input[type="text"] {
 .person-icon {
   scale: 2;
   position: absolute;
-  left: 1300px;
+  left: 94%;
   color: #f6f6f6;
   top: 35px;
 }
@@ -162,12 +168,13 @@ input[type="text"] {
 .off-screen-menu a {
   text-decoration: none; /* Removes the underline */
   color: #f6f6f6; /* Changes the text color */
-  font-size: 3rem; /* Adjusts the font size */
-  font-family: "Inter", sans-serif; /* Optional: Ensures consistent font */
+  font-size: 2.8rem; /* Adjusts the font size */
+  font-family: "Josefin Sans", sans-serif; /* Uses the Josefin Sans font */
+
   display: block; /* Makes the links block-level for better spacing */
   padding-left: 20px;
-  padding-top: 33px;
-  margin-top: -30px;
+  padding-top: 2.5rem; /* Adds padding for spacing */
+  margin-top: -1.8rem;
 }
 
 .off-screen-menu.active {
