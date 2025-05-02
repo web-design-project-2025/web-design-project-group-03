@@ -130,6 +130,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  position: relative;
 }
 
 .content img {
@@ -144,9 +145,44 @@ nav {
 #home-video {
   width: 95vw;
   height: auto;
-  margin: 0 auto;
   display: block;
   border-radius: 40px;
+  margin: 0 auto;
+  pointer-events: auto;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.video-controls:not(.hide) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#playPauseBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 /*off screen menu*/

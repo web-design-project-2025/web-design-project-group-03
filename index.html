@@ -86,9 +86,19 @@
     </div>
     <main>
       <div class="content">
-        <video autoplay id="home-video">
-          <source src="/video/trailer-blnce.mp4" type="video/mp4" />
-        </video>
+        <div
+          class="video-wrapper"
+          style="position: relative; width: 95vw; margin: 0 auto"
+        >
+          <video id="home-video" autoplay muted loop>
+            <source src="video/trailer-blnce.mp4" type="video/mp4" />
+          </video>
+
+          <div class="video-controls" id="videoControls">
+            <button id="playPauseBtn">⏸</button>
+            <span id="videoTime">0s</span>
+          </div>
+        </div>
         <a href="inspiration.html">
           <img src="img/INSPO.png" alt="get inspired weights" />
         </a>
