@@ -375,7 +375,6 @@ footer p {
   color: rgba(166, 163, 149, 1);
 }
 
-/*  FOOTER  */
 .contact-footer {
   color: rgba(226, 220, 203, 1);
   margin-top: -23rem;
@@ -445,7 +444,7 @@ footer p {
   fill: rgba(166, 163, 149, 1);
 }
 
-/*  back to top logic  */
+/*  BACK TO TOP LOGIC  */
 #backToTop {
   position: fixed;
   bottom: 40px;
@@ -459,10 +458,14 @@ footer p {
   transition: opacity 0.4s ease;
   opacity: 0;
   z-index: 1000;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 #backToTop.visible {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 #arrow-up {
