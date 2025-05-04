@@ -2,6 +2,12 @@
 * {
   font-family: "Inter", sans-serif;
 }
+.josefin-sans-font {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 a {
   text-decoration: none;
@@ -33,7 +39,7 @@ nav {
   transform: translateX(-50%);
   width: 90%;
   height: 60px;
-  max-width: 1500px;
+  max-width: 300vh;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -76,22 +82,11 @@ nav {
   width: 280px;
 }
 
-.search-input {
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  color: #333333;
-  margin-left: var(--padding);
-  outline: none;
+input[type="text"] {
+  width: 150px;
+  border-radius: 28px;
+  background: #ffffff;
   border: none;
-  background: transparent;
-  width: 200px;
-  flex: 1;
-}
-
-.search-input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
 }
 
 .material-symbols-outlined {
@@ -104,7 +99,7 @@ nav {
 .settings-icon {
   scale: 2;
   position: absolute;
-  left: 1400px;
+  left: 87%;
   color: #f6f6f6;
   top: 35px;
 }
@@ -112,7 +107,7 @@ nav {
 .person-icon {
   scale: 2;
   position: absolute;
-  left: 1300px;
+  left: 94%;
   color: #f6f6f6;
   top: 35px;
 }
@@ -124,6 +119,12 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+#bar {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(34, 33, 34);
 }
 
 .content {
@@ -191,7 +192,7 @@ nav {
   top: -501%; /* Initial position when hidden */
   left: 0;
   width: 30%;
-  height: 300px;
+  height: 70vh;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glass effect */
   -webkit-backdrop-filter: blur(10px); /* Glass effect for WebKit browsers */
@@ -212,12 +213,13 @@ nav {
 .off-screen-menu a {
   text-decoration: none; /* Removes the underline */
   color: #f6f6f6; /* Changes the text color */
-  font-size: 3rem; /* Adjusts the font size */
-  font-family: "Inter", sans-serif; /* Optional: Ensures consistent font */
+  font-size: 2.8rem; /* Adjusts the font size */
+  font-family: "Josefin Sans", sans-serif; /* Uses the Josefin Sans font */
+
   display: block; /* Makes the links block-level for better spacing */
   padding-left: 20px;
-  padding-top: 33px;
-  margin-top: -30px;
+  padding-top: 2.5rem; /* Adds padding for spacing */
+  margin-top: -1.8rem;
 }
 
 .off-screen-menu.active {
