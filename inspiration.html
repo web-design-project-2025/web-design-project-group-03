@@ -5,25 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>inspiration</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav>
-      <a href="index.html" id="logo">home</a>
+    <div class="nav-bar">
+      <nav>
+        <a href="index.html" id="logo">
+          <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. Svg used since border radius does not work if ONLY the lower corners should be rounded -->
+          <svg
+            width="200"
+            height="123"
+            viewBox="0 0 160 133"
+            xmlns="http://www.w3.org/2000/svg"
+            style="
+              position: absolute;
+              z-index: -1;
+              transform: translate(-50%, -50%);
+              top: 49%;
+              left: 48%;
+            "
+          >
+            <!--Drawing the trapezoid-->
+            <path
+              d="M0 0 H160 L120 90 Q120 100 110 100 H50 Q40 100 40 90 L0 0 Z"
+              fill="white"
+            />
+          </svg>
+          <!-- Logo -->
+          <img src="img/blnce-logo.png" alt="blnce logo" />
 
-      <ul class="nav-links">
-        <li><a href="community.html">community</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="goals.html">Goals</a></li>
-        <li><a href="inspiration.html">services</a></li>
-      </ul>
+          <!-- Search bar -->
+        </a>
+        <form>
+          <div class="search" id="search-box">
+            <span
+              class="search-icon material-symbols-outlined"
+              onclick="searchPage()"
+              >search</span
+            >
+            <input class="search-input" type="search" placeholder="search..." />
+          </div>
+        </form>
+        <span class="person-icon material-symbols-outlined">
+          account_circle
+        </span>
+        <span class="settings-icon material-symbols-outlined"> settings </span>
+        <!-- Hamburger menu -->
 
-      <div class="nav-icons">
-        <!-- search -->
-        <!-- account -->
-        <!-- settings -->
-      </div>
-    </nav>
+        <div class="off-screen-menu">
+          <li><a href="community.html">community</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="inspiration.html">services</a></li>
+        </div>
+        <div class="ham-menu">
+          <button class="ham-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
       <p>inspiration</p>
     </main>
     <footer>
