@@ -9,7 +9,6 @@
   font-style: normal;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -86,7 +85,6 @@ nav {
   width: 30vh;
 }
 
-
 .search-input {
   border: none;
 }
@@ -100,7 +98,6 @@ input[type="text"] {
   width: 150px;
   border-radius: 28px;
   background: #ffffff;
-
 }
 
 .material-symbols-outlined {
@@ -236,7 +233,6 @@ input[type="text"] {
   ); /* Moves the text 20px to the right and 30px down */
 }
 
-
 .off-screen-menu a {
   text-decoration: none; /* Removes the underline */
   color: #f6f6f6; /* Changes the text color */
@@ -247,7 +243,6 @@ input[type="text"] {
   padding-left: 20px;
   padding-top: 2.5rem; /* Adds padding for spacing */
   margin-top: -1.8rem;
-
 }
 
 .off-screen-menu.active {
@@ -340,6 +335,80 @@ nav {
   border: 3px solid #222122;
   border-radius: 40px;
   cursor: pointer;
+}
+.Explore,
+.Popular {
+  display: flex;
+  gap: 35%;
+}
+
+.Explore a,
+.Popular a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.Explore,
+.Popular h1 {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.explore-panels,
+.popular-panels {
+  display: flex;
+  width: 60vw;
+  height: 40vh;
+}
+
+.panel {
+  flex: 1;
+  transition: flex 0.5s ease;
+  margin: 10px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Panel Colors */
+#Cycling {
+  background-color: rgb(106, 142, 174);
+}
+
+#Powerlifting {
+  background-color: rgb(221, 124, 128);
+}
+
+#Yoga {
+  background-color: rgb(125, 120, 48);
+}
+
+#high,
+#medium,
+#low {
+  background-color: rgb(226, 220, 203);
+}
+
+.panel:hover {
+  flex: 1.5;
+  transition: flex 0.5s ease;
+}
+
+.panel h3 {
+  font-size: 2rem;
+  padding-left: 3%;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.panel p {
+  font-size: 1rem;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 0;
 }
 
 #about-vector {
