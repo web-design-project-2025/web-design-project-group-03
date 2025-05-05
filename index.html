@@ -15,8 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
       rel="stylesheet"
@@ -71,19 +73,39 @@
           <img src="img/blnce-logo.png" alt="blnce logo" />
         </a>
 
-        <!-- Search bar -->
-
-        <input
-          type="text"
-          placeholder="Search.."
-          id="search-box"
-          class="search"
-        />
+        <form>
+          <div class="search" id="search-box">
+            <span
+              class="search-icon material-symbols-outlined"
+              onclick="searchPage()"
+              >search</span
+            >
+            <input class="search-input" type="search" placeholder="search..." />
+          </div>
+        </form>
 
         <span class="person-icon material-symbols-outlined">
           account_circle
         </span>
         <span class="settings-icon material-symbols-outlined"> settings </span>
+
+        <!-- Hamburger menu -->
+
+        <div class="off-screen-menu">
+          <li><a href="community.html">community</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="inspiration.html">services</a></li>
+        </div>
+        <div class="ham-menu">
+          <button class="ham-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
       </nav>
     </div>
     <main>

@@ -15,6 +15,7 @@ hamMenu.addEventListener("click", () => {
   offScreenMenu.classList.toggle("active");
 });
 
+
 // Show back-to-top button on scroll
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
@@ -81,6 +82,7 @@ document
     }
   });
 
+
 function searchPage() {
   let query = document.getElementById("search-box").value.toLowerCase();
   if (query === "about") {
@@ -90,9 +92,11 @@ function searchPage() {
   } else if (query === "courses") {
     window.location.href = "courses.html";
   } else if (query === "goals") {
-    window.location.href = "goals.html";
+
+    window.location.href = "Goals.html";
   } else if (query === "inspiration") {
     window.location.href = "inspiration.html";
+
   } else {
     window.location.href = "search.html";
   }

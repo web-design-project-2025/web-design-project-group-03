@@ -9,6 +9,7 @@
   font-style: normal;
 }
 
+
 a {
   text-decoration: none;
 }
@@ -39,7 +40,9 @@ nav {
   transform: translateX(-50%);
   width: 90%;
   height: 60px;
-  max-width: 300vh;
+
+  max-width: 80%;
+
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -71,22 +74,33 @@ nav {
 
 .search {
   --padding: 14px;
-  left: 920px;
+  left: 60%;
   position: absolute;
   width: max-content;
   display: flex;
+  background: transparent;
   align-items: center;
   padding: var(--padding);
   border-radius: 28px;
   background: #ffffff;
-  width: 280px;
+  width: 30vh;
+}
+
+
+.search-input {
+  border: none;
+}
+
+.search-input:focus {
+  outline: none; /* Ensures no outline appears on focus */
+  box-shadow: none; /* Removes any focus shadow applied by the browser */
 }
 
 input[type="text"] {
   width: 150px;
   border-radius: 28px;
   background: #ffffff;
-  border: none;
+
 }
 
 .material-symbols-outlined {
@@ -191,8 +205,10 @@ input[type="text"] {
   position: fixed;
   top: -501%; /* Initial position when hidden */
   left: 0;
-  width: 30%;
-  height: 70vh;
+
+  width: 25%;
+  height: 300px;
+
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glass effect */
   -webkit-backdrop-filter: blur(10px); /* Glass effect for WebKit browsers */
@@ -206,9 +222,20 @@ input[type="text"] {
   border-radius: 46px; /* Optional: Rounded corners */
 }
 
-.off-screen-menu li {
-  list-style: none;
+.off-screen-menu a {
+  text-decoration: none;
+  color: #f6f6f6;
+  font-size: 2.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  display: block;
+  line-height: 0.8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translate(
+    20px,
+    30px
+  ); /* Moves the text 20px to the right and 30px down */
 }
+
 
 .off-screen-menu a {
   text-decoration: none; /* Removes the underline */
@@ -220,6 +247,7 @@ input[type="text"] {
   padding-left: 20px;
   padding-top: 2.5rem; /* Adds padding for spacing */
   margin-top: -1.8rem;
+
 }
 
 .off-screen-menu.active {
@@ -497,4 +525,28 @@ footer p {
 .features li {
   margin-bottom: 10px;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 1380px) {
+  .search {
+    position: absolute;
+    width: max-content;
+    display: flex;
+    background: transparent;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #ffffff;
+    width: 20vh;
+  }
+
+  .search-input {
+    border: none;
+    width: 16vh;
+  }
+
+  .search-input:focus {
+    outline: none; /* Ensures no outline appears on focus */
+    box-shadow: none; /* Removes any focus shadow applied by the browser */
+  }
 }
