@@ -10,15 +10,35 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
       rel="stylesheet"
     />
+
     <script src="js/main.js" defer></script>
+    <script src="js/profile.js" defer></script>
   </head>
   <body>
     <div class="nav-bar">
       <nav>
+
+        <!-- Hamburger menu -->
+        <div class="off-screen-menu">
+          <li><a href="community.html">community</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="inspiration.html">Inspiration</a></li>
+        </div>
+        <div class="ham-menu">
+          <button class="ham-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
         <a href="index.html" id="logo">
           <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. Svg used since border radius does not work if ONLY the lower corners should be rounded -->
           <svg
@@ -43,6 +63,7 @@
           <!-- Logo -->
           <img src="img/blnce-logo.png" alt="blnce logo" />
 
+
           <!-- Search bar -->
         </a>
         <form>
@@ -55,10 +76,12 @@
             <input class="search-input" type="search" placeholder="search..." />
           </div>
         </form>
+
         <span class="person-icon material-symbols-outlined">
           account_circle
         </span>
         <span class="settings-icon material-symbols-outlined"> settings </span>
+
         <!-- Hamburger menu -->
 
         <div class="off-screen-menu">
@@ -77,7 +100,9 @@
         </div>
       </nav>
     </div>
+
     <main>
+      <div id="bar"></div>
       <h1>Hello "name"</h1>
 
       <div class="content">
