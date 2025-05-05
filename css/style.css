@@ -9,7 +9,6 @@
   font-style: normal;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -86,7 +85,6 @@ nav {
   width: 30vh;
 }
 
-
 .search-input {
   border: none;
 }
@@ -100,7 +98,6 @@ input[type="text"] {
   width: 150px;
   border-radius: 28px;
   background: #ffffff;
-
 }
 
 .material-symbols-outlined {
@@ -236,7 +233,6 @@ input[type="text"] {
   ); /* Moves the text 20px to the right and 30px down */
 }
 
-
 .off-screen-menu a {
   text-decoration: none; /* Removes the underline */
   color: #f6f6f6; /* Changes the text color */
@@ -247,7 +243,6 @@ input[type="text"] {
   padding-left: 20px;
   padding-top: 2.5rem; /* Adds padding for spacing */
   margin-top: -1.8rem;
-
 }
 
 .off-screen-menu.active {
@@ -549,4 +544,8 @@ footer p {
     outline: none; /* Ensures no outline appears on focus */
     box-shadow: none; /* Removes any focus shadow applied by the browser */
   }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
