@@ -28,7 +28,6 @@
   <body>
     <div class="nav-bar">
       <nav>
-        <!-- Hamburger menu -->
         <div class="off-screen-menu">
           <li><a href="community.html">community</a></li>
           <li><a href="about.html">about</a></li>
@@ -36,6 +35,7 @@
           <li><a href="goals.html">Goals</a></li>
           <li><a href="inspiration.html">Inspiration</a></li>
         </div>
+        <!-- Hamburger menu -->
         <div class="ham-menu">
           <button class="ham-menu-button">
             <span></span>
@@ -43,50 +43,47 @@
             <span></span>
           </button>
         </div>
-        <a href="index.html" id="logo">
-          <!-- (Trapezoid shape behind logo) co-pilot used for trapezoid shape coordinates. Svg used since border radius does not work if ONLY the lower corners should be rounded -->
-          <svg
-            width="200"
-            height="123"
-            viewBox="0 0 160 133"
-            xmlns="http://www.w3.org/2000/svg"
-            style="
-              position: absolute;
-              z-index: -1;
-              transform: translate(-50%, -50%);
-              top: 49%;
-              left: 48%;
-            "
-          >
-            <!--Drawing the trapezoid-->
-            <path
-              d="M0 0 H160 L120 90 Q120 100 110 100 H50 Q40 100 40 90 L0 0 Z"
-              fill="white"
-            />
-          </svg>
-          <!-- Logo -->
-          <img src="img/blnce-logo.png" alt="blnce logo" />
-        </a>
 
+        <div class="logo-wrapper">
+          <a href="index.html" id="nav-bar-background">
+            <!-- Trapezoid SVG background -->
+            <svg
+              width="1440"
+              height="104"
+              viewBox="0 0 1440 104"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M647.704 93.6193L618.668 44.1193C610.847 30.7865 620.461 14 635.919 14H803.075C818.642 14 828.242 31.0025 820.199 44.3321L790.333 93.8321C786.713 99.8323 780.216 103.5 773.209 103.5H664.955C657.859 103.5 651.294 99.74 647.704 93.6193Z"
+                fill="white"
+              />
+              <path d="M0 0H1467V40H0V0Z" fill="white" />
+            </svg>
+          </a>
+          <img src="img/blnce-logo.png" alt="blnce logo" id="nav-logo" />
+        </div>
+
+        <!-- Search box -->
         <form>
           <div class="search" id="search-box">
             <span
               class="search-icon material-symbols-outlined"
               onclick="searchPage()"
-              >search</span
             >
+              search
+            </span>
             <input class="search-input" type="search" placeholder="search..." />
           </div>
         </form>
 
-        <a href="Account.html" class="person-icon material-symbols-outlined"
-          >account_circle</a
-        >
-        <a href="settings.html" class="settings-icon material-symbols-outlined"
-          >settings</a
-        >
-
-        <!-- Hamburger menu -->
+        <!-- Account and settings icons -->
+        <a href="Account.html" class="person-icon material-symbols-outlined">
+          account_circle
+        </a>
+        <a href="settings.html" class="settings-icon material-symbols-outlined">
+          settings
+        </a>
       </nav>
     </div>
     <main>

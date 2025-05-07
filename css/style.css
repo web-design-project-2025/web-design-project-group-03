@@ -2,6 +2,7 @@
 * {
   font-family: "Inter", sans-serif;
 }
+
 .josefin-sans-font {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
@@ -14,6 +15,35 @@ a {
 }
 
 /* NAVIGATION BAR */
+.logo-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  top: -4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+#nav-bar-background {
+  z-index: 0;
+}
+
+#nav-logo {
+  position: absolute;
+  top: 0;
+  left: 50.5%;
+  transform: translateX(-50%);
+  width: 10vw;
+  height: auto;
+  pointer-events: auto;
+  margin-top: -5px;
+  z-index: 100;
+}
+
 nav {
   display: flex;
   gap: 2rem;
@@ -34,33 +64,22 @@ nav {
 
 .nav-bar {
   position: fixed;
-  top: 7px; /* Adds space between the navbar and the top of the screen */
+  top: 7px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
   height: 60px;
-
   max-width: 80%;
-
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 1000; /* Ensures the navbar is above the "video" */
+  z-index: 1000;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
-}
-
-#logo {
-  position: absolute;
-  top: 68%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1;
 }
 
 #logo img {
@@ -90,8 +109,8 @@ nav {
 }
 
 .search-input:focus {
-  outline: none; /* Ensures no outline appears on focus */
-  box-shadow: none; /* Removes any focus shadow applied by the browser */
+  outline: none;
+  box-shadow: none;
 }
 
 input[type="text"] {
