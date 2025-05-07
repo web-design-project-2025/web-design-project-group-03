@@ -82,7 +82,7 @@ nav {
   padding: var(--padding);
   border-radius: 28px;
   background: #ffffff;
-  width: 30vh;
+  width: 25vh;
 }
 
 .search-input {
@@ -202,10 +202,8 @@ input[type="text"] {
   position: fixed;
   top: -501%; /* Initial position when hidden */
   left: 0;
-
-  width: 25%;
-  height: 300px;
-
+  width: 40%;
+  height: 280px;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glass effect */
   -webkit-backdrop-filter: blur(10px); /* Glass effect for WebKit browsers */
@@ -221,10 +219,12 @@ input[type="text"] {
 
 .off-screen-menu a {
   text-decoration: none;
+  text-align: justify;
   color: #f6f6f6;
   font-size: 2.8rem;
   font-family: "Josefin Sans", sans-serif;
   display: block;
+  list-style-type: none;
   line-height: 0.8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transform: translate(
@@ -233,16 +233,8 @@ input[type="text"] {
   ); /* Moves the text 20px to the right and 30px down */
 }
 
-.off-screen-menu a {
-  text-decoration: none; /* Removes the underline */
-  color: #f6f6f6; /* Changes the text color */
-  font-size: 2.8rem; /* Adjusts the font size */
-  font-family: "Josefin Sans", sans-serif; /* Uses the Josefin Sans font */
-
-  display: block; /* Makes the links block-level for better spacing */
-  padding-left: 20px;
-  padding-top: 2.5rem; /* Adds padding for spacing */
-  margin-top: -1.8rem;
+.off-screen-menu li {
+  list-style: none;
 }
 
 .off-screen-menu.active {
@@ -335,6 +327,80 @@ nav {
   border: 3px solid #222122;
   border-radius: 40px;
   cursor: pointer;
+}
+.Explore,
+.Popular {
+  display: flex;
+  gap: 35%;
+}
+
+.Explore a,
+.Popular a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.Explore,
+.Popular h1 {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.explore-panels,
+.popular-panels {
+  display: flex;
+  width: 60vw;
+  height: 40vh;
+}
+
+.panel {
+  flex: 1;
+  transition: flex 0.5s ease;
+  margin: 10px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Panel Colors */
+#Cycling {
+  background-color: rgb(106, 142, 174);
+}
+
+#Powerlifting {
+  background-color: rgb(221, 124, 128);
+}
+
+#Yoga {
+  background-color: rgb(125, 120, 48);
+}
+
+#high,
+#medium,
+#low {
+  background-color: rgb(226, 220, 203);
+}
+
+.panel:hover {
+  flex: 1.5;
+  transition: flex 0.5s ease;
+}
+
+.panel h3 {
+  font-size: 2rem;
+  padding-left: 3%;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.panel p {
+  font-size: 1rem;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 0;
 }
 
 #about-vector {
@@ -532,12 +598,12 @@ footer p {
     padding: var(--padding);
     border-radius: 28px;
     background: #ffffff;
-    width: 20vh;
+    width: 19vh;
   }
 
   .search-input {
     border: none;
-    width: 16vh;
+    width: 12vh;
   }
 
   .search-input:focus {
