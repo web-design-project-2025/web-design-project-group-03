@@ -9,96 +9,90 @@ const videoWrapper = document.querySelector(".video-wrapper");
 
 let hideTimeout;
 
-// Toggle hamburger menu
+// Toggle hamburger menu visibility
 hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
   offScreenMenu.classList.toggle("active");
 });
 
-
 // Show back-to-top button on scroll
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopButton.classList.add("visible");
-  } else {
-    backToTopButton.classList.remove("visible");
-  }
+  backToTopButton.classList.toggle("visible", window.scrollY > 300);
 });
 
+// Scroll to top on back-to-top button click
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // --- VIDEO LOGIC ---
+// show video controls and clear the hide timer
 function showControls() {
   controls.classList.remove("hide");
   clearTimeout(hideTimeout);
 }
 
+// Hide video controls after a delay
 function startHideTimer() {
   clearTimeout(hideTimeout);
-  hideTimeout = setTimeout(() => {
-    controls.classList.add("hide");
-  }, 2000);
+  hideTimeout = setTimeout(() => controls.classList.add("hide"), 2000);
 }
 
-// controls show when mouse enters video-wrapper
+// Mouse enter: Show controls
 videoWrapper.addEventListener("mouseenter", showControls);
 
-// start hide timer when mouse leaves video-wrapper
+// Mouse leave: Start hide timer
 videoWrapper.addEventListener("mouseleave", startHideTimer);
 
-// play/pause
+// Play/Pause button click
 playPauseBtn.addEventListener("click", () => {
   if (video.paused) {
     video.play();
-    playPauseBtn.textContent = "⏸";
+    playPauseBtn.textContent = "⏸"; // Pause icon
   } else {
     video.pause();
-    playPauseBtn.textContent = "▶";
+    playPauseBtn.textContent = "▶"; // Play icon
   }
-  showControls(); // reset hide timer
+  showControls(); // Reset hide timer
 });
 
-// upd time display
+// Update time display as video plays
 video.addEventListener("timeupdate", () => {
   videoTime.textContent = `${Math.floor(video.currentTime)}s`;
 });
 
-// reset play button when video ends
+// Reset play button when video ends
 video.addEventListener("ended", () => {
-  playPauseBtn.textContent = "▶";
+  playPauseBtn.textContent = "▶"; // Reset to play icon
 });
 
-// Initial display of controls
-showControls();
-startHideTimer();
+// --- SEARCH FUNCTIONALITY ---
 
 document
   .getElementById("search-box")
   .addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-      searchPage(); // Call your search function
+      searchPage();
     }
   });
 
-
+// Handle page redirection based on search input
 function searchPage() {
-  let query = document.getElementById("search-box").value.toLowerCase();
-  if (query === "about") {
-    window.location.href = "about.html";
-  } else if (query === "community") {
-    window.location.href = "Community.html";
-  } else if (query === "courses") {
-    window.location.href = "courses.html";
-  } else if (query === "goals") {
+  const query = document
+    .getElementById("search-box")
+    .value.trim()
+    .toLowerCase();
+  const pages = {
+    about: "about.html",
+    community: "Community.html",
+    courses: "courses.html",
+    goals: "Goals.html",
+    inspiration: "inspiration.html",
+  };
 
-    window.location.href = "Goals.html";
-  } else if (query === "inspiration") {
-    window.location.href = "inspiration.html";
-
-  } else {
-    window.location.href = "search.html";
-  }
+  window.location.href = pages[query] || "search.html";
 }
 
+// Initial display of controls and timer start
+showControls();
+startHideTimer();
