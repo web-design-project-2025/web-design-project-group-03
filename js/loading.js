@@ -79,6 +79,7 @@ const exerciseId = new URLSearchParams(window.location.search).get("id");
 
 // Check if the page contains the exercise-related elements
 const exerciseNameElement = document.getElementById("exercise-name");
+
 const exerciseDescriptionElement = document.getElementById(
   "exercise-description"
 );
@@ -117,4 +118,33 @@ if (
   }
 } else {
   console.log("This page does not contain exercise-related elements.");
+}
+
+//workout page
+const workoutId = new URLSearchParams(window.location.search).get("id");
+
+// Check if the page contains the workout-related elements
+const workoutNameElement = document.getElementById("workout-name");
+
+if (workoutNameElement) {
+  if (workoutId) {
+    fetch("json/workouts.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const workout = data[workoutId];
+
+        if (workout) {
+          workoutNameElement.innerText = workout.name;
+        } else {
+          console.error("Workout not found for ID:", workoutId);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load workout data:", error);
+      });
+  } else {
+    workoutNameElement.innerText = "No workout selected.";
+  }
+} else {
+  console.error("Workout name element not found in the DOM.");
 }
