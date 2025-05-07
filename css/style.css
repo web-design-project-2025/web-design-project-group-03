@@ -82,7 +82,7 @@ nav {
   padding: var(--padding);
   border-radius: 28px;
   background: #ffffff;
-  width: 30vh;
+  width: 25vh;
 }
 
 .search-input {
@@ -202,10 +202,8 @@ input[type="text"] {
   position: fixed;
   top: -501%; /* Initial position when hidden */
   left: 0;
-
-  width: 25%;
-  height: 300px;
-
+  width: 40%;
+  height: 280px;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glass effect */
   -webkit-backdrop-filter: blur(10px); /* Glass effect for WebKit browsers */
@@ -221,10 +219,12 @@ input[type="text"] {
 
 .off-screen-menu a {
   text-decoration: none;
+  text-align: justify;
   color: #f6f6f6;
   font-size: 2.8rem;
   font-family: "Josefin Sans", sans-serif;
   display: block;
+  list-style-type: none;
   line-height: 0.8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transform: translate(
@@ -606,12 +606,12 @@ footer p {
     padding: var(--padding);
     border-radius: 28px;
     background: #ffffff;
-    width: 20vh;
+    width: 19vh;
   }
 
   .search-input {
     border: none;
-    width: 16vh;
+    width: 12vh;
   }
 
   .search-input:focus {
