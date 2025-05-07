@@ -1,0 +1,20 @@
+{
+  "1": {
+    "name": "high-intensity cycling"
+  },
+  "2": {
+    "name": "medium-intensity cycling"
+  },
+  "3": {
+    "name": "low-intensity cycling"
+  },
+  "4": {
+    "name": "high-intensity powerlifting"
+  },
+  "5": {
+    "name": "medium-intensity powerlifting"
+  },
+  "6": {
+    "name": "low-intensity powerlifting"
+  }
+}
