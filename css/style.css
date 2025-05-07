@@ -233,16 +233,8 @@ input[type="text"] {
   ); /* Moves the text 20px to the right and 30px down */
 }
 
-.off-screen-menu a {
-  text-decoration: none; /* Removes the underline */
-  color: #f6f6f6; /* Changes the text color */
-  font-size: 2.8rem; /* Adjusts the font size */
-  font-family: "Josefin Sans", sans-serif; /* Uses the Josefin Sans font */
-
-  display: block; /* Makes the links block-level for better spacing */
-  padding-left: 20px;
-  padding-top: 2.5rem; /* Adds padding for spacing */
-  margin-top: -1.8rem;
+.off-screen-menu li {
+  list-style: none;
 }
 
 .off-screen-menu.active {
