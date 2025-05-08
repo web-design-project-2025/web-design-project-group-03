@@ -1,20 +1,151 @@
 {
   "1": {
-    "name": "high-intensity cycling"
+    "name": "high-intensity cycling",
+    "description": "A fast-paced, cardiovascular workout focused on endurance and power using a stationary or road bike.",
+    "benefits": [
+      "Improves cardiovascular health",
+      "Burns calories quickly",
+      "Boosts endurance",
+      "Strengthens lower body muscles"
+    ],
+    "warmup": "5-minute light pedaling followed by dynamic leg stretches.",
+    "exercise1": "30 seconds sprint cycling",
+    "exercise2": "30 seconds light pedaling",
+    "exercise3": "1-minute standing hill climb",
+    "exercise4": "30 seconds sprint cycling",
+    "exercise5": "1-minute seated moderate pace",
+    "exercise6": "2-minute cooldown with light pedaling"
   },
   "2": {
-    "name": "medium-intensity cycling"
+    "name": "medium-intensity cycling",
+    "description": "A moderate cycling session ideal for improving stamina and maintaining fitness.",
+    "benefits": [
+      "Enhances endurance",
+      "Promotes weight loss",
+      "Supports heart health"
+    ],
+    "warmup": "5-minute easy pedaling with gradual increase in resistance.",
+    "exercise1": "2-minute moderate pace cycling",
+    "exercise2": "1-minute hill climb",
+    "exercise3": "2-minute steady state ride",
+    "exercise4": "1-minute standing moderate climb",
+    "exercise5": "2-minute recovery pedal",
+    "exercise6": "3-minute cooldown"
   },
   "3": {
-    "name": "low-intensity cycling"
+    "name": "low-intensity cycling",
+    "description": "A light cycling session focused on recovery or beginners' training.",
+    "benefits": [
+      "Gentle on joints",
+      "Improves blood circulation",
+      "Aids recovery"
+    ],
+    "warmup": "5-minute slow pedaling and deep breathing.",
+    "exercise1": "5-minute steady pedaling at low resistance",
+    "exercise2": "1-minute slow pace with upright posture",
+    "exercise3": "2-minute moderate pace ride",
+    "exercise4": "1-minute light resistance hill climb",
+    "exercise5": "2-minute gentle pedaling",
+    "exercise6": "3-minute cooldown and stretching"
   },
   "4": {
-    "name": "high-intensity powerlifting"
+    "name": "high-intensity powerlifting",
+    "description": "An advanced strength training workout involving maximum effort lifts.",
+    "benefits": [
+      "Builds muscle mass",
+      "Increases strength",
+      "Boosts metabolism",
+      "Enhances bone density"
+    ],
+    "warmup": "5-minute dynamic warm-up including jumping jacks, bodyweight squats, and arm swings.",
+    "exercise1": "5 sets of 3 reps of deadlifts at 90% 1RM",
+    "exercise2": "4 sets of 5 reps of squats at 85% 1RM",
+    "exercise3": "4 sets of 5 reps of bench press at 85% 1RM",
+    "exercise4": "3 sets of 6 reps of barbell rows",
+    "exercise5": "3 sets of 10 reps of weighted pull-ups",
+    "exercise6": "3 sets of 12 reps of overhead press"
   },
   "5": {
-    "name": "medium-intensity powerlifting"
+    "name": "medium-intensity powerlifting",
+    "description": "A balanced powerlifting routine focused on technique and hypertrophy.",
+    "benefits": [
+      "Improves muscle tone",
+      "Develops strength",
+      "Reinforces lifting form"
+    ],
+    "warmup": "5-minute warmup with light cardio and mobility drills.",
+    "exercise1": "4 sets of 6 reps of squats at 75% 1RM",
+    "exercise2": "3 sets of 8 reps of deadlifts at 70% 1RM",
+    "exercise3": "4 sets of 8 reps of bench press at 70% 1RM",
+    "exercise4": "3 sets of 10 reps of barbell curls",
+    "exercise5": "3 sets of 10 reps of dumbbell lunges",
+    "exercise6": "3 sets of 10 reps of incline dumbbell press"
   },
   "6": {
-    "name": "low-intensity powerlifting"
+    "name": "low-intensity powerlifting",
+    "description": "A beginner-friendly session focusing on form and mobility with lighter weights.",
+    "benefits": [
+      "Develops foundational strength",
+      "Improves form",
+      "Reduces injury risk"
+    ],
+    "warmup": "5-minute brisk walk and joint mobility exercises.",
+    "exercise1": "3 sets of 10 reps of bodyweight squats",
+    "exercise2": "3 sets of 10 reps of kettlebell deadlifts",
+    "exercise3": "3 sets of 10 reps of dumbbell bench press",
+    "exercise4": "2 sets of 15 reps of resistance band rows",
+    "exercise5": "2 sets of 12 reps of glute bridges",
+    "exercise6": "2 sets of 15 reps of seated dumbbell shoulder press"
+  },
+  "7": {
+    "name": "high-intensity yoga",
+    "description": "A vigorous, dynamic yoga session focusing on strength, stamina, and flexibility, often incorporating power yoga or vinyasa flow.",
+    "benefits": [
+      "Builds full-body strength",
+      "Improves cardiovascular endurance",
+      "Enhances flexibility",
+      "Boosts mental focus"
+    ],
+    "warmup": "5-minute dynamic flow including Cat-Cow, Downward Dog, and Sun Salutations.",
+    "exercise1": "5 rounds of Sun Salutation B with jump transitions",
+    "exercise2": "30 seconds Warrior III hold each leg",
+    "exercise3": "1-minute Plank to Chaturanga transitions",
+    "exercise4": "3 rounds of Chair to Twisted Chair poses",
+    "exercise5": "1-minute Crow Pose or attempt",
+    "exercise6": "2-minute cooldown in Pigeon Pose and Supine Twist"
+  },
+  "8": {
+    "name": "medium-intensity yoga",
+    "description": "A moderately paced yoga session combining static holds with controlled movements, suitable for regular practice.",
+    "benefits": [
+      "Enhances muscle tone",
+      "Reduces stress",
+      "Improves posture",
+      "Improves balance"
+    ],
+    "warmup": "5-minute sequence of gentle stretches and slow-paced Sun Salutations.",
+    "exercise1": "3 rounds of Sun Salutation A",
+    "exercise2": "30 seconds Warrior I and II on each side",
+    "exercise3": "1-minute Triangle Pose and Side Angle Pose",
+    "exercise4": "30-second Boat Pose (Navasana)",
+    "exercise5": "1-minute Bridge Pose",
+    "exercise6": "2-minute relaxation in Supine Twist and Savasana"
+  },
+  "9": {
+    "name": "low-intensity yoga",
+    "description": "A gentle, restorative yoga practice aimed at relaxation and recovery, ideal for beginners or rest days.",
+    "benefits": [
+      "Promotes deep relaxation",
+      "Aids flexibility",
+      "Supports joint health",
+      "Improves breathing"
+    ],
+    "warmup": "5-minute slow breathing with seated forward bends and Cat-Cow stretches.",
+    "exercise1": "1-minute Child’s Pose",
+    "exercise2": "1-minute seated Forward Fold",
+    "exercise3": "1-minute Supine Hamstring Stretch",
+    "exercise4": "1-minute Legs-Up-The-Wall Pose",
+    "exercise5": "2-minute Reclining Bound Angle Pose",
+    "exercise6": "3-minute Savasana (corpse pose) with breath awareness"
   }
 }

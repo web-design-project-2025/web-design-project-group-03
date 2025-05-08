@@ -125,26 +125,67 @@ const workoutId = new URLSearchParams(window.location.search).get("id");
 
 // Check if the page contains the workout-related elements
 const workoutNameElement = document.getElementById("workout-name");
+const workoutDescriptionElement = document.getElementById(
+  "workout-description"
+);
+const workoutBenefitsElement = document.getElementById("workout-benefits");
+const warmupElement = document.getElementById("warm-up");
+const ex1Element = document.getElementById("exercise1");
+const ex2Element = document.getElementById("exercise2");
+const ex3Element = document.getElementById("exercise3");
+const ex4Element = document.getElementById("exercise4");
+const ex5Element = document.getElementById("exercise5");
+const ex6Element = document.getElementById("exercise6");
 
-if (workoutNameElement) {
-  if (workoutId) {
-    fetch("json/workouts.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const workout = data[workoutId];
+if (
+  workoutNameElement &&
+  workoutDescriptionElement &&
+  workoutBenefitsElement &&
+  warmupElement &&
+  ex1Element &&
+  ex2Element &&
+  ex3Element &&
+  ex4Element &&
+  ex5Element &&
+  ex6Element
+)
+  if (workoutNameElement) {
+    if (workoutId) {
+      fetch("json/workouts.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const workout = data[workoutId];
 
-        if (workout) {
-          workoutNameElement.innerText = workout.name;
-        } else {
-          console.error("Workout not found for ID:", workoutId);
-        }
-      })
-      .catch((error) => {
-        console.error("Failed to load workout data:", error);
-      });
+          if (workout) {
+            workoutNameElement.innerText = workout.name;
+            workoutDescriptionElement.innerText =
+              workout.description || "No description available.";
+            workoutBenefitsElement.innerText = Array.isArray(workout.benefits)
+              ? workout.benefits.join(", ")
+              : workout.benefits || "No benefits available.";
+            warmupElement.innerText = workout.warmup || "No warm-up available.";
+            ex1Element.innerText =
+              workout.exercise1 || "No exercise available.";
+            ex2Element.innerText =
+              workout.exercise2 || "No exercise available.";
+            ex3Element.innerText =
+              workout.exercise3 || "No exercise available.";
+            ex4Element.innerText =
+              workout.exercise4 || "No exercise available.";
+            ex5Element.innerText =
+              workout.exercise5 || "No exercise available.";
+            ex6Element.innerText =
+              workout.exercise6 || "No exercise available.";
+          } else {
+            console.error("Workout not found for ID:", workoutId);
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to load workout data:", error);
+        });
+    } else {
+      workoutNameElement.innerText = "No workout selected.";
+    }
   } else {
-    workoutNameElement.innerText = "No workout selected.";
+    console.error("Workout name element not found in the DOM.");
   }
-} else {
-  console.error("Workout name element not found in the DOM.");
-}
