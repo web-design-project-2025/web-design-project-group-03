@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #222122;
+  overflow-x: hidden;
 }
 
 a {
@@ -159,14 +160,59 @@ input[type="text"] {
   z-index: 1;
 }
 
-#background-img-article {
-  width: 100%;
-  height: auto;
-  margin-top: -10vh;
+.background-section {
+  position: relative;
+  background-image: url("/img/scaling-mountains 1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
+  margin-top: -20vh;
+  width: 100%;
+  height: 2250px;
+}
+
+h1 {
+  font-style: black;
+  font-weight: 900;
+  font-size: 48px;
+  color: #222122;
+  position: relative;
+  z-index: 10;
+  top: 30vh;
+  text-align: center;
+}
+
+.larger-text-title {
+  font-style: black;
+  font-weight: 900;
+  font-size: 96px;
+}
+
+p {
+  position: relative;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 18px;
+  z-index: 10;
+  width: 60%;
+  max-width: 600px;
+}
+
+.subheadings {
+  font-weight: 800;
+}
+
+.img-p-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#indoor-climbing-bw {
+  width: 50%;
+  height: auto;
 }
 
 #running-bw {
