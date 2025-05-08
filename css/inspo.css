@@ -151,10 +151,48 @@ input[type="text"] {
 
 /* WEB HERO */
 #inspo-hero {
+  position: relative;
   width: 95vw;
   height: auto;
   display: block;
   margin: 0 auto;
+  z-index: 1;
+}
+
+#background-img-article {
+  width: 100%;
+  height: auto;
+  margin-top: -10vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#running-bw {
+  margin-top: -10vh;
+  display: block;
+}
+
+#climbing-bw,
+#sparring-bw {
+  width: 100%;
+  max-width: 100vw;
+}
+
+.content {
+  width: 95vw;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.image-row {
+  display: flex;
+  gap: 2rem;
 }
 
 /*off screen menu*/
