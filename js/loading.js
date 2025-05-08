@@ -77,15 +77,15 @@ fetch("json/data.json")
   */
 const exerciseId = new URLSearchParams(window.location.search).get("id");
 
-// Check if the page contains the exercise-related elements
+// Get DOM elements
 const exerciseNameElement = document.getElementById("exercise-name");
-
 const exerciseDescriptionElement = document.getElementById(
   "exercise-description"
 );
 const exerciseBenefitsElement = document.getElementById("exercise-benefits");
 const exerciseQuoteElement = document.getElementById("exercise-quote");
 
+// Ensure all required elements exist
 if (
   exerciseNameElement &&
   exerciseDescriptionElement &&
@@ -93,17 +93,34 @@ if (
   exerciseQuoteElement
 ) {
   if (exerciseId) {
-    fetch("json/data.json")
+    fetch("json/data.json") // Removed unnecessary "?" from URL
       .then((response) => response.json())
       .then((data) => {
-        const exercise = data[exerciseId]; // Use 'data' to avoid overwriting
+        const exercise = data[exerciseId];
 
         if (exercise) {
           exerciseNameElement.innerText = exercise.name;
-          exerciseBenefitsElement.innerText = exercise.benefits.join(", "); // Corrected key name
           exerciseDescriptionElement.innerText =
             exercise.description || "No description available.";
           exerciseQuoteElement.innerText = exercise.quote || "";
+
+          // Render benefits as a list
+          exerciseBenefitsElement.innerHTML = ""; // Clear existing content
+          if (Array.isArray(exercise.benefits)) {
+            exercise.benefits.forEach((benefit) => {
+              const li = document.createElement("li");
+              li.textContent = benefit;
+              exerciseBenefitsElement.appendChild(li);
+            });
+          } else {
+            exerciseBenefitsElement.innerText = "No benefits listed.";
+          }
+
+          // Optionally set the image
+          const imageElement = document.getElementById("exercise-image");
+          if (imageElement && exercise.image) {
+            imageElement.src = exercise.image;
+          }
         } else {
           console.error("Exercise not found for ID:", exerciseId);
         }
@@ -128,6 +145,7 @@ const workoutNameElement = document.getElementById("workout-name");
 const workoutDescriptionElement = document.getElementById(
   "workout-description"
 );
+const workoutTimeElement = document.getElementById("workout-time");
 const workoutBenefitsElement = document.getElementById("workout-benefits");
 const warmupElement = document.getElementById("warm-up");
 const ex1Element = document.getElementById("exercise1");
@@ -140,6 +158,7 @@ const ex6Element = document.getElementById("exercise6");
 if (
   workoutNameElement &&
   workoutDescriptionElement &&
+  workoutTimeElement &&
   workoutBenefitsElement &&
   warmupElement &&
   ex1Element &&
@@ -163,6 +182,7 @@ if (
             workoutBenefitsElement.innerText = Array.isArray(workout.benefits)
               ? workout.benefits.join(", ")
               : workout.benefits || "No benefits available.";
+            workoutTimeElement.innerText = workout.time || "No time specified.";
             warmupElement.innerText = workout.warmup || "No warm-up available.";
             ex1Element.innerText =
               workout.exercise1 || "No exercise available.";
@@ -189,3 +209,40 @@ if (
   } else {
     console.error("Workout name element not found in the DOM.");
   }
+
+//goal cubes
+// Get the current exercise ID from the URL
+
+// Get the strength goal cube link
+const strengthGoalLink = document.getElementById("strength-goal");
+const staminaGoalLink = document.getElementById("stamina-goal");
+const enduranceGoalLink = document.getElementById("endurance-goal");
+
+// Define the mapping of exercise IDs to workout IDs
+const strengthGoalMapping = {
+  1: "1", // If on exercise.html?id=1, go to workouts.html?id=2
+  2: "4", // If on exercise.html?id=2, go to workouts.html?id=4
+  3: "7", // If on exercise.html?id=3, go to workouts.html?id=7
+};
+
+const staminaGoalMapping = {
+  1: "2", // If on exercise.html?id=1, go to workouts.html?id=2
+  2: "5", // If on exercise.html?id=2, go to workouts.html?id=5
+  3: "8", // If on exercise.html?id=3, go to workouts.html?id=8
+};
+const enduranceGoalMapping = {
+  1: "3", // If on exercise.html?id=1, go to workouts.html?id=3
+  2: "6", // If on exercise.html?id=2, go to workouts.html?id=6
+  3: "9", // If on exercise.html?id=3, go to workouts.html?id=9
+};
+
+// Set the href dynamically based on the current exercise ID
+if (strengthGoalLink && strengthGoalMapping[exerciseId]) {
+  strengthGoalLink.href = `workouts.html?id=${strengthGoalMapping[exerciseId]}`;
+}
+if (staminaGoalLink && staminaGoalMapping[exerciseId]) {
+  staminaGoalLink.href = `workouts.html?id=${staminaGoalMapping[exerciseId]}`;
+}
+if (enduranceGoalLink && enduranceGoalMapping[exerciseId]) {
+  enduranceGoalLink.href = `workouts.html?id=${enduranceGoalMapping[exerciseId]}`;
+}

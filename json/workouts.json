@@ -8,7 +8,8 @@
       "Boosts endurance",
       "Strengthens lower body muscles"
     ],
-    "warmup": "5-minute light pedaling followed by dynamic leg stretches.",
+    "time": "30 minutes",
+    "warmup": "5-minute light pedaling followed by dynamic leg stretches and ankle circles.",
     "exercise1": "30 seconds sprint cycling",
     "exercise2": "30 seconds light pedaling",
     "exercise3": "1-minute standing hill climb",
@@ -24,7 +25,8 @@
       "Promotes weight loss",
       "Supports heart health"
     ],
-    "warmup": "5-minute easy pedaling with gradual increase in resistance.",
+    "time": "35 minutes",
+    "warmup": "5-minute easy pedaling with gradual increase in resistance and quad/hamstring stretches.",
     "exercise1": "2-minute moderate pace cycling",
     "exercise2": "1-minute hill climb",
     "exercise3": "2-minute steady state ride",
@@ -40,7 +42,8 @@
       "Improves blood circulation",
       "Aids recovery"
     ],
-    "warmup": "5-minute slow pedaling and deep breathing.",
+    "time": "25 minutes",
+    "warmup": "5-minute slow pedaling and deep breathing with shoulder rolls.",
     "exercise1": "5-minute steady pedaling at low resistance",
     "exercise2": "1-minute slow pace with upright posture",
     "exercise3": "2-minute moderate pace ride",
@@ -57,7 +60,8 @@
       "Boosts metabolism",
       "Enhances bone density"
     ],
-    "warmup": "5-minute dynamic warm-up including jumping jacks, bodyweight squats, and arm swings.",
+    "time": "60 minutes",
+    "warmup": "5-minute dynamic warm-up including jumping jacks, squats, arm swings, and barbell complexes.",
     "exercise1": "5 sets of 3 reps of deadlifts at 90% 1RM",
     "exercise2": "4 sets of 5 reps of squats at 85% 1RM",
     "exercise3": "4 sets of 5 reps of bench press at 85% 1RM",
@@ -73,7 +77,8 @@
       "Develops strength",
       "Reinforces lifting form"
     ],
-    "warmup": "5-minute warmup with light cardio and mobility drills.",
+    "time": "50 minutes",
+    "warmup": "5-minute warmup with light cardio, mobility drills, and band-resisted lifts.",
     "exercise1": "4 sets of 6 reps of squats at 75% 1RM",
     "exercise2": "3 sets of 8 reps of deadlifts at 70% 1RM",
     "exercise3": "4 sets of 8 reps of bench press at 70% 1RM",
@@ -89,7 +94,8 @@
       "Improves form",
       "Reduces injury risk"
     ],
-    "warmup": "5-minute brisk walk and joint mobility exercises.",
+    "time": "40 minutes",
+    "warmup": "5-minute brisk walk and joint mobility exercises, including bodyweight squats and shoulder rolls.",
     "exercise1": "3 sets of 10 reps of bodyweight squats",
     "exercise2": "3 sets of 10 reps of kettlebell deadlifts",
     "exercise3": "3 sets of 10 reps of dumbbell bench press",
@@ -106,7 +112,8 @@
       "Enhances flexibility",
       "Boosts mental focus"
     ],
-    "warmup": "5-minute dynamic flow including Cat-Cow, Downward Dog, and Sun Salutations.",
+    "time": "45 minutes",
+    "warmup": "5-minute dynamic flow including Cat-Cow, Downward Dog, and Sun Salutations, with wrist rolls and shoulder openers.",
     "exercise1": "5 rounds of Sun Salutation B with jump transitions",
     "exercise2": "30 seconds Warrior III hold each leg",
     "exercise3": "1-minute Plank to Chaturanga transitions",
@@ -123,7 +130,8 @@
       "Improves posture",
       "Improves balance"
     ],
-    "warmup": "5-minute sequence of gentle stretches and slow-paced Sun Salutations.",
+    "time": "40 minutes",
+    "warmup": "5-minute sequence of gentle stretches, slow-paced Sun Salutations, and neck rolls.",
     "exercise1": "3 rounds of Sun Salutation A",
     "exercise2": "30 seconds Warrior I and II on each side",
     "exercise3": "1-minute Triangle Pose and Side Angle Pose",
@@ -140,7 +148,8 @@
       "Supports joint health",
       "Improves breathing"
     ],
-    "warmup": "5-minute slow breathing with seated forward bends and Cat-Cow stretches.",
+    "time": "35 minutes",
+    "warmup": "5-minute slow breathing with seated forward bends, neck stretches, and Cat-Cow poses.",
     "exercise1": "1-minute Child’s Pose",
     "exercise2": "1-minute seated Forward Fold",
     "exercise3": "1-minute Supine Hamstring Stretch",

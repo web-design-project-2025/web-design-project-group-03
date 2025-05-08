@@ -23,7 +23,7 @@
       "Increases functional strength for daily activities"
     ],
     "quote": "Powerlifting is a great way to build strength and muscle mass",
-    "image": "img/blackandwhite-wheights-1634747_640 kopier.jpg"
+    "image": "img/blackandwhite-weights-1634747_640 kopiera.jpg"
   },
   "3": {
     "name": "Yoga",
@@ -35,7 +35,8 @@
       "Improves mental clarity",
       "Promotes relaxation and mindfulness"
     ],
-    "quote": "Yoga is the journey of the self, through the self, to the self - The Bhagavad Gita"
+    "quote": "Yoga is the journey of the self, through the self, to the self - The Bhagavad Gita",
+    "image": "img/bwyoga.jpg"
   },
   "4": {
     "name": "high-intensity interval training (HIIT)",
@@ -51,6 +52,26 @@
   },
   "5": {
     "name": "medium-intensity steady-state (MISS)",
-    "description": "MISS is a form of exercise that involves maintaining a moderate level of intensity for an extended period of time. It is often used for cardiovascular training and can be done through activities like jogging, cycling, or swimming."
+    "description": "MISS is a form of exercise that involves maintaining a moderate level of intensity for an extended period of time. It is often used for cardiovascular training and can be done through activities like jogging, cycling, or swimming.",
+    "benefits": [
+      "Improves cardiovascular fitness",
+      "Burns calories",
+      "Enhances endurance",
+      "Can be done outdoors or indoors",
+      "Supports weight management"
+    ],
+    "quote": "MISS is a great way to build endurance and improve overall fitness"
+  },
+  "6": {
+    "name": "low-intensity steady-state (LISS)",
+    "description": "LISS is a form of exercise that involves maintaining a low level of intensity for an extended period of time. It is often used for recovery or fat loss and can be done through activities like walking, light jogging, or cycling.",
+    "benefits": [
+      "Gentle on the joints",
+      "Improves cardiovascular health",
+      "Supports recovery",
+      "Can be done anywhere",
+      "Helps with fat loss"
+    ],
+    "quote": "LISS is a great way to stay active without putting too much stress on the body"
   }
 }

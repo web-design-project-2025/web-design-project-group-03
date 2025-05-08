@@ -4,28 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workout</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/courses.css" />
     <script src="js/loading.js" defer></script>
   </head>
-  <body>
-    <p>
-      here you will be able to see the workouts and add them to your profile
-    </p>
-
+  <body id="workout-body">
     <div class="workout-info">
-      <h1 id="workout-name"></h1>
+      <div class="wohead">
+        <h1 id="workout-name"></h1>
+        <button>add to favourites</button>
+      </div>
       <p id="workout-description"></p>
-      <div class="workout-benefits">
+      <ul>
+        <li>time</li>
+        <li>Benefits</li>
+      </ul>
+      <p id="workout-time"></p>
+      <section class="workout-benefits">
         <h2>Benefits</h2>
         <p id="workout-benefits"></p>
+      </section>
+      <section class="warmup-content">
+        <h2>Warm Up</h2>
+
+        <p id="warm-up"></p>
+      </section>
+
+      <div class="wo-content">
+        <h2>Main set</h2>
+        <ul class="wo-main-list">
+          <li class="wo-main-list">Set</li>
+          <li class="wo-main-list">Exercise</li>
+        </ul>
+        <div class="wo-container">
+          <p>1</p>
+          <p id="exercise1"></p>
+          <p>2</p>
+          <p id="exercise2"></p>
+          <p>3</p>
+          <p id="exercise3"></p>
+          <p>4</p>
+          <p id="exercise4"></p>
+          <p>5</p>
+          <p id="exercise5"></p>
+          <p>6</p>
+          <p id="exercise6"></p>
+        </div>
       </div>
-      <p id="warm-up"></p>
-      <p id="exercise1"></p>
-      <p id="exercise2"></p>
-      <p id="exercise3"></p>
-      <p id="exercise4"></p>
-      <p id="exercise5"></p>
-      <p id="exercise6"></p>
     </div>
-    <button>add to favourites</button>
   </body>
 </html>
