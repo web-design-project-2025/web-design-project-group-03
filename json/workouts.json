@@ -10,12 +10,19 @@
     ],
     "time": "30 minutes",
     "warmup": "5-minute light pedaling followed by dynamic leg stretches and ankle circles.",
+    "warmup2": "5-minute light pedaling with gradual increase in resistance and quad/hamstring stretches.",
     "exercise1": "30 seconds sprint cycling",
+    "exercise1-description": "Focus on maximum effort while maintaining posture",
     "exercise2": "30 seconds light pedaling",
+    "exercise2-description": "Recover while keeping legs moving",
     "exercise3": "1-minute standing hill climb",
+    "exercise3-description": "Engage glutes and quads, maintain a steady pace",
     "exercise4": "30 seconds sprint cycling",
+    "exercise4-description": "Push for maximum effort again",
     "exercise5": "1-minute seated moderate pace",
-    "exercise6": "2-minute cooldown with light pedaling"
+    "exercise5-description": "Recover while maintaining a steady pace",
+    "exercise6": "2-minute cooldown with light pedaling",
+    "exercise6-description": "Gradually decrease intensity and focus on breathing"
   },
   "2": {
     "name": "medium-intensity cycling",
@@ -27,12 +34,19 @@
     ],
     "time": "35 minutes",
     "warmup": "5-minute easy pedaling with gradual increase in resistance and quad/hamstring stretches.",
+    "warmup2": "5-minute light pedaling with gradual increase in resistance and quad/hamstring stretches.",
     "exercise1": "2-minute moderate pace cycling",
+    "exercise1-description": "Maintain a steady pace with moderate resistance",
     "exercise2": "1-minute hill climb",
+    "exercise2-description": "Increase resistance and maintain a steady pace",
     "exercise3": "2-minute steady state ride",
+    "exercise3-description": "Focus on maintaining a consistent speed",
     "exercise4": "1-minute standing moderate climb",
+    "exercise4-description": "Engage core and glutes while maintaining a steady pace",
     "exercise5": "2-minute recovery pedal",
-    "exercise6": "3-minute cooldown"
+    "exercise5-description": "Light pedaling to recover",
+    "exercise6": "3-minute cooldown",
+    "exercise6-description": "Gradually decrease intensity and focus on breathing"
   },
   "3": {
     "name": "low-intensity cycling",
@@ -44,12 +58,19 @@
     ],
     "time": "25 minutes",
     "warmup": "5-minute slow pedaling and deep breathing with shoulder rolls.",
+    "warmup2": "5-minute light pedaling with gradual increase in resistance and quad/hamstring stretches.",
     "exercise1": "5-minute steady pedaling at low resistance",
+    "exercise1-description": "Focus on maintaining a steady pace",
     "exercise2": "1-minute slow pace with upright posture",
+    "exercise2-description": "Maintain a comfortable pace while focusing on posture",
     "exercise3": "2-minute moderate pace ride",
+    "exercise3-description": "Increase resistance slightly while maintaining a steady pace",
     "exercise4": "1-minute light resistance hill climb",
+    "exercise4-description": "Engage core and glutes while maintaining a steady pace",
     "exercise5": "2-minute gentle pedaling",
-    "exercise6": "3-minute cooldown and stretching"
+    "exercise5-description": "Light pedaling to recover",
+    "exercise6": "3-minute cooldown and stretching",
+    "exercise6-description": "Gradually decrease intensity and focus on breathing"
   },
   "4": {
     "name": "high-intensity powerlifting",
@@ -61,13 +82,20 @@
       "Enhances bone density"
     ],
     "time": "60 minutes",
-    "warmup": "5-minute dynamic warm-up including jumping jacks, squats, arm swings, and barbell complexes.",
+    "warmup": "5-minute dynamic  warm-up including jumping jacks, squats, arm swings, and barbell complexes.",
+    "warmup2": "Light barvell warm-up with mobility drills and dynamic stretches.",
     "exercise1": "5 sets of 3 reps of deadlifts at 90% 1RM",
+    "exercise1-description": "Focus on form and maximum effort",
     "exercise2": "4 sets of 5 reps of squats at 85% 1RM",
+    "exercise2-description": "Maintain a steady pace and focus on depth",
     "exercise3": "4 sets of 5 reps of bench press at 85% 1RM",
+    "exercise3-description": "Focus on form and maximum effort",
     "exercise4": "3 sets of 6 reps of barbell rows",
+    "exercise4-description": "Engage core and maintain a steady pace",
     "exercise5": "3 sets of 10 reps of weighted pull-ups",
-    "exercise6": "3 sets of 12 reps of overhead press"
+    "exercise5-description": "Focus on form and maximum effort",
+    "exercise6": "3 sets of 12 reps of overhead press",
+    "exercise6-description": "Engage core and maintain a steady pace"
   },
   "5": {
     "name": "medium-intensity powerlifting",
@@ -79,12 +107,19 @@
     ],
     "time": "50 minutes",
     "warmup": "5-minute warmup with light cardio, mobility drills, and band-resisted lifts.",
+    "warmup2": "5-minute dynamic warm-up including jumping jacks, squats, arm swings, and barbell complexes.",
     "exercise1": "4 sets of 6 reps of squats at 75% 1RM",
+    "exercise1-description": "Focus on form and depth",
     "exercise2": "3 sets of 8 reps of deadlifts at 70% 1RM",
+    "exercise2-description": "Maintain a steady pace and focus on form",
     "exercise3": "4 sets of 8 reps of bench press at 70% 1RM",
+    "exercise3-description": "Focus on form and maximum effort",
     "exercise4": "3 sets of 10 reps of barbell curls",
+    "exercise4-description": "Engage core and maintain a steady pace",
     "exercise5": "3 sets of 10 reps of dumbbell lunges",
-    "exercise6": "3 sets of 10 reps of incline dumbbell press"
+    "exercise5-description": "Focus on form and maximum effort",
+    "exercise6": "3 sets of 10 reps of incline dumbbell press",
+    "exercise6-description": "Engage core and maintain a steady pace"
   },
   "6": {
     "name": "low-intensity powerlifting",
@@ -96,12 +131,19 @@
     ],
     "time": "40 minutes",
     "warmup": "5-minute brisk walk and joint mobility exercises, including bodyweight squats and shoulder rolls.",
+    "warmup2": "5-minute dynamic warm-up including jumping jacks, squats, arm swings, and barbell complexes.",
     "exercise1": "3 sets of 10 reps of bodyweight squats",
+    "exercise1-description": "Focus on depth and form",
     "exercise2": "3 sets of 10 reps of kettlebell deadlifts",
+    "exercise2-description": "Maintain a steady pace and focus on form",
     "exercise3": "3 sets of 10 reps of dumbbell bench press",
+    "exercise3-description": "Focus on form and maximum effort",
     "exercise4": "2 sets of 15 reps of resistance band rows",
+    "exercise4-description": "Engage core and maintain a steady pace",
     "exercise5": "2 sets of 12 reps of glute bridges",
-    "exercise6": "2 sets of 15 reps of seated dumbbell shoulder press"
+    "exercise5-description": "Focus on form and maximum effort",
+    "exercise6": "2 sets of 15 reps of seated dumbbell shoulder press",
+    "exercise6-description": "Engage core and maintain a steady pace"
   },
   "7": {
     "name": "high-intensity yoga",
@@ -114,12 +156,19 @@
     ],
     "time": "45 minutes",
     "warmup": "5-minute dynamic flow including Cat-Cow, Downward Dog, and Sun Salutations, with wrist rolls and shoulder openers.",
+    "warmup2": "Wrist rolls and shoulder openers.",
     "exercise1": "5 rounds of Sun Salutation B with jump transitions",
+    "exercise1-description": "Focus on breath and flow",
     "exercise2": "30 seconds Warrior III hold each leg",
+    "exercise2-description": "Engage core and maintain balance",
     "exercise3": "1-minute Plank to Chaturanga transitions",
+    "exercise3-description": "Focus on core engagement and control",
     "exercise4": "3 rounds of Chair to Twisted Chair poses",
+    "exercise4-description": "Engage core and maintain balance",
     "exercise5": "1-minute Crow Pose or attempt",
-    "exercise6": "2-minute cooldown in Pigeon Pose and Supine Twist"
+    "exercise5-description": "Focus on balance and core strength",
+    "exercise6": "2-minute cooldown in Pigeon Pose and Supine Twist",
+    "exercise6-description": "Focus on breath and relaxation"
   },
   "8": {
     "name": "medium-intensity yoga",
@@ -132,12 +181,19 @@
     ],
     "time": "40 minutes",
     "warmup": "5-minute sequence of gentle stretches, slow-paced Sun Salutations, and neck rolls.",
+    "warmup2": "Neck rolls and spinal twists.",
     "exercise1": "3 rounds of Sun Salutation A",
+    "exercise1-description": "Focus on breath and flow",
     "exercise2": "30 seconds Warrior I and II on each side",
+    "exercise2-description": "Engage core and maintain balance",
     "exercise3": "1-minute Triangle Pose and Side Angle Pose",
+    "exercise3-description": "Focus on alignment and breath",
     "exercise4": "30-second Boat Pose (Navasana)",
+    "exercise4-description": "Engage core and maintain balance",
     "exercise5": "1-minute Bridge Pose",
-    "exercise6": "2-minute relaxation in Supine Twist and Savasana"
+    "exercise5-description": "Focus on breath and relaxation",
+    "exercise6": "2-minute relaxation in Supine Twist and Savasana",
+    "exercise6-description": "Focus on breath and relaxation"
   },
   "9": {
     "name": "low-intensity yoga",
@@ -150,11 +206,18 @@
     ],
     "time": "35 minutes",
     "warmup": "5-minute slow breathing with seated forward bends, neck stretches, and Cat-Cow poses.",
+    "warmup2": "Neck stretches and seated forward bends.",
     "exercise1": "1-minute Child’s Pose",
+    "exercise1-description": "Focus on breath and relaxation",
     "exercise2": "1-minute seated Forward Fold",
+    "exercise2-description": "Focus on breath and relaxation",
     "exercise3": "1-minute Supine Hamstring Stretch",
+    "exercise3-description": "Focus on breath and relaxation",
     "exercise4": "1-minute Legs-Up-The-Wall Pose",
+    "exercise4-description": "Focus on breath and relaxation",
     "exercise5": "2-minute Reclining Bound Angle Pose",
-    "exercise6": "3-minute Savasana (corpse pose) with breath awareness"
+    "exercise5-description": "Focus on breath and relaxation",
+    "exercise6": "3-minute Savasana (corpse pose) with breath awareness",
+    "exercise6-description": "Focus on breath and relaxation"
   }
 }

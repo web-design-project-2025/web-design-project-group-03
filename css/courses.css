@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 .exercise-item {
@@ -216,6 +216,18 @@ p {
   font-weight: bold;
   text-transform: uppercase;
 }
+.wo-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  font-size: 1.5rem;
+  padding-left: 15%;
+  font-weight: bold;
+}
+.workout-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .warmup-content {
   width: 98%;
   height: auto;
@@ -259,7 +271,7 @@ p {
 .wo-main-list {
   display: flex;
   flex-direction: row;
-  gap: 10%;
+  gap: 20%;
   font-size: 1.5rem;
   color: rgb(214, 200, 180);
   padding-left: 3%;
@@ -267,9 +279,9 @@ p {
 }
 .wo-container {
   padding-left: 7%;
-  width: 30%;
+  width: 90%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 0.3fr 1fr 1fr;
   gap: 1%;
 }
 .wo-content p {

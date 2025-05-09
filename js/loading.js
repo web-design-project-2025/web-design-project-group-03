@@ -148,12 +148,19 @@ const workoutDescriptionElement = document.getElementById(
 const workoutTimeElement = document.getElementById("workout-time");
 const workoutBenefitsElement = document.getElementById("workout-benefits");
 const warmupElement = document.getElementById("warm-up");
+const warmup2Element = document.getElementById("warm-up2");
 const ex1Element = document.getElementById("exercise1");
+const ex1DescriptionElement = document.getElementById("exercise1-description");
 const ex2Element = document.getElementById("exercise2");
+const ex2DescriptionElement = document.getElementById("exercise2-description");
 const ex3Element = document.getElementById("exercise3");
+const ex3DescriptionElement = document.getElementById("exercise3-description");
 const ex4Element = document.getElementById("exercise4");
+const ex4DescriptionElement = document.getElementById("exercise4-description");
 const ex5Element = document.getElementById("exercise5");
+const ex5DescriptionElement = document.getElementById("exercise5-description");
 const ex6Element = document.getElementById("exercise6");
+const ex6DescriptionElement = document.getElementById("exercise6-description");
 
 if (
   workoutNameElement &&
@@ -161,12 +168,19 @@ if (
   workoutTimeElement &&
   workoutBenefitsElement &&
   warmupElement &&
+  warmup2Element &&
   ex1Element &&
+  ex1DescriptionElement &&
   ex2Element &&
+  ex2DescriptionElement &&
   ex3Element &&
+  ex3DescriptionElement &&
   ex4Element &&
+  ex4DescriptionElement &&
   ex5Element &&
-  ex6Element
+  ex5DescriptionElement &&
+  ex6Element &&
+  ex6DescriptionElement
 )
   if (workoutNameElement) {
     if (workoutId) {
@@ -184,18 +198,32 @@ if (
               : workout.benefits || "No benefits available.";
             workoutTimeElement.innerText = workout.time || "No time specified.";
             warmupElement.innerText = workout.warmup || "No warm-up available.";
+            warmup2Element.innerText =
+              workout.warmup2 || "No warm-up available.";
             ex1Element.innerText =
               workout.exercise1 || "No exercise available.";
+            ex1DescriptionElement.innerText =
+              workout.exercise1Description || "No description available.";
             ex2Element.innerText =
               workout.exercise2 || "No exercise available.";
+            ex2DescriptionElement.innerText =
+              workout.exercise2Description || "No description available.";
             ex3Element.innerText =
               workout.exercise3 || "No exercise available.";
+            ex3DescriptionElement.innerText =
+              workout.exercise3Description || "No description available.";
             ex4Element.innerText =
               workout.exercise4 || "No exercise available.";
+            ex4DescriptionElement.innerText =
+              workout.exercise4Description || "No description available.";
             ex5Element.innerText =
               workout.exercise5 || "No exercise available.";
+            ex5DescriptionElement.innerText =
+              workout.exercise5Description || "No description available.";
             ex6Element.innerText =
               workout.exercise6 || "No exercise available.";
+            ex6DescriptionElement.innerText =
+              workout.exercise6Description || "No description available.";
           } else {
             console.error("Workout not found for ID:", workoutId);
           }
