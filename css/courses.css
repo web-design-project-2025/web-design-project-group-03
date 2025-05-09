@@ -18,8 +18,9 @@
   transition: box-shadow 0.3s ease;
   background-color: white;
   margin: 1rem;
-  width: 20rem;
+  width: 25rem;
   border-radius: 5%;
+  transition: transform 0.2s ease;
 }
 .exercise-item a {
   text-decoration: none;
@@ -30,12 +31,10 @@
 }
 
 .exercise-item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 .exercise-img {
-  /* width: 100%;
-  height: 300px;*/
-  width: 20rem;
+  width: 100%;
   object-fit: cover;
   height: auto;
   display: block;
@@ -68,13 +67,21 @@ p {
 }
 
 .popular-panel {
-  background-color: #acb863;
+  background-color: rgb(226, 220, 203);
   width: 25rem;
   height: 35rem;
   padding: 1rem 2rem;
   border-radius: 8px;
   text-align: center;
   transition: transform 0.2s ease;
+}
+.popular-panel:hover {
+  transform: scale(1.05);
+}
+.popular-panel a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: rgb(34, 33, 34);
 }
 
 /*exercise*/
@@ -189,7 +196,7 @@ p {
 
 /*workout*/
 #workout-body {
-  background-color: beige;
+  background-color: rgb(226, 220, 203);
 }
 
 .wohead {
@@ -215,18 +222,29 @@ p {
   color: rgb(34, 33, 34);
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 0%;
+}
+#workout-description {
+  font-size: 1.5rem;
+  color: rgb(34, 33, 34);
+  text-align: left;
+  margin-top: 0%;
 }
 .wo-list {
   display: flex;
   flex-direction: row;
   gap: 20%;
   font-size: 1.5rem;
-  padding-left: 15%;
+  padding-left: 12%;
   font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 20px;
 }
 .workout-benefits {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 0%;
 }
 .warmup-content {
   width: 98%;
@@ -257,6 +275,7 @@ p {
   height: auto;
   background-color: rgb(34, 33, 34);
   border-radius: 20px;
+  padding-bottom: 2%;
 }
 
 .wo-content h2 {
@@ -285,6 +304,29 @@ p {
   gap: 1%;
 }
 .wo-content p {
+  font-size: 1.5rem;
+  color: rgb(214, 200, 180);
+  padding-bottom: 2%;
+  text-align: left;
+}
+.cooldown-content {
+  width: 98%;
+  height: auto;
+  background-color: rgb(34, 33, 34);
+  border-radius: 20px;
+  margin-top: 1.5%;
+}
+.cooldown-content h2 {
+  font-size: 2.5rem;
+  color: rgb(214, 200, 180);
+  font-weight: bold;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: left;
+  padding-left: 2%;
+  padding-top: 2%;
+}
+.cooldown-content p {
   font-size: 1.5rem;
   color: rgb(214, 200, 180);
   padding-bottom: 2%;
