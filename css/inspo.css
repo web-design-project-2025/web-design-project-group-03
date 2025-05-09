@@ -188,7 +188,7 @@ h1 {
   font-size: 96px;
 }
 
-p {
+#body-text {
   position: relative;
   text-align: left;
   font-style: normal;
@@ -218,7 +218,7 @@ p {
 }
 
 #running-bw {
-  margin-top: -10vh;
+  margin-top: -40vh;
   display: block;
 }
 
@@ -241,6 +241,44 @@ p {
 .image-row {
   display: flex;
   gap: 2rem;
+}
+
+#weights-bw {
+  position: relative;
+  width: 40vw;
+  height: auto;
+  display: block;
+  z-index: 2;
+  margin-left: 55vw;
+  top: -30vh;
+}
+
+#white-text-overlay {
+  position: relative;
+  top: -50vh;
+  margin-left: 10vw;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: white;
+  width: 60vw;
+  z-index: 30;
+  text-align: right;
+}
+
+#citation {
+  position: relative;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: right;
+  color: #8e8e8e;
+  z-index: 30;
+  width: 35vw;
+  top: -50vh;
+  margin-left: 45vw;
 }
 
 /*off screen menu*/
@@ -274,10 +312,7 @@ p {
   list-style-type: none;
   line-height: 0.8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  transform: translate(
-    20px,
-    30px
-  ); /* Moves the text 20px to the right and 30px down */
+  transform: translate(20px, 30px);
 }
 
 .off-screen-menu li {
