@@ -16,7 +16,7 @@ body {
 
 .centerLog {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
@@ -32,6 +32,13 @@ body {
 .centerLog form {
   padding: 0 40px;
   box-sizing: border-box;
+}
+
+.loginTxt {
+  color: #e2dccb;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 form .txtField {
@@ -51,9 +58,86 @@ form .txtField {
   font-size: 16px;
 }
 
+.txtField label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #e2dccb;
+  font-size: 16px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.txtField span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #e2dccb;
+}
+
+.txtField input:focus ~ label,
+.txtField input:valid ~ label {
+  top: -5px;
+  color: #e2dccb;
+}
+
+.txtField input:focus ~ span::before,
+.txtField input:valid ~ span::before {
+  width: 100%;
+  background: #e2dccb;
+}
+
+.forgotPass {
+  color: #e2dccb;
+  margin: -5px 0 20px 5px;
+  cursor: pointer;
+}
+
+.forgotPass:hover {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: #e2dccb;
+  border: 1px solid #e2dccb;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #222122;
+  border-radius: 25px;
+  outline: none;
+  font-weight: 700;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+input[type="submit"]:hover {
+  background: #222122;
+  color: #e2dccb;
+  transition: 0.5s ease;
+}
+
+.signUpLink {
+  color: #e2dccb;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signUpLink a {
+  color: #7596f0;
+  text-decoration: none;
+}
+.signUpLink a:hover {
+  text-decoration: underline;
+}
+
 .accountBlnceLogo {
   position: absolute;
-  top: 15%;
+  top: 13%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.07);
   width: auto;
