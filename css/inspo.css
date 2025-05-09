@@ -205,13 +205,15 @@ p {
 }
 
 .img-p-container {
+  padding-top: 40vh;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 8rem;
 }
 
 #indoor-climbing-bw {
-  width: 50%;
+  padding-bottom: 20vh;
+  width: 40%;
   height: auto;
 }
 
