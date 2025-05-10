@@ -93,7 +93,9 @@ form .txtField {
 
 .forgotPass {
   color: #e2dccb;
-  margin: -5px 0 20px 5px;
+  position: relative;
+  top: -14px;
+  margin: 0 0 20px 5px;
   cursor: pointer;
 }
 
