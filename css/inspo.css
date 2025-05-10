@@ -245,12 +245,30 @@ h1 {
 
 #weights-bw {
   position: relative;
-  width: 40vw;
+  width: 30vw;
   height: auto;
   display: block;
   z-index: 2;
-  margin-left: 55vw;
-  top: -30vh;
+  margin-right: 12vw;
+  top: -35vh;
+  align-self: flex-start;
+}
+
+#bike-bw {
+  position: relative;
+  width: 40vw;
+  height: auto;
+  display: block;
+  z-index: 1;
+  margin-left: 5vw;
+  top: -48vh;
+}
+
+.middle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
 }
 
 #white-text-overlay {
