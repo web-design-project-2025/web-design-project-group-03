@@ -199,3 +199,5 @@ if (staminaGoalLink && staminaGoalMapping[exerciseId]) {
 if (enduranceGoalLink && enduranceGoalMapping[exerciseId]) {
   enduranceGoalLink.href = `workouts.html?id=${enduranceGoalMapping[exerciseId]}`;
 }
+
+//used help from github copilot to create the above code

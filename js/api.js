@@ -1,29 +1,94 @@
-fetch("https://wger.de/api/v2/exerciseinfo/?language=2")
-  .then((response) => response.json())
-  .then((data) => {
-    displayData(data);
-  })
-  .catch((error) => {
-    console.error("Error fetching data:", error);
-  });
+const exerciseContainer = document.getElementById("exercise-list");
+const workoutList = document.getElementById("workout-list");
+const template = document.getElementById("exercise-template");
+let workout = [];
 
-function displayData(data) {
-  const movementsContainer = document.querySelector(".movements"); // Target the parent container
-  movementsContainer.innerHTML = ""; // Clear existing content
+async function fetchExercises() {
+  try {
+    const response = await fetch(
+      "https://wger.de/api/v2/exerciseinfo/?limit=100"
+    );
+    const data = await response.json();
+    renderExercises(data.results);
+  } catch (error) {
+    exerciseContainer.innerHTML = "<p>Error fetching data.</p>";
+    console.error(error);
+  }
+}
 
-  // Convert data to an array if it's an object
-  const workouts = Array.isArray(data) ? data : Object.values(data);
-
-  // Loop through the data and create movement panels
-  workouts.forEach((workout) => {
-    const movementPanel = document.createElement("div");
-    movementPanel.classList.add("movement-panel");
-
-    const movementItem = document.createElement("p");
-    movementItem.classList.add("movement-item");
-    movementItem.textContent = workout.name; // Use the workout name
-
-    movementPanel.appendChild(movementItem);
-    movementsContainer.appendChild(movementPanel);
+function renderExercises(exercises) {
+  exerciseContainer.innerHTML = "";
+  exercises.forEach((ex) => {
+    const card = createExerciseCard(ex, true);
+    exerciseContainer.appendChild(card);
   });
 }
+
+function addToWorkout(exercise) {
+  if (!workout.find((e) => e.id === exercise.id)) {
+    workout.push(exercise);
+    updateWorkoutList();
+  }
+}
+
+function removeFromWorkout(id) {
+  workout = workout.filter((e) => e.id !== id);
+  updateWorkoutList();
+}
+
+function updateWorkoutList() {
+  workoutList.innerHTML = "";
+
+  if (workout.length === 0) {
+    workoutList.innerHTML =
+      '<li class="placeholder">No exercises added yet.</li>';
+    return;
+  }
+
+  workout.forEach((exercise) => {
+    const card = createExerciseCard(exercise, false);
+    const li = document.createElement("li");
+    li.appendChild(card);
+    workoutList.appendChild(li);
+  });
+}
+
+function createExerciseCard(ex, showAddButton) {
+  const clone = template.content.cloneNode(true);
+  clone.querySelector(".exercise-title").textContent =
+    ex.name || "No name available";
+  clone.querySelector(
+    ".exercise-cat"
+  ).textContent = `Category: ${ex.category.name}`;
+  clone.querySelector(".exercise-description").textContent =
+    ex.description || "No description available";
+
+  const musclesContainer = clone.querySelector(".muscles");
+  musclesContainer.innerHTML = ex.muscles.length
+    ? ex.muscles.map((m) => `<span class="tag">${m.name}</span>`).join("")
+    : '<span class="tag">N/A</span>';
+
+  const equipmentContainer = clone.querySelector(".equipment");
+  equipmentContainer.innerHTML = ex.equipment.length
+    ? ex.equipment.map((eq) => `<span class="tag">${eq.name}</span>`).join("")
+    : '<span class="tag">Bodyweight</span>';
+
+  const button = clone.querySelector(".action-button");
+  button.textContent = showAddButton ? "Add to Workout" : "Remove";
+  button.className = showAddButton
+    ? "add-button action-button"
+    : "remove-btn action-button";
+  button.onclick = () => {
+    if (showAddButton) {
+      addToWorkout(ex);
+    } else {
+      removeFromWorkout(ex.id);
+    }
+  };
+
+  return clone;
+}
+
+fetchExercises();
+
+//used help from github copilot to create the above code

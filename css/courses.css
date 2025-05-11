@@ -55,6 +55,16 @@ h2 {
   text-align: center;
 }
 
+.create {
+  font-size: 1.5rem;
+
+  margin-top: 2rem;
+  padding-left: 45%;
+}
+.create a {
+  text-align: center;
+}
+
 p {
   text-align: center;
 }
@@ -144,6 +154,7 @@ p {
   background-color: rgb(106, 142, 174);
   padding: 2%;
   padding-left: 5%;
+  margin-bottom: 3%;
 }
 
 .exercise-benefits h2 {
@@ -162,36 +173,37 @@ p {
   margin-top: 1%;
 }
 
-#Goal {
-  font-size: 3rem;
-  text-transform: uppercase;
-}
 .goals {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-  padding-left: 10%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 0%;
+  flex-wrap: wrap;
+  background-color: #f7f7f7;
 }
 
 .goalcube {
-  max-width: 20rem;
+  background: rgb(106, 142, 174);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 20rem;
+  text-align: center;
+  cursor: pointer;
+}
 
-  height: 15rem;
-  border-radius: 10%;
-  background-color: sandybrown;
+.goalcube:hover {
+  transform: scale(1.05);
 }
 
 .goalcube a {
-  font-size: 1.5rem;
-  text-align: center;
-  translate: 20% -50%;
-  color: rgb(34, 33, 34);
-  font-weight: bold;
-  text-transform: uppercase;
   text-decoration: none;
-  padding-left: 0.5rem;
-  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /*workout*/
@@ -205,17 +217,20 @@ p {
   gap: 30%;
 }
 .wohead button {
-  background-color: rgb(34, 33, 34);
-  color: white;
+  background-color: transparent;
+  color: rgb(34, 33, 34);
+  padding: 10px 40px;
   height: 4rem;
-  border: none;
+  border: 3px solid rgb(34, 33, 34);
   font-size: 1rem;
-  font-weight: bold;
-  border-radius: 10px;
+  font-weight: bolder;
+  border-radius: 40px;
   cursor: pointer;
   margin-top: 5rem;
   transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
+
 #workout-name {
   font-size: 5rem;
   padding-top: 2%;
@@ -245,7 +260,16 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 0%;
+  width: 60rem;
+  gap: 23rem;
+  padding-left: 16%;
 }
+#workout-time {
+  font-size: 1rem;
+  color: rgb(34, 33, 34);
+  margin-top: 16px;
+}
+
 .warmup-content {
   width: 98%;
   height: auto;

@@ -1,0 +1,166 @@
+* {
+  background-color: rgb(226, 220, 203);
+}
+
+.container {
+  margin-top: 10rem;
+}
+h1 {
+  font-size: 5rem;
+  color: rgb(34, 33, 34);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0%;
+}
+
+#yourwoh2 {
+  font-size: 2.5rem;
+  color: rgb(226, 220, 203);
+  background-color: rgb(34, 33, 34);
+  font-weight: bold;
+  margin-bottom: 0%;
+}
+
+h2 {
+  color: rgb(34, 33, 34);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0%;
+}
+
+.save-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(226, 220, 203);
+  border: 3px solid rgb(226, 220, 203);
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.workout-panel {
+  background-color: rgb(34, 33, 34);
+  padding: 15px;
+  width: 98%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.workout-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.workout-list li {
+  margin: 6px 0;
+  padding: 6px 10px;
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workout-list .remove-btn {
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(226, 220, 203);
+  border: 3px solid rgb(226, 220, 203);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.workout-list .remove-btn:hover {
+  background-color: rgb(226, 106, 69);
+}
+
+.exercise-card {
+  background-color: rgb(34, 33, 34);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.exercise-title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 2%;
+  background-color: rgb(34, 33, 34);
+  color: rgb(226, 220, 203);
+}
+
+.exercise-cat {
+  font-size: 1rem;
+  color: rgb(226, 220, 203);
+  margin-bottom: 15px;
+  background-color: rgb(34, 33, 34);
+}
+
+.exercise-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  background-color: rgb(34, 33, 34);
+  color: rgb(226, 220, 203);
+}
+
+p {
+  font-size: 1.5rem;
+  background-color: rgb(34, 33, 34);
+  color: rgb(226, 220, 203);
+  text-align: left;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.tags {
+  background-color: rgb(34, 33, 34);
+  gap: 90px;
+  margin-bottom: 3%;
+}
+.tag {
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: rgb(221, 124, 128);
+}
+
+.placeholder {
+  color: #777;
+}
+
+button.add-button {
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(226, 220, 203);
+  border: 3px solid rgb(226, 220, 203);
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+button.add-button:hover {
+  background-color: rgb(96, 132, 164);
+}
+button:active {
+  transform: scale(0.95);
+  background-color: rgb(226, 220, 203);
+}
+
+.loading {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 2rem;
+  color: rgb(34, 33, 34);
+}
