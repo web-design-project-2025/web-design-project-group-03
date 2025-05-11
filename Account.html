@@ -24,7 +24,6 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
       rel="stylesheet"
     />
-    <script src="js/main.js" defer></script>
     <script src="js/login.js" defer></script>
   </head>
   <body>
@@ -140,39 +139,39 @@
       </nav>
     </div>
     <!-- Hamburger menu -->
-  </body>
-  <main>
-    <div class="content">
-      <div class="backgroundAcc">
-        <img
-          src="img/Beige-blnce-logo.png"
-          class="accountBlnceLogo"
-          alt="company logo"
-        />
-        <div class="centerLog">
-          <h1 class="loginTxt">Login</h1>
-          <form method="post">
-            <div class="txtField">
-              <input type="text" required />
-              <span></span>
-              <label>Username</label>
-            </div>
-            <div class="txtField">
-              <input type="password" required />
-              <span></span>
-              <label>Password</label>
-            </div>
-            <a href="ForgotPass.html" class="forgotPass">Forgot Password?</a>
-            <input type="submit" value="Login" />
-            <div class="signUpLink">
-              Not a member? <a href="Register.html">Register</a>
-            </div>
-          </form>
+    <main>
+      <div class="content">
+        <div class="backgroundAcc">
+          <img
+            src="img/Beige-blnce-logo.png"
+            class="accountBlnceLogo"
+            alt="company logo"
+          />
+          <div class="centerLog">
+            <h1 class="loginTxt">Login</h1>
+            <form id="login-form" method="post">
+              <div class="txtField">
+                <input type="text" id="username" required />
+                <span></span>
+                <label>Username</label>
+              </div>
+              <div class="txtField">
+                <input type="password" id="password" required />
+                <span></span>
+                <label>Password</label>
+              </div>
+              <a href="ForgotPass.html" class="forgotPass">Forgot Password?</a>
+              <input type="submit" value="Login" />
+              <div class="signUpLink">
+                Not a member? <a href="Register.html">Register</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-      <footer>
+    </main>
+
+    <footer>
       <section class="navigation-container">
         <div class="nav-column">
           <a href="exercises.html">exercises ➔</a>
@@ -266,4 +265,5 @@
         </svg>
       </button>
     </footer>
+  </body>
 </html>
