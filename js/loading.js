@@ -1,4 +1,3 @@
-
 //loading data from api
 //loading data from json files
 const exerciseId = new URLSearchParams(window.location.search).get("id");
@@ -61,7 +60,9 @@ if (
   }
 } else {
   console.log("This page does not contain exercise-related elements.");
-/*function finishedLoadingHandler(event) {
+}
+
+function finishedLoadingHandler(event) {
   const request = event.target;
   const response = request.response;
   console.log(response.role);
@@ -225,7 +226,6 @@ function loadHandler() {
     });
 }
 window.addEventListener("load", loadHandler);
-*/
 
 function loadHandler() {
   fetch("https://wger.de/api/v2/exerciseinfo/")
