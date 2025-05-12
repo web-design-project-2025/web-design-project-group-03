@@ -17,35 +17,10 @@ async function fetchExercises() {
 }
 
 function renderExercises(exercises) {
+  exerciseContainer.innerHTML = ""; // Clear previous content
   exercises.forEach((exercise) => {
-    const clone = template.content.cloneNode(true);
-
-    // Try to find English translation (language code 2), fallback to first available translation
-    const translation =
-      exercise.translations?.find((t) => t.language === 2) ||
-      exercise.translations?.[0];
-
-    const name = translation?.name || "No name available";
-    const description = translation?.description || "No description available";
-    const category = exercise.category?.name || "No category";
-
-    clone.querySelector(".exercise-title").textContent = name;
-    clone.querySelector(".exercise-cat").textContent = `Category: ${category}`;
-    clone.querySelector(".exercise-description").innerHTML = description;
-
-    // Handle muscles - ensuring we only show valid muscles and format them properly
-    const muscles = exercise.muscles?.length
-      ? exercise.muscles.map((m) => m.name).join(", ")
-      : "No muscles listed";
-    clone.querySelector(".muscles").textContent = `Muscles: ${muscles}`;
-
-    // Handle equipment - if there's no equipment, show "Bodyweight"
-    const equipment = exercise.equipment?.length
-      ? exercise.equipment.map((e) => e.name).join(", ")
-      : "Bodyweight";
-    clone.querySelector(".equipment").textContent = `Equipment: ${equipment}`;
-
-    exerciseContainer.appendChild(clone);
+    const card = createExerciseCard(exercise, true); // true = show "Add to Workout"
+    exerciseContainer.appendChild(card);
   });
 }
 
