@@ -6,7 +6,7 @@ let workout = [];
 async function fetchExercises() {
   try {
     const response = await fetch(
-      "https://wger.de/api/v2/exerciseinfo/?limit=100"
+      "https://wger.de/api/v2/exerciseinfo/?limit=100&language=2"
     );
     const data = await response.json();
     renderExercises(data.results);
@@ -17,10 +17,35 @@ async function fetchExercises() {
 }
 
 function renderExercises(exercises) {
-  exerciseContainer.innerHTML = "";
-  exercises.forEach((ex) => {
-    const card = createExerciseCard(ex, true);
-    exerciseContainer.appendChild(card);
+  exercises.forEach((exercise) => {
+    const clone = template.content.cloneNode(true);
+
+    // Try to find English translation (language code 2), fallback to first available translation
+    const translation =
+      exercise.translations?.find((t) => t.language === 2) ||
+      exercise.translations?.[0];
+
+    const name = translation?.name || "No name available";
+    const description = translation?.description || "No description available";
+    const category = exercise.category?.name || "No category";
+
+    clone.querySelector(".exercise-title").textContent = name;
+    clone.querySelector(".exercise-cat").textContent = `Category: ${category}`;
+    clone.querySelector(".exercise-description").innerHTML = description;
+
+    // Handle muscles - ensuring we only show valid muscles and format them properly
+    const muscles = exercise.muscles?.length
+      ? exercise.muscles.map((m) => m.name).join(", ")
+      : "No muscles listed";
+    clone.querySelector(".muscles").textContent = `Muscles: ${muscles}`;
+
+    // Handle equipment - if there's no equipment, show "Bodyweight"
+    const equipment = exercise.equipment?.length
+      ? exercise.equipment.map((e) => e.name).join(", ")
+      : "Bodyweight";
+    clone.querySelector(".equipment").textContent = `Equipment: ${equipment}`;
+
+    exerciseContainer.appendChild(clone);
   });
 }
 
@@ -55,29 +80,41 @@ function updateWorkoutList() {
 
 function createExerciseCard(ex, showAddButton) {
   const clone = template.content.cloneNode(true);
-  clone.querySelector(".exercise-title").textContent =
-    ex.name || "No name available";
-  clone.querySelector(
-    ".exercise-cat"
-  ).textContent = `Category: ${ex.category.name}`;
-  clone.querySelector(".exercise-description").textContent =
-    ex.description || "No description available";
 
-  const musclesContainer = clone.querySelector(".muscles");
-  musclesContainer.innerHTML = ex.muscles.length
-    ? ex.muscles.map((m) => `<span class="tag">${m.name}</span>`).join("")
-    : '<span class="tag">N/A</span>';
+  // Try to find English translation (language code 2), fallback to first available translation
+  const translation =
+    ex.translations?.find((t) => t.language === 2) || ex.translations?.[0];
 
-  const equipmentContainer = clone.querySelector(".equipment");
-  equipmentContainer.innerHTML = ex.equipment.length
-    ? ex.equipment.map((eq) => `<span class="tag">${eq.name}</span>`).join("")
+  const name = translation?.name?.trim() || "No name available";
+  clone.querySelector(".exercise-title").textContent = name;
+
+  clone.querySelector(".exercise-cat").textContent = ex.category?.name
+    ? `Category: ${ex.category.name}`
+    : "Category: N/A";
+
+  const description =
+    translation?.description?.trim() || "No description available";
+  clone.querySelector(".exercise-description").innerHTML = description;
+
+  // Handling muscles - ensuring no repeated tags and no "undefined"
+  const muscles = ex.muscles?.length
+    ? ex.muscles.map((m) => `<span class="tag">${m.name}</span>`).join(", ")
+    : '<span class="tag">No muscles listed</span>';
+
+  // Handling equipment - show "Bodyweight" or list the equipment
+  const equipment = ex.equipment?.length
+    ? ex.equipment.map((eq) => `<span class="tag">${eq.name}</span>`).join(", ")
     : '<span class="tag">Bodyweight</span>';
+
+  clone.querySelector(".muscles").innerHTML = muscles;
+  clone.querySelector(".equipment").innerHTML = equipment;
 
   const button = clone.querySelector(".action-button");
   button.textContent = showAddButton ? "Add to Workout" : "Remove";
   button.className = showAddButton
     ? "add-button action-button"
     : "remove-btn action-button";
+
   button.onclick = () => {
     if (showAddButton) {
       addToWorkout(ex);
