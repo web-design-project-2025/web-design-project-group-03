@@ -350,10 +350,16 @@ nav {
   font-style: normal;
   font-weight: 700;
   background-color: transparent;
-  color: black;
+  color: #222122;
   border: 3px solid #222122;
   border-radius: 40px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.joinrect button:hover {
+  background-color: #222122;
+  color: white;
 }
 
 #about-vector {
@@ -365,7 +371,6 @@ nav {
 }
 
 /* STATIC INFO / BEFORE MOVING  */
-
 .explore-panels,
 .popular-panels {
   display: flex;
@@ -434,14 +439,19 @@ nav {
 }
 
 /* TITLES for the see all and explore etc. */
-.explore,
-.Popular {
-  display: flex;
-  gap: 35%;
+.explore h1 {
+  padding-left: 2%;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 44px;
+  color: #222122;
 }
 
 .explore a,
 .Popular a {
+  padding-right: 3%;
   margin-left: auto;
   display: block;
   color: black;
@@ -451,9 +461,17 @@ nav {
 }
 
 .explore,
+.Popular {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35%;
+}
+
+.explore,
 .Popular h1 {
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .panel h3,
