@@ -2,7 +2,7 @@
 const favoriteContainer = document.getElementById("favorite-container");
 const savedContainer = document.getElementById("saved-container");
 
-// ---------- FAVORITES ----------
+// favorite workouts
 if (favoriteContainer) {
   const favoriteItems = JSON.parse(localStorage.getItem("favoriteItems")) || [];
 
@@ -37,7 +37,7 @@ function removeFromFavorite(idx) {
   window.location.reload();
 }
 
-// ---------- SAVED WORKOUTS ----------
+// saved created workouts
 if (savedContainer) {
   const savedItems = JSON.parse(localStorage.getItem("savedItems")) || [];
 
