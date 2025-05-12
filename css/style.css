@@ -11,7 +11,12 @@
 }
 
 a {
+  outline: none;
   text-decoration: none;
+}
+
+a:focus {
+  outline: none;
 }
 
 /* NAVIGATION BAR */
@@ -350,34 +355,113 @@ nav {
   border-radius: 40px;
   cursor: pointer;
 }
-.Explore,
+
+#about-vector {
+  padding-top: 2%;
+  width: 3vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* STATIC INFO / BEFORE MOVING  */
+
+.explore-panels,
+.popular-panels {
+  display: flex;
+  width: 100%;
+  height: 30em;
+  gap: 0.5rem;
+}
+
+.explore-panels .panel:first-child,
+.popular-panels .panel:first-child {
+  flex-grow: 3;
+}
+
+.explore-panels .panel:first-child .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* HOVERING LOGIC EXPLORE PANEL */
+.explore-panels {
+  display: flex;
+}
+
+.panel {
+  flex: 1;
+  transition: flex 0.3s ease;
+}
+
+/* when panel hovered, grow it */
+.panel:hover {
+  flex: 3;
+}
+
+/* shrink others when one is hovered */
+.explore-panels:hover .panel {
+  flex: 1; /* default size of non-hovered */
+}
+
+/* maintain flex: 3 on the hovered one */
+.explore-panels:hover .panel:hover {
+  flex: 3;
+}
+
+.panel-text {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* text visability when not hovered */
+.explore-panels:hover .panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* text visability when */
+.explore-panels:hover .panel:hover .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* TITLES for the see all and explore etc. */
+.explore,
 .Popular {
   display: flex;
   gap: 35%;
 }
 
-.Explore a,
+.explore a,
 .Popular a {
-  text-decoration: none;
+  margin-left: auto;
+  display: block;
   color: black;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding-left: 10px;
 }
 
-.Explore,
+.explore,
 .Popular h1 {
   margin-bottom: 0;
   margin-top: 10px;
 }
-.explore-panels,
-.popular-panels {
-  display: flex;
-  width: 60vw;
-  height: 40vh;
+
+.panel h3,
+.panel p {
+  color: white;
 }
 
+/* BACKGROUND PANEL INFO */
 .panel {
   flex: 1;
   transition: flex 0.5s ease;
@@ -388,49 +472,37 @@ nav {
   cursor: pointer;
 }
 
-/* Panel Colors */
-#Cycling {
-  background-color: rgb(106, 142, 174);
+.panel h3 {
+  font-size: 2rem;
+  padding-left: 4%;
+  margin-top: 20rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
-#Powerlifting {
-  background-color: rgb(221, 124, 128);
+.panel p {
+  font-size: 1rem;
+  padding-left: 4%;
+  padding-right: 3%;
+  margin-top: 0;
 }
 
-#Yoga {
-  background-color: rgb(125, 120, 48);
+#cycling {
+  background-image: url("/img/bike-close-up.jpg");
+}
+
+#powerlifting {
+  background-image: url("/img/powerlifting.png");
+}
+
+#yoga {
+  background-image: url("/img/yoga.png");
 }
 
 #high,
 #medium,
 #low {
   background-color: rgb(226, 220, 203);
-}
-
-.panel:hover {
-  flex: 1.5;
-  transition: flex 0.5s ease;
-}
-
-.panel h3 {
-  font-size: 2rem;
-  padding-left: 3%;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-.panel p {
-  font-size: 1rem;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin-top: 0;
-}
-
-#about-vector {
-  padding-top: 2%;
-  width: 3vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 /* COMPLETE FOOTER */
@@ -559,6 +631,9 @@ footer p {
 
 /*  BACK TO TOP LOGIC  */
 #backToTop {
+  width: 3.5vw;
+  height: 3.5vw;
+  min-width: 3.5vw;
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -613,7 +688,7 @@ footer p {
 /*  RESPONSIVENESS, MEDIA QUERIES  */
 
 /* small screens (phones) */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .nav-bar {
     flex-direction: column;
     height: auto;
@@ -667,9 +742,10 @@ footer p {
     line-height: 1;
   }
 }
+  */
 
 /* medium screens (tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
+/*@media (min-width: 601px) and (max-width: 1024px) {
   .nav-bar {
     padding: 1rem;
   }
@@ -709,9 +785,9 @@ footer p {
     font-size: 8rem;
   }
 }
-
+*/
 /* large screens (desktops and up) */
-@media (min-width: 1025px) {
+/*@media (min-width: 1025px) {
   .nav-bar {
     max-width: 75%;
   }
@@ -727,7 +803,7 @@ footer p {
 
   .explore-panels,
   .popular-panels {
-    width: 60vw;
+    width: 100vw;
     flex-direction: row;
   }
 
@@ -748,9 +824,9 @@ footer p {
     font-size: 15rem;
   }
 }
-
+*/
 /* Extra-large screens (ultrawide monitors) */
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
   .nav-bar {
     max-width: 60%;
   }
@@ -782,3 +858,4 @@ footer p {
     font-size: 20rem;
   }
 }
+*/
