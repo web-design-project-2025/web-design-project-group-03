@@ -1,4 +1,77 @@
 {
-  "name": "dog",
-  "role": "animal"
+  "1": {
+    "name": "Cycling",
+    "description": "Cycling is a great way to stay fit and enjoy the outdoors. It can be done on roads, trails, or even in the gym on a stationary bike. Cycling is low-impact and can be adjusted to suit your fitness level.",
+    "benefits": [
+      "Improves cardiovascular fitness",
+      "Strengthens muscles",
+      "Burns calories",
+      "Enhances joint mobility",
+      "Improves coordination and balance"
+    ],
+    "quote": "Cycling is great because it's easy on your body - Mari Holden, Olympic cyclist",
+    "image": "img/bike.jpg"
+  },
+  "2": {
+    "name": "Powerlifting",
+    "description": "Powerlifting is a strength sport that focuses on three main lifts: the squat, bench press, and deadlift. It is a great way to build strength and muscle mass. Powerlifting can be done in a gym or at home with the right equipment.",
+    "benefits": [
+      "Builds strength and muscle mass",
+      "Improves bone density",
+      "Boosts metabolism",
+      "Enhances mental toughness",
+      "Increases functional strength for daily activities"
+    ],
+    "quote": "Powerlifting is a great way to build strength and muscle mass",
+    "image": "img/blackandwhite-weights-1634747_640 kopiera.jpg"
+  },
+  "3": {
+    "name": "Yoga",
+    "description": "Yoga is a mind-body practice that combines physical postures, breathing exercises, and meditation. It can improve flexibility, strength, and mental clarity. Yoga can be practiced at home or in a class setting.",
+    "benefits": [
+      "Improves flexibility",
+      "Enhances strength",
+      "Reduces stress and anxiety",
+      "Improves mental clarity",
+      "Promotes relaxation and mindfulness"
+    ],
+    "quote": "Yoga is the journey of the self, through the self, to the self - The Bhagavad Gita",
+    "image": "img/bwyoga.jpg"
+  },
+  "4": {
+    "name": "high-intensity interval training (HIIT)",
+    "description": "HIIT is a form of exercise that alternates between short bursts of intense activity and periods of rest or lower-intensity exercise. It is a time-efficient way to improve cardiovascular fitness and burn calories.",
+    "benefits": [
+      "Burns calories quickly",
+      "Improves cardiovascular fitness",
+      "Increases metabolism",
+      "Can be done anywhere with little to no equipment",
+      "Saves time compared to traditional workouts"
+    ],
+    "quote": "HIIT is a great way to get a full-body workout in a short amount of time"
+  },
+  "5": {
+    "name": "medium-intensity steady-state (MISS)",
+    "description": "MISS is a form of exercise that involves maintaining a moderate level of intensity for an extended period of time. It is often used for cardiovascular training and can be done through activities like jogging, cycling, or swimming.",
+    "benefits": [
+      "Improves cardiovascular fitness",
+      "Burns calories",
+      "Enhances endurance",
+      "Can be done outdoors or indoors",
+      "Supports weight management"
+    ],
+    "quote": "MISS is a great way to build endurance and improve overall fitness"
+  },
+  "6": {
+    "name": "low-intensity steady-state (LISS)",
+    "description": "LISS is a form of exercise that involves maintaining a low level of intensity for an extended period of time. It is often used for recovery or fat loss and can be done through activities like walking, light jogging, or cycling.",
+    "benefits": [
+      "Gentle on the joints",
+      "Improves cardiovascular health",
+      "Supports recovery",
+      "Can be done anywhere",
+      "Helps with fat loss"
+    ],
+    "quote": "LISS is a great way to stay active without putting too much stress on the body"
+  }
 }

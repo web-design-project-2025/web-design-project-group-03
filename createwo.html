@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Builder</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/create.css" />
+    <script src="js/api.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Workout Builder</h1>
+
+      <div class="workout-panel">
+        <h2 id="yourwoh2">Your Workout</h2>
+        <ul id="workout-list" class="workout-list">
+          <li class="placeholder">No exercises added yet.</li>
+        </ul>
+        <button id="save-workout" class="save-button">Save Workout</button>
+      </div>
+
+      <h2>Available Exercises</h2>
+      <div id="exercise-list">
+        <div class="loading">Loading exercises...</div>
+      </div>
+    </div>
+
+    <template id="exercise-template">
+      <div class="exercise-card">
+        <div class="exercise-title"></div>
+        <div class="exercise-cat"></div>
+        <div class="exercise-description"></div>
+        <p>Target Muscles:</p>
+        <div class="tags muscles"></div>
+        <br />
+        <p>Equipment:</p>
+        <div class="tags equipment"></div>
+        <button class="action-button"></button>
+      </div>
+    </template>
+  </body>
+</html>
