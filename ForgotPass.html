@@ -3,17 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLNCE 丨 COURSES</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/courses.css" />
+    <title>BLNCE 丨 HOME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/account.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    <script src="js/loading.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -128,76 +138,34 @@
         </a>
       </nav>
     </div>
-    <main>
-      <section class="exercise-container">
-        <div class="exercise-item">
-          <a href="exercise.html?id=1">
-            <img
-              class="exercise-img"
-              src="img/bike-close-up.jpg"
-              alt="bike-close-up"
-            />
-            <h1 class="exercise-h1">cycling</h1>
-          </a>
-        </div>
-        <div class="exercise-item">
-          <a href="exercise.html?id=2">
-            <img class="exercise-img" src="img/weights.jpg" alt="weights" />
-            <h1 class="exercise-h1">powerlifting</h1>
-          </a>
-        </div>
-        <div class="exercise-item">
-          <a href="exercise.html?id=3">
-            <img
-              class="exercise-img"
-              src="img/bw-yoga-6723315_640.jpg"
-              alt="yoga"
-            />
-            <h1 class="exercise-h1">yoga</h1>
-          </a>
-        </div>
-      </section>
-      <section>
-        <div class="exercise-item">
-          <a href="exercise.html?id=4">
-            <h1>High-intensity</h1>
-          </a>
-        </div>
-        <div class="exercise-item">
-          <a href="exercise.html?id=5">
-            <h1>Medium-intensity</h1>
-          </a>
-        </div>
-        <div class="exercise-item">
-          <a href="exercise.html?id=6">
-            <h1>Low-intensity</h1>
-          </a>
-        </div>
-      </section>
-      <h2>Alredy have something in mind?</h2>
-      <a href="createwo.html" class="create">Create workout here</a>
-      <h2>Don't know where to start?</h2>
-      <p>
-        <a href="inspiration.html">Get inspired</a> by our community and find
-        the perfect workout for you.
-      </p>
-
-      <h2>or brows our popluar workouts here</h2>
-
-      <div class="popularwo">
-        <div class="popular-panel">
-          <a href="workouts.html?id=4"> High-intensity powerlifting </a>
-          <div class="popular-box"></div>
-        </div>
-        <div class="popular-panel">
-          <a href="workouts.html?id=3">Low-intensity cycling</a>
-        </div>
-        <div class="popular-panel">
-          <a href="workouts.html?id=9">Low-intensity yoga</a>
+    <!-- Hamburger menu -->
+  </body>
+  <main>
+    <div class="content">
+      <div class="backgroundAcc">
+        <img
+          src="img/Beige-blnce-logo.png"
+          class="accountBlnceLogo"
+          alt="company logo"
+        />
+        <div class="centerLog">
+          <h1 class="loginTxt">Verify your email</h1>
+          <form method="post">
+            <div class="txtField">
+              <input type="text" required />
+              <span></span>
+              <label>E-mail</label>
+            </div>
+            <input type="submit" value="Send Verification" />
+            <div class="signUpLink">
+              Not a member? <a href="Register.html">Register</a>
+            </div>
+          </form>
         </div>
       </div>
-    </main>
-    <footer>
+    </div>
+  </main>
+      <footer>
       <section class="navigation-container">
         <div class="nav-column">
           <a href="exercises.html">exercises ➔</a>
@@ -291,5 +259,4 @@
         </svg>
       </button>
     </footer>
-  </body>
 </html>
