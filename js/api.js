@@ -1,10 +1,11 @@
 const exerciseContainer = document.getElementById("exercise-list");
 const workoutList = document.getElementById("workout-list");
 const template = document.getElementById("exercise-template");
-let workout = [];
-let exercisesData = []; // stores fetched exercises data, for filtering
 
-// upd muscleGroupMapping with right muscles
+let workout = [];
+let exercisesData = [];
+
+// Map specific muscles to broader muscle groups
 const muscleGroupMapping = {
   Legs: [
     "Biceps femoris",
@@ -30,7 +31,7 @@ async function fetchExercises() {
       "https://wger.de/api/v2/exerciseinfo/?limit=100&language=2"
     );
     const data = await response.json();
-    exercisesData = data.results; // stores fetched exercises data for filtering
+    exercisesData = data.results;
     renderExercises(exercisesData);
     generateMuscleGroupButtons(exercisesData);
   } catch (error) {
@@ -40,59 +41,29 @@ async function fetchExercises() {
 }
 
 function renderExercises(exercises) {
-  exerciseContainer.innerHTML = ""; // clear prev
+  exerciseContainer.innerHTML = "";
   exercises.forEach((exercise) => {
-    const clone = template.content.cloneNode(true);
-
-    // try to find eng transl (language code 2), fallback to first available translation
-    const translation =
-      exercise.translations?.find((t) => t.language === 2) ||
-      exercise.translations?.[0];
-
-    const name = translation?.name || "No name available";
-    const description = translation?.description || "No description available";
-    const category = exercise.category?.name || "No category";
-
-    // render exerc
-    clone.querySelector(".exercise-title").textContent = name;
-    clone.querySelector(".exercise-cat").textContent = `Category: ${category}`;
-    clone.querySelector(".exercise-description").innerHTML = description;
-
-    // show valid muscles or no muscle listed
-    const muscles = exercise.muscles?.length
-      ? exercise.muscles.map((m) => m.name).join(", ")
-      : "No muscles listed";
-    clone.querySelector(".muscles").textContent = `Muscles: ${muscles}`;
-
-    // show bw if no equipment
-    const equipment = exercise.equipment?.length
-      ? exercise.equipment.map((e) => e.name).join(", ")
-      : "Bodyweight";
-    clone.querySelector(".equipment").textContent = `Equipment: ${equipment}`;
-
-    exerciseContainer.appendChild(clone);
+    const card = createExerciseCard(exercise, true); // show "Add to Workout"
+    exerciseContainer.appendChild(card);
   });
 }
 
-// gen muscle group filter buttons
 function generateMuscleGroupButtons(exercises) {
   const muscleGroups = new Set();
 
   exercises.forEach((exercise) => {
     exercise.muscles?.forEach((muscle) => {
-      // find correct muscle group by checking the muscleGroupMapping
       for (const group in muscleGroupMapping) {
         if (muscleGroupMapping[group].includes(muscle.name)) {
-          muscleGroups.add(group); // add muscle group to the set
+          muscleGroups.add(group);
         }
       }
     });
   });
 
   const filterContainer = document.getElementById("muscle-filter-buttons");
-  filterContainer.innerHTML = ""; // clear existing buttons
+  filterContainer.innerHTML = "";
 
-  // create filter buttons for each muscle group
   muscleGroups.forEach((group) => {
     const button = document.createElement("button");
     button.textContent = group;
@@ -100,7 +71,6 @@ function generateMuscleGroupButtons(exercises) {
     filterContainer.appendChild(button);
   });
 
-  // add clear filter
   const clearButton = document.createElement("button");
   clearButton.textContent = "Clear Filter";
   clearButton.onclick = clearFilter;
@@ -118,7 +88,6 @@ function clearFilter() {
   renderExercises(exercisesData);
 }
 
-// add to workout
 function addToWorkout(exercise) {
   if (!workout.find((e) => e.id === exercise.id)) {
     workout.push(exercise);
@@ -126,13 +95,11 @@ function addToWorkout(exercise) {
   }
 }
 
-// remove from workout
 function removeFromWorkout(id) {
   workout = workout.filter((e) => e.id !== id);
   updateWorkoutList();
 }
 
-// upd workout list
 function updateWorkoutList() {
   workoutList.innerHTML = "";
 
@@ -143,58 +110,54 @@ function updateWorkoutList() {
   }
 
   workout.forEach((exercise) => {
-    const card = createExerciseCard(exercise, false);
+    const card = createExerciseCard(exercise, false); // show "Remove"
     const li = document.createElement("li");
     li.appendChild(card);
     workoutList.appendChild(li);
   });
 }
 
-// create exercise card for the workout list
-function createExerciseCard(ex, showAddButton) {
+function createExerciseCard(ex, showAddButton = true) {
   const clone = template.content.cloneNode(true);
 
-  // try to find eng
   const translation =
     ex.translations?.find((t) => t.language === 2) || ex.translations?.[0];
 
   const name = translation?.name?.trim() || "No name available";
-  clone.querySelector(".exercise-title").textContent = name;
+  const description =
+    translation?.description?.trim() || "No description available";
 
+  clone.querySelector(".exercise-title").textContent = name;
   clone.querySelector(".exercise-cat").textContent = ex.category?.name
     ? `Category: ${ex.category.name}`
     : "Category: N/A";
-
-  const description =
-    translation?.description?.trim() || "No description available";
   clone.querySelector(".exercise-description").innerHTML = description;
 
-  // no repeated tags and no "undefined"
   const muscles = ex.muscles?.length
     ? ex.muscles.map((m) => `<span class="tag">${m.name}</span>`).join(", ")
     : '<span class="tag">No muscles listed</span>';
-
-  // show bw or list equipment
-  const equipment = ex.equipment?.length
-    ? ex.equipment.map((eq) => `<span class="tag">${eq.name}</span>`).join(", ")
-    : '<span class="tag">Bodyweight</span>';
-
   clone.querySelector(".muscles").innerHTML = muscles;
+
+  const equipment = ex.equipment?.length
+    ? ex.equipment.map((e) => `<span class="tag">${e.name}</span>`).join(", ")
+    : '<span class="tag">Bodyweight</span>';
   clone.querySelector(".equipment").innerHTML = equipment;
 
   const button = clone.querySelector(".action-button");
-  button.textContent = showAddButton ? "Add to Workout" : "Remove";
-  button.className = showAddButton
-    ? "add-button action-button"
-    : "remove-btn action-button";
+  if (button) {
+    button.textContent = showAddButton ? "Add to Workout" : "Remove";
+    button.className = showAddButton
+      ? "add-button action-button"
+      : "remove-btn action-button";
 
-  button.onclick = () => {
-    if (showAddButton) {
-      addToWorkout(ex);
-    } else {
-      removeFromWorkout(ex.id);
-    }
-  };
+    button.onclick = () => {
+      if (showAddButton) {
+        addToWorkout(ex);
+      } else {
+        removeFromWorkout(ex.id);
+      }
+    };
+  }
 
   return clone;
 }
