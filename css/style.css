@@ -350,6 +350,47 @@ nav {
   border-radius: 40px;
   cursor: pointer;
 }
+
+/* STATIC INFO FOR EXPLORE + POPULAR PANELS */
+.explore-panels,
+.popular-panels {
+  display: flex;
+  width: 100%;
+  height: 30em;
+}
+
+/* STATIC WIDTH */
+.explore-panels .panel:first-child,
+.popular-panels .panel:first-child {
+  flex-grow: 3;
+}
+
+/* HOVERING LOGIC EXPLORE PANEL */
+.explore-panels {
+  display: flex;
+}
+
+.panel {
+  flex: 1;
+  transition: flex 0.3s ease;
+}
+
+/* when panel hovered, grow it */
+.panel:hover {
+  flex: 3;
+}
+
+/* shrink others when one is hovered */
+.explore-panels:hover .panel {
+  flex: 1; /* default size of non-hovered */
+}
+
+/* maintain flex: 3 on the hovered one */
+.explore-panels:hover .panel:hover {
+  flex: 3;
+}
+
+/* SOMETHING ELSE */
 .Explore,
 .Popular {
   display: flex;
@@ -370,12 +411,6 @@ nav {
 .Popular h1 {
   margin-bottom: 0;
   margin-top: 10px;
-}
-.explore-panels,
-.popular-panels {
-  display: flex;
-  width: 60vw;
-  height: 40vh;
 }
 
 .panel {
@@ -559,6 +594,9 @@ footer p {
 
 /*  BACK TO TOP LOGIC  */
 #backToTop {
+  width: 3.5vw;
+  height: 3.5vw;
+  min-width: 3.5vw;
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -613,7 +651,7 @@ footer p {
 /*  RESPONSIVENESS, MEDIA QUERIES  */
 
 /* small screens (phones) */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .nav-bar {
     flex-direction: column;
     height: auto;
@@ -667,9 +705,10 @@ footer p {
     line-height: 1;
   }
 }
+  */
 
 /* medium screens (tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
+/*@media (min-width: 601px) and (max-width: 1024px) {
   .nav-bar {
     padding: 1rem;
   }
@@ -709,9 +748,9 @@ footer p {
     font-size: 8rem;
   }
 }
-
+*/
 /* large screens (desktops and up) */
-@media (min-width: 1025px) {
+/*@media (min-width: 1025px) {
   .nav-bar {
     max-width: 75%;
   }
@@ -727,7 +766,7 @@ footer p {
 
   .explore-panels,
   .popular-panels {
-    width: 60vw;
+    width: 100vw;
     flex-direction: row;
   }
 
@@ -748,9 +787,9 @@ footer p {
     font-size: 15rem;
   }
 }
-
+*/
 /* Extra-large screens (ultrawide monitors) */
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
   .nav-bar {
     max-width: 60%;
   }
@@ -782,3 +821,4 @@ footer p {
     font-size: 20rem;
   }
 }
+*/
