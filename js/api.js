@@ -2,7 +2,27 @@ const exerciseContainer = document.getElementById("exercise-list");
 const workoutList = document.getElementById("workout-list");
 const template = document.getElementById("exercise-template");
 let workout = [];
-let exercisesData = []; // stores fetched exercises data, 4 filtering
+let exercisesData = []; // stores fetched exercises data, for filtering
+
+// upd muscleGroupMapping with right muscles
+const muscleGroupMapping = {
+  Legs: [
+    "Biceps femoris",
+    "Quadriceps femoris",
+    "Gluteus maximus",
+    "Hamstrings",
+    "Soleus",
+    "Gastrocnemius",
+  ],
+  Arms: ["Biceps brachii", "Anterior deltoid", "Triceps brachii", "Brachialis"],
+  Back: ["Trapezius", "Latissimus dorsi", "Rhomboid", "Erector spinae"],
+  Chest: ["Pectoralis major", "Serratus anterior"],
+  Core: [
+    "Rectus abdominis",
+    "Obliquus externus abdominis",
+    "Transverse abdominis",
+  ],
+};
 
 async function fetchExercises() {
   try {
@@ -10,7 +30,7 @@ async function fetchExercises() {
       "https://wger.de/api/v2/exerciseinfo/?limit=100&language=2"
     );
     const data = await response.json();
-    exercisesData = data.results; // stored fetched exercise data, same thing here, for filtering
+    exercisesData = data.results; // stores fetched exercises data for filtering
     renderExercises(exercisesData);
     generateMuscleGroupButtons(exercisesData);
   } catch (error) {
@@ -19,13 +39,12 @@ async function fetchExercises() {
   }
 }
 
-// render exercises
 function renderExercises(exercises) {
-  exerciseContainer.innerHTML = ""; // clear prev exercises
+  exerciseContainer.innerHTML = ""; // clear prev
   exercises.forEach((exercise) => {
     const clone = template.content.cloneNode(true);
 
-    // try to find English translation (language code 2), fallback to first available translation
+    // try to find eng transl (language code 2), fallback to first available translation
     const translation =
       exercise.translations?.find((t) => t.language === 2) ||
       exercise.translations?.[0];
@@ -34,18 +53,18 @@ function renderExercises(exercises) {
     const description = translation?.description || "No description available";
     const category = exercise.category?.name || "No category";
 
-    // render excrs data
+    // render exerc
     clone.querySelector(".exercise-title").textContent = name;
     clone.querySelector(".exercise-cat").textContent = `Category: ${category}`;
     clone.querySelector(".exercise-description").innerHTML = description;
 
-    // show valid muscles or "no muscles listed"
+    // show valid muscles or no muscle listed
     const muscles = exercise.muscles?.length
       ? exercise.muscles.map((m) => m.name).join(", ")
       : "No muscles listed";
     clone.querySelector(".muscles").textContent = `Muscles: ${muscles}`;
 
-    // show bodyweight if no equipment
+    // show bw if no equipment
     const equipment = exercise.equipment?.length
       ? exercise.equipment.map((e) => e.name).join(", ")
       : "Bodyweight";
@@ -55,12 +74,18 @@ function renderExercises(exercises) {
   });
 }
 
-// gen muscle group filter buttons dynamically based on exercises
+// gen muscle group filter buttons
 function generateMuscleGroupButtons(exercises) {
-  const muscleGroups = new Set(); // store unique muscle groups
+  const muscleGroups = new Set();
+
   exercises.forEach((exercise) => {
     exercise.muscles?.forEach((muscle) => {
-      muscleGroups.add(muscle.name); // add each muscle to the set
+      // find correct muscle group by checking the muscleGroupMapping
+      for (const group in muscleGroupMapping) {
+        if (muscleGroupMapping[group].includes(muscle.name)) {
+          muscleGroups.add(group); // add muscle group to the set
+        }
+      }
     });
   });
 
@@ -68,29 +93,27 @@ function generateMuscleGroupButtons(exercises) {
   filterContainer.innerHTML = ""; // clear existing buttons
 
   // create filter buttons for each muscle group
-  muscleGroups.forEach((muscle) => {
+  muscleGroups.forEach((group) => {
     const button = document.createElement("button");
-    button.textContent = muscle;
-    button.onclick = () => filterByMuscle(muscle);
+    button.textContent = group;
+    button.onclick = () => filterByMuscleGroup(group);
     filterContainer.appendChild(button);
   });
 
-  // add clear button
+  // add clear filter
   const clearButton = document.createElement("button");
   clearButton.textContent = "Clear Filter";
   clearButton.onclick = clearFilter;
   filterContainer.appendChild(clearButton);
 }
 
-// filter ex by muscle group
-function filterByMuscle(muscle) {
+function filterByMuscleGroup(group) {
   const filteredExercises = exercisesData.filter((exercise) =>
-    exercise.muscles?.some((m) => m.name === muscle)
+    exercise.muscles?.some((m) => muscleGroupMapping[group]?.includes(m.name))
   );
   renderExercises(filteredExercises);
 }
 
-// cleat current filter + show all exercises again
 function clearFilter() {
   renderExercises(exercisesData);
 }
@@ -127,11 +150,11 @@ function updateWorkoutList() {
   });
 }
 
-// create exercise 'card' for workout list
+// create exercise card for the workout list
 function createExerciseCard(ex, showAddButton) {
   const clone = template.content.cloneNode(true);
 
-  // try to find eng transl (same as b4)
+  // try to find eng
   const translation =
     ex.translations?.find((t) => t.language === 2) || ex.translations?.[0];
 
@@ -151,7 +174,7 @@ function createExerciseCard(ex, showAddButton) {
     ? ex.muscles.map((m) => `<span class="tag">${m.name}</span>`).join(", ")
     : '<span class="tag">No muscles listed</span>';
 
-  // show bodyweight or list the equipment
+  // show bw or list equipment
   const equipment = ex.equipment?.length
     ? ex.equipment.map((eq) => `<span class="tag">${eq.name}</span>`).join(", ")
     : '<span class="tag">Bodyweight</span>';
