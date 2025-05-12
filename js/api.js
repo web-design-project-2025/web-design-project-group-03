@@ -20,7 +20,7 @@ function renderExercises(exercises) {
   exercises.forEach((exercise) => {
     const clone = template.content.cloneNode(true);
 
-    // Try to find English translation (language code 2), fallback to first available translation
+    // try find eng translation (lang code 2), fallback to first available translation
     const translation =
       exercise.translations?.find((t) => t.language === 2) ||
       exercise.translations?.[0];
@@ -33,13 +33,13 @@ function renderExercises(exercises) {
     clone.querySelector(".exercise-cat").textContent = `Category: ${category}`;
     clone.querySelector(".exercise-description").innerHTML = description;
 
-    // Handle muscles - ensuring we only show valid muscles and format them properly
+    // handling muscles - only show valid muscles and format properly
     const muscles = exercise.muscles?.length
       ? exercise.muscles.map((m) => m.name).join(", ")
       : "No muscles listed";
     clone.querySelector(".muscles").textContent = `Muscles: ${muscles}`;
 
-    // Handle equipment - if there's no equipment, show "Bodyweight"
+    // hadnling equipment - if no equipment, show bw
     const equipment = exercise.equipment?.length
       ? exercise.equipment.map((e) => e.name).join(", ")
       : "Bodyweight";
@@ -81,7 +81,7 @@ function updateWorkoutList() {
 function createExerciseCard(ex, showAddButton) {
   const clone = template.content.cloneNode(true);
 
-  // Try to find English translation (language code 2), fallback to first available translation
+  // try to find eng translation, same as higher in the code
   const translation =
     ex.translations?.find((t) => t.language === 2) || ex.translations?.[0];
 
@@ -96,12 +96,12 @@ function createExerciseCard(ex, showAddButton) {
     translation?.description?.trim() || "No description available";
   clone.querySelector(".exercise-description").innerHTML = description;
 
-  // Handling muscles - ensuring no repeated tags and no "undefined"
+  // handling muscles - ensuring no repeated tags and no "undefined"
   const muscles = ex.muscles?.length
     ? ex.muscles.map((m) => `<span class="tag">${m.name}</span>`).join(", ")
     : '<span class="tag">No muscles listed</span>';
 
-  // Handling equipment - show "Bodyweight" or list the equipment
+  // handling equip - show bw or list the equipment
   const equipment = ex.equipment?.length
     ? ex.equipment.map((eq) => `<span class="tag">${eq.name}</span>`).join(", ")
     : '<span class="tag">Bodyweight</span>';
