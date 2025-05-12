@@ -11,7 +11,12 @@
 }
 
 a {
+  outline: none;
   text-decoration: none;
+}
+
+a:focus {
+  outline: none;
 }
 
 /* NAVIGATION BAR */
@@ -351,18 +356,38 @@ nav {
   cursor: pointer;
 }
 
-/* STATIC INFO FOR EXPLORE + POPULAR PANELS */
+#about-vector {
+  padding-top: 2%;
+  width: 3vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* STATIC INFO / BEFORE MOVING  */
+
 .explore-panels,
 .popular-panels {
   display: flex;
   width: 100%;
   height: 30em;
+  gap: 0.5rem;
 }
 
-/* STATIC WIDTH */
 .explore-panels .panel:first-child,
 .popular-panels .panel:first-child {
   flex-grow: 3;
+}
+
+.explore-panels .panel:first-child .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 /* HOVERING LOGIC EXPLORE PANEL */
@@ -390,29 +415,53 @@ nav {
   flex: 3;
 }
 
-/* SOMETHING ELSE */
-.Explore,
+.panel-text {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* text visability when not hovered */
+.explore-panels:hover .panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* text visability when */
+.explore-panels:hover .panel:hover .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* TITLES for the see all and explore etc. */
+.explore,
 .Popular {
   display: flex;
   gap: 35%;
 }
 
-.Explore a,
+.explore a,
 .Popular a {
-  text-decoration: none;
+  margin-left: auto;
+  display: block;
   color: black;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding-left: 10px;
 }
 
-.Explore,
+.explore,
 .Popular h1 {
   margin-bottom: 0;
   margin-top: 10px;
 }
 
+.panel h3,
+.panel p {
+  color: white;
+}
+
+/* BACKGROUND PANEL INFO */
 .panel {
   flex: 1;
   transition: flex 0.5s ease;
@@ -423,9 +472,23 @@ nav {
   cursor: pointer;
 }
 
-/* Panel Colors */
-#Cycling {
-  background-color: rgb(106, 142, 174);
+.panel h3 {
+  font-size: 2rem;
+  padding-left: 4%;
+  margin-top: 20rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.panel p {
+  font-size: 1rem;
+  padding-left: 4%;
+  padding-right: 3%;
+  margin-top: 0;
+}
+
+#cycling {
+  background-image: url("/img/bike-close-up.jpg");
 }
 
 #Powerlifting {
@@ -440,32 +503,6 @@ nav {
 #medium,
 #low {
   background-color: rgb(226, 220, 203);
-}
-
-.panel:hover {
-  flex: 1.5;
-  transition: flex 0.5s ease;
-}
-
-.panel h3 {
-  font-size: 2rem;
-  padding-left: 3%;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-.panel p {
-  font-size: 1rem;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin-top: 0;
-}
-
-#about-vector {
-  padding-top: 2%;
-  width: 3vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 /* COMPLETE FOOTER */
