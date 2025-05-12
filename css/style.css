@@ -491,12 +491,12 @@ nav {
   background-image: url("/img/bike-close-up.jpg");
 }
 
-#Powerlifting {
-  background-color: rgb(221, 124, 128);
+#powerlifting {
+  background-image: url("/img/powerlifting.png");
 }
 
-#Yoga {
-  background-color: rgb(125, 120, 48);
+#yoga {
+  background-image: url("/img/yoga.png");
 }
 
 #high,
