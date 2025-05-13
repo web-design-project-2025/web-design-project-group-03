@@ -72,7 +72,7 @@ nav {
   top: 7px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 75%;
   max-width: 100%;
   height: 38px;
   background: rgba(255, 255, 255, 0.1);
@@ -88,7 +88,7 @@ nav {
 }
 
 #logo img {
-  max-height: 160px;
+  max-height: 10px;
   width: auto;
   position: relative;
   top: -10px;
@@ -102,8 +102,8 @@ nav {
 /* SEARCH FUNCTION */
 .search {
   position: absolute;
-  top: 2.7vh;
-  left: 60%;
+  top: 25%;
+  left: 64%;
   display: flex;
   align-items: center;
   padding: 8px;
@@ -116,6 +116,7 @@ nav {
 .search-input {
   border: none;
   color: rgba(34, 33, 34, 0.7);
+  width: 17vh;
 }
 
 .search-input:focus {
@@ -132,9 +133,9 @@ input[type="text"] {
 /* PERSON ICON */
 .person-icon {
   position: absolute;
-  top: 2.5vh;
+  top: 23%;
   right: 9%;
-  width: 4vw;
+  width: 3vw;
   height: auto;
   fill: white;
   cursor: pointer;
@@ -142,9 +143,9 @@ input[type="text"] {
 
 .settings-icon {
   position: absolute;
-  top: 2.7vh;
+  top: 25%;
   right: 3%;
-  width: 4vw;
+  width: 3vw;
   height: auto;
   fill: white;
   cursor: pointer;
