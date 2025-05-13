@@ -28,43 +28,59 @@ backToTopButton.addEventListener("click", () => {
 // --- VIDEO LOGIC ---
 // show video controls and clear the hide timer
 function showControls() {
-  controls.classList.remove("hide");
-  clearTimeout(hideTimeout);
+  if (controls) {
+    controls.classList.remove("hide");
+    clearTimeout(hideTimeout);
+  }
 }
 
-// Hide video controls after a delay
 function startHideTimer() {
-  clearTimeout(hideTimeout);
-  hideTimeout = setTimeout(() => controls.classList.add("hide"), 2000);
+  if (controls) {
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => controls.classList.add("hide"), 2000);
+  }
+}
+
+if (controls) {
+  showControls();
+  startHideTimer();
 }
 
 // Mouse enter: Show controls
-videoWrapper.addEventListener("mouseenter", showControls);
+if (videoWrapper) {
+  videoWrapper.addEventListener("mouseenter", showControls);
+  videoWrapper.addEventListener("mouseleave", startHideTimer);
+}
 
 // Mouse leave: Start hide timer
-videoWrapper.addEventListener("mouseleave", startHideTimer);
+if (videoWrapper) {
+  videoWrapper.addEventListener("mouseleave", startHideTimer);
+} //
+// videoWrapper.addEventListener("mouseleave", startHideTimer);
 
 // Play/Pause button click
-playPauseBtn.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    playPauseBtn.textContent = "⏸"; // Pause icon
-  } else {
-    video.pause();
-    playPauseBtn.textContent = "▶"; // Play icon
-  }
-  showControls(); // Reset hide timer
-});
+if (playPauseBtn && video) {
+  playPauseBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      playPauseBtn.textContent = "⏸"; // Pause icon
+    } else {
+      video.pause();
+      playPauseBtn.textContent = "▶"; // Play icon
+    }
+    showControls(); // Reset hide timer
+  });
+}
 
-// Update time display as video plays
-video.addEventListener("timeupdate", () => {
-  videoTime.textContent = `${Math.floor(video.currentTime)}s`;
-});
+if (video && videoTime) {
+  video.addEventListener("timeupdate", () => {
+    videoTime.textContent = `${Math.floor(video.currentTime)}s`;
+  });
 
-// Reset play button when video ends
-video.addEventListener("ended", () => {
-  playPauseBtn.textContent = "▶"; // Reset to play icon
-});
+  video.addEventListener("ended", () => {
+    if (playPauseBtn) playPauseBtn.textContent = "▶"; // Reset to play icon
+  });
+}
 
 // --- SEARCH FUNCTIONALITY ---
 
@@ -99,9 +115,9 @@ startHideTimer();
 
 document.addEventListener("DOMContentLoaded", () => {
   const workoutPages = {
-    high: "http://127.0.0.1:5500/workouts.html?id=1",
-    medium: "http://127.0.0.1:5500/workouts.html?id=2",
-    low: "http://127.0.0.1:5500/workouts.html?id=3",
+    high: "workouts.html?id=1",
+    medium: "workouts.html?id=2",
+    low: "workouts.html?id=3",
   };
 
   Object.entries(workoutPages).forEach(([intensity, url]) => {
@@ -116,6 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+const navbar = document.querySelector(".nav-bar");
+const footer = document.querySelector("footer");
 
 navbar.classList.add("hidden");
 footer.classList.add("hidden");
