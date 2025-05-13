@@ -77,7 +77,6 @@ nav {
   height: 38px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem;
   display: flex;
@@ -233,13 +232,13 @@ input[type="text"] {
   height: 280px;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glass effect */
-  -webkit-backdrop-filter: blur(10px); /* Glass effect for WebKit browsers */
+  /* Glass effect for WebKit browsers */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for depth */
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
-  justify-content: flex-start; /* Align items to the top */
-  transition: top 0.3s ease; /* Smooth transition */
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: top 0.3s ease;
   z-index: 999;
   border-radius: 46px; /* Optional: Rounded corners */
 }
