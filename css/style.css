@@ -40,10 +40,10 @@ a:focus {
 #nav-logo {
   width: clamp(30px, 3vw, 80px);
   position: absolute;
-  top: 5vh;
+  top: 4vh;
   left: 50%;
   transform: translateX(-50%);
-  height: auto;
+  height: 60%;
   pointer-events: auto;
   margin-top: -5px;
   z-index: 100;
@@ -229,7 +229,7 @@ input[type="text"] {
   position: fixed;
   top: -501%; /* Initial position when hidden */
   left: 0;
-  width: 40%;
+  width: 25%;
   height: 280px;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Glass effect */
@@ -257,7 +257,7 @@ input[type="text"] {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transform: translate(
     20px,
-    30px
+    25px
   ); /* Moves the text 20px to the right and 30px down */
 }
 
