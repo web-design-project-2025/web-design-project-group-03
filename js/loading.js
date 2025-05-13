@@ -212,3 +212,13 @@ if (enduranceGoalLink && enduranceGoalMapping[exerciseId]) {
 
 //favorite button
 let addToFavorite = document.querySelectorAll(".add-to-favorite");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isInIframe = window !== window.parent;
+  if (isInIframe) {
+    const navbar = document.querySelector(".nav-bar");
+    const footer = document.querySelector("footer");
+    if (navbar) navbar.style.display = "none";
+    if (footer) footer.style.display = "none";
+  }
+});

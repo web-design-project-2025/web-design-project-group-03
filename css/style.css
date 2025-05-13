@@ -209,6 +209,8 @@ input[type="text"] {
 }
 
 .content {
+  width: 95vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -223,7 +225,7 @@ input[type="text"] {
   margin: 0 auto;
 }
 
-/*off screen menu*/
+/*off screen menu for the hamburger*/
 .off-screen-menu {
   position: fixed;
   top: -501%; /* Initial position when hidden */
@@ -324,7 +326,6 @@ nav {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* ABOUT */
 .joinrect h2 {
   text-align: center;
   font-weight: 700;
@@ -395,7 +396,6 @@ nav {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* HOVERING LOGIC EXPLORE PANEL */
 .explore-panels {
   display: flex;
 }
@@ -405,7 +405,6 @@ nav {
   transition: flex 0.3s ease;
 }
 
-/* when panel hovered, grow it */
 .panel:hover {
   flex: 3;
 }
@@ -439,39 +438,48 @@ nav {
 }
 
 /* TITLES for the see all and explore etc. */
-.explore h1 {
+.explore h1,
+.popular h1 {
+  margin-bottom: 0;
+  margin-top: 0;
   padding-left: 2%;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 44px;
   color: #222122;
 }
 
+/* see all part */
 .explore a,
-.Popular a {
+.popular a {
   padding-right: 3%;
   margin-left: auto;
-  display: block;
   color: black;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
+.explore a .arrow,
+.popular a .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.explore a:hover .arrow,
+.popular a:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* next section */
 .explore,
-.Popular {
+.popular {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 35%;
-}
-
-.explore,
-.Popular h1 {
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 2%;
+  margin-bottom: -1.5%;
 }
 
 .panel h3,

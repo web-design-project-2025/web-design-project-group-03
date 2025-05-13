@@ -22,8 +22,8 @@ a {
 }
 
 .exercise-item {
-  position: relative; /* Make the container a positioned element */
-  display: inline-block; /* Ensure the container wraps around its content */
+  position: relative;
+  display: inline-block;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
@@ -35,10 +35,10 @@ a {
 }
 .exercise-item a {
   text-decoration: none;
-  color: inherit; /* Inherit the color from the parent element */
-  display: block; /* Make the link fill the entire container */
-  height: 100%; /* Ensure it takes the full height of the container */
-  width: 100%; /* Ensure it takes the full width of the container */
+  color: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .exercise-item:hover {
@@ -67,13 +67,16 @@ h2 {
 }
 
 .create {
+  margin-left: 41.5%;
   font-size: 1.5rem;
-
-  margin-top: 2rem;
-  padding-left: 45%;
-}
-.create a {
-  text-align: center;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(34, 33, 34);
+  border: 3px solid rgb(34, 33, 34);
+  border-radius: 40px;
+  cursor: pointer;
 }
 
 p {
@@ -85,24 +88,6 @@ p {
   justify-content: center; /* Center the row horizontally */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   margin: 2rem 0;
-}
-
-.popular-panel {
-  background-color: rgb(226, 220, 203);
-  width: 25rem;
-  height: 35rem;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-.popular-panel:hover {
-  transform: scale(1.05);
-}
-.popular-panel a {
-  text-decoration: none;
-  font-size: 2rem;
-  color: rgb(34, 33, 34);
 }
 
 /*exercise*/
