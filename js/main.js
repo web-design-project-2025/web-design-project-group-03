@@ -96,3 +96,26 @@ function searchPage() {
 // Initial display of controls and timer start
 showControls();
 startHideTimer();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const workoutPages = {
+    high: "http://127.0.0.1:5500/workouts.html?id=1",
+    medium: "http://127.0.0.1:5500/workouts.html?id=2",
+    low: "http://127.0.0.1:5500/workouts.html?id=3",
+  };
+
+  Object.entries(workoutPages).forEach(([intensity, url]) => {
+    const panel = document.getElementById(intensity);
+    if (panel) {
+      const iframe = document.createElement("iframe");
+      iframe.src = url;
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      panel.appendChild(iframe);
+    }
+  });
+});
+
+navbar.classList.add("hidden");
+footer.classList.add("hidden");
