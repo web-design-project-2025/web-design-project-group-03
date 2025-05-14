@@ -1,0 +1,51 @@
+.backgroundAcc {
+  width: 191vh;
+  height: 1728px;
+  background-color: #222122;
+  border-radius: 19px;
+  position: relative;
+  left: 0.5%;
+  top: 10px;
+}
+
+.aboutBlnceLogo {
+  display: grid;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  padding-bottom: 30vh;
+}
+
+.aboutHeader {
+  position: absolute;
+  top: 33%;
+  left: 45%;
+  width: 50vh;
+  border-radius: 10px;
+  color: #e2dccb;
+  stroke-width: 20%;
+  font-size: 9vh;
+}
+
+.about {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vh;
+  border-radius: 10px;
+  color: #e2dccb;
+}
+
+.feture {
+  display: flex;
+  flex-direction: row;
+  top: 50%;
+}
+
+.aboutImg {
+  border-radius: 30px;
+}
