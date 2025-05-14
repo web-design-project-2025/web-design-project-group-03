@@ -69,7 +69,7 @@ body {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
-  color: #ffffff;
+  color: #e2dccb;
   transition: color 0.3s ease;
   text-transform: uppercase;
 }
@@ -80,32 +80,53 @@ body {
 }
 
 /*  CREATE WORKOUT  */
-.create {
-  margin-left: 41.5%;
-  font-size: 1.5rem;
-  padding: 10px 40px;
-  font-style: normal;
-  font-weight: 700;
-  background-color: transparent;
-  color: rgb(34, 33, 34);
-  border: 3px solid rgb(34, 33, 34);
-  border-radius: 40px;
-  cursor: pointer;
-}
+#create-background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-p {
+  width: 60%;
+  height: 20vh;
+  margin: -1.8rem auto;
+  z-index: 10;
+
+  border-radius: 50px;
+  background-color: #e2dccb;
   text-align: center;
 }
-.popularwo {
-  display: flex;
-  gap: 1rem; /* Space between panels */
-  justify-content: center; /* Center the row horizontally */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  margin: 2rem 0;
+
+#create-background h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 2%;
 }
 
-/*exercise*/
+#create-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-weight: 700;
+  background-color: transparent;
+  color: #222122;
+  border: 3px solid #222122;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+}
 
+#create-button:hover {
+  background-color: #222122;
+  color: #e2dccb;
+}
+
+/*  SPECIFIC EXERCISE TYPE TEMPLATE*/
 #exercise-image {
   width: 100%;
   height: 50rem;
@@ -125,6 +146,7 @@ p {
   display: flex;
   gap: 45%;
 }
+
 .description h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -139,6 +161,7 @@ p {
   padding-top: 2%;
   text-align: left;
 }
+
 .exercise-quote {
   border-radius: 40px;
   width: 100%;
@@ -174,6 +197,7 @@ p {
   margin-top: 0%;
   margin-bottom: 0%;
 }
+
 #exercise-benefits {
   font-size: 2rem;
   color: rgb(255, 255, 255);
@@ -183,6 +207,7 @@ p {
   margin-top: 1%;
 }
 
+/*  BUTTONS FOR SPECIFIC GOALS  */
 .goals {
   display: flex;
   justify-content: center;
@@ -216,7 +241,7 @@ p {
   letter-spacing: 1px;
 }
 
-/*workout*/
+/*  WORKOUT SPECIFICS */
 #workout-body {
   background-color: rgb(226, 220, 203);
 }
@@ -226,6 +251,7 @@ p {
   flex-direction: row;
   gap: 30%;
 }
+
 .wohead button {
   background-color: transparent;
   color: rgb(34, 33, 34);
@@ -249,12 +275,14 @@ p {
   text-transform: uppercase;
   margin-bottom: 0%;
 }
+
 #workout-description {
   font-size: 1.5rem;
   color: rgb(34, 33, 34);
   text-align: left;
   margin-top: 0%;
 }
+
 .wo-list {
   display: flex;
   flex-direction: row;
@@ -266,6 +294,7 @@ p {
   margin-bottom: 0;
   margin-top: 20px;
 }
+
 .workout-benefits {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -274,6 +303,7 @@ p {
   gap: 23rem;
   padding-left: 16%;
 }
+
 #workout-time {
   font-size: 1rem;
   color: rgb(34, 33, 34);
