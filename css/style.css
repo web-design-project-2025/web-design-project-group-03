@@ -45,7 +45,7 @@ a:focus {
   transform: translateX(-50%);
   height: 60%;
   pointer-events: auto;
-  margin-top: -5px;
+  margin-top: 0.1%;
   z-index: 100;
 }
 
@@ -372,6 +372,15 @@ nav {
 }
 
 /* STATIC INFO / BEFORE MOVING  */
+.explore,
+.popular {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-bottom: -1.5%;
+}
+
 .explore-panels,
 .popular-panels {
   display: flex;
@@ -385,7 +394,8 @@ nav {
   flex-grow: 3;
 }
 
-.explore-panels .panel:first-child .panel-text {
+.explore-panels .panel:first-child .panel-text,
+.popular-panels .panel:first-child .panel-text {
   opacity: 1;
   visibility: visible;
 }
@@ -396,7 +406,7 @@ nav {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.explore-panels {
+.explore-panels .popular-panels {
   display: flex;
 }
 
@@ -410,12 +420,14 @@ nav {
 }
 
 /* shrink others when one is hovered */
-.explore-panels:hover .panel {
+.explore-panels:hover .panel,
+.popular-panels:hover .panel {
   flex: 1; /* default size of non-hovered */
 }
 
 /* maintain flex: 3 on the hovered one */
-.explore-panels:hover .panel:hover {
+.explore-panels:hover .panel:hover,
+.popular-panels:hover .panel:hover {
   flex: 3;
 }
 
@@ -433,6 +445,54 @@ nav {
 
 /* text visability when */
 .explore-panels:hover .panel:hover .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* POPULAR PANEL HOVER LOGIC */
+.popular-panels .panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-panels .panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 225, 209);
+  z-index: 1;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Default: remove overlay from first panel */
+.popular-panels .panel:first-child::after {
+  opacity: 0;
+}
+
+/* When .popular-panels is hovered, let hover state control overlays (even first panel) */
+.popular-panels:hover .panel:first-child::after {
+  opacity: 1;
+}
+
+/* Hide overlay on hovered panel */
+.popular-panels:hover .panel:hover::after {
+  opacity: 0;
+}
+
+/* Hide all panel-texts when hovering over panel group */
+.popular-panels:hover .panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show only hovered panel's text */
+.popular-panels:hover .panel:hover .panel-text {
   opacity: 1;
   visibility: visible;
 }
@@ -472,22 +532,7 @@ nav {
   transform: translateX(5px);
 }
 
-/* next section */
-.explore,
-.popular {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2%;
-  margin-bottom: -1.5%;
-}
-
-.panel h3,
-.panel p {
-  color: white;
-}
-
-/* BACKGROUND PANEL INFO */
+/* GENERAL PANEL INFO */
 .panel {
   flex: 1;
   transition: flex 0.5s ease;
@@ -504,6 +549,7 @@ nav {
   margin-top: 20rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  color: white;
 }
 
 .panel p {
@@ -511,6 +557,7 @@ nav {
   padding-left: 4%;
   padding-right: 3%;
   margin-top: 0;
+  color: white;
 }
 
 #cycling {

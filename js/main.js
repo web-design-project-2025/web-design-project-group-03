@@ -115,9 +115,9 @@ startHideTimer();
 
 document.addEventListener("DOMContentLoaded", () => {
   const workoutPages = {
-    high: "workouts.html?id=1",
+    high: "workouts.html?id=6",
     medium: "workouts.html?id=2",
-    low: "workouts.html?id=3",
+    low: "workouts.html?id=9",
   };
 
   Object.entries(workoutPages).forEach(([intensity, url]) => {
