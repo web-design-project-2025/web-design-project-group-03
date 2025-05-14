@@ -414,3 +414,26 @@ footer p {
   width: 2vw;
   height: auto;
 }
+
+#search-page {
+  margin-top: 10rem;
+  margin-left: 5rem;
+}
+#search-page h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#search-page a {
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(34, 33, 34);
+  border: 3px solid rgb(34, 33, 34);
+  border-radius: 40px;
+  cursor: pointer;
+}

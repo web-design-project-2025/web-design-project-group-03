@@ -82,36 +82,42 @@ if (video && videoTime) {
   });
 }
 
-// --- SEARCH FUNCTIONALITY ---
-
-document
-  .getElementById("search-box")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      searchPage();
-    }
-  });
-
-// Handle page redirection based on search input
-function searchPage() {
-  const query = document
-    .getElementById("search-box")
-    .value.trim()
-    .toLowerCase();
-  const pages = {
-    about: "about.html",
-    community: "Community.html",
-    courses: "courses.html",
-    goals: "Goals.html",
-    inspiration: "inspiration.html",
-  };
-
-  window.location.href = pages[query] || "search.html";
-}
-
 // Initial display of controls and timer start
 showControls();
 startHideTimer();
+
+// Handle page redirection based on search input
+function searchPage() {
+  const searchBox = document.getElementById("search-box");
+  if (!searchBox) {
+    console.warn("Search box not found!");
+    return;
+  }
+  let query = searchBox.value.toLowerCase();
+  if (query === "home") {
+    window.location.href = "index.html";
+  } else if (query === "about") {
+    window.location.href = "about.html";
+  } else if (query === "account") {
+    window.location.href = "Account.html";
+  } else if (query === "workouts") {
+    window.location.href = "workouts.html";
+  } else if (query === "Community") {
+    window.location.href = "Community.html";
+  } else if (query === "exercise") {
+    window.location.href = "exercise.html";
+  } else if (query === "favorite") {
+    window.location.href = "favorite.html";
+  } else if (query === "inspiration") {
+    window.location.href = "inspiration.html";
+  } else if (query === "products") {
+    window.location.href = "products.html";
+  } else if (query === "goals") {
+    window.location.href = "Goals.html";
+  } else {
+    window.location.href = "search.html";
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const workoutPages = {

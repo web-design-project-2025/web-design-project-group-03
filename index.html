@@ -89,15 +89,20 @@
       </div>
 
       <!-- Search box -->
-      <form>
-        <div class="search" id="search-box">
+      <form onsubmit="return searchPage()">
+        <div class="search">
           <span
             class="search-icon material-symbols-outlined"
             onclick="searchPage()"
           >
             search
           </span>
-          <input class="search-input" type="search" placeholder="search..." />
+          <input
+            class="search-input"
+            id="search-box"
+            type="search"
+            placeholder="search..."
+          />
         </div>
       </form>
 
@@ -179,7 +184,9 @@
             right by your body, we have a variety of workouts<br />
             and tips for you, every step of the way.
           </p>
-          <button>JOIN TODAY</button>
+          <a href="Register.html">
+            <button>JOIN TODAY</button>
+          </a>
         </div>
 
         <section class="explore">

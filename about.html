@@ -83,14 +83,19 @@
 
         <!-- Search box -->
         <form>
-          <div class="search" id="search-box">
+          <div class="search">
             <span
               class="search-icon material-symbols-outlined"
               onclick="searchPage()"
             >
               search
             </span>
-            <input class="search-input" type="search" placeholder="search..." />
+            <input
+              class="search-input"
+              id="search-box"
+              type="search"
+              placeholder="search..."
+            />
           </div>
         </form>
 
@@ -128,21 +133,17 @@
         </a>
       </nav>
     </div>
-    <div class="backgroundAcc">
-      <img
-        src="img/rowing.jpg"
-        class="aboutImg"
-        alt="company logo"
-      />
-      <img
-        src="img/Beige-blnce-logo.png"
-        class="aboutBlnceLogo"
-        alt="company logo"
-      />
-      <h2 class="aboutHeader">About Us</h2>
-      <main class="about">
+    <main class="about">
+      <div class="backgroundAcc">
+        <img src="img/rowing.jpg" class="aboutImg" alt="company logo" />
+        <img
+          src="img/Beige-blnce-logo.png"
+          class="aboutBlnceLogo"
+          alt="company logo"
+        />
+        <h2 class="aboutHeader">About Us</h2>
+
         <section class="intro">
-          
           <p>
             At <strong>BLNCE</strong>, we believe fitness is more than a routine
             — it’s a lifestyle. Our goal is to help you find your perfect
@@ -162,9 +163,9 @@
             <li>🧠 Built with science-backed training methods</li>
           </ul>
         </section>
-    </div>
-    <div class="meetTheTeam">
-      <img src="img/blnce-logo.png" alt="blnce logo" />
+      </div>
+      <div class="meetTheTeam">
+        <img src="img/blnce-logo.png" alt="blnce logo" />
 
         <section class="team">
           <h3>Meet the Team</h3>
@@ -173,8 +174,8 @@
             dedicated to building a better fitness future.
           </p>
         </section>
-        </div>
-      </main>
+      </div>
+    </main>
 
     <footer>
       <section class="navigation-container">
