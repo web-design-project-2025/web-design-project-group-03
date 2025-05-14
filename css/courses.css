@@ -233,13 +233,13 @@ body {
 .goals {
   background-color: #e2dccb;
   position: absolute;
-  top: 88%;
+  top: 90%;
   left: 65%;
   width: 20%;
   height: 40%;
   z-index: 10;
   padding: 2rem;
-  margin-top: 10%;
+  margin-top: 13%;
 }
 
 .goalcube {
