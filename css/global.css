@@ -164,7 +164,7 @@ input[type="text"] {
   position: fixed;
   top: -501%; /* initial pos when hidden */
   left: 0;
-  width: 25%;
+  width: 35%;
   height: 280px;
   background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
   backdrop-filter: blur(10px); /* glass effect */
@@ -184,7 +184,10 @@ input[type="text"] {
   text-align: justify;
   color: #f6f6f6;
   font-size: 2.8rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding-left: 1rem;
   padding-bottom: 1rem;
   display: block;
   list-style-type: none;
@@ -281,7 +284,6 @@ footer p {
 
 .navigation-container {
   font-style: italic;
-  text-transform: uppercase;
   display: flex;
   align-items: flex-start;
   justify-content: center;
