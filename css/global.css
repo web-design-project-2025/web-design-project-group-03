@@ -437,3 +437,8 @@ footer p {
   border-radius: 40px;
   cursor: pointer;
 }
+
+#settings {
+  margin-top: 10rem;
+  margin-left: 5rem;
+}
