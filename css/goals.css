@@ -23,7 +23,7 @@
   max-height: 0;
   width: 100%;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: 0.3s ease;
   background-color: rgb(34, 33, 34);
   padding: 0 1rem;
   border-radius: 40px;
@@ -34,8 +34,14 @@
   margin: 0%;
 }
 
-.dropdown-panel ul,
-li {
+ .dropdown-panel ul{
+  color: rgb(226, 220, 203);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-left: 2rem;
+}
+
+.dropdown-panel-list {
   color: rgb(226, 220, 203);
   font-size: 1.2rem;
   padding: 0.5rem;
