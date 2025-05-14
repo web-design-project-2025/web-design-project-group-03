@@ -221,40 +221,73 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 1%;
+  position: relative;
+  z-index: 1;
 }
 
 /*  BUTTONS FOR SPECIFIC GOALS  */
+.exercises-info {
+  position: relative;
+}
+
 .goals {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  background-color: #e2dccb;
+  position: absolute;
+  top: 88%;
+  left: 65%;
+  width: 20%;
+  height: 40%;
+  z-index: 10;
   padding: 2rem;
-  padding-top: 0%;
-  flex-wrap: wrap;
-  background-color: #f7f7f7;
+  margin-top: 10%;
 }
 
 .goalcube {
-  background: rgb(106, 142, 174);
-  padding: 2rem;
-  border-radius: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 20rem;
-  text-align: center;
+  max-width: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: transparent;
+  color: #222122;
+  border: 3px solid #222122;
+  border-radius: 40px;
   cursor: pointer;
+  transition: border 0.3s ease, color 0.3s ease;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-wrap: balance;
 }
 
 .goalcube:hover {
   transform: scale(1.05);
+  border: 5px solid #222122;
 }
 
 .goalcube a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
+  color: #222122;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.goals h2 {
+  margin-top: 1vh;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3vh;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222122;
 }
 
 /*  POPULAR PANEL  */
