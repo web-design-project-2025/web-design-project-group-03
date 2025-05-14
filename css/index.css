@@ -236,11 +236,21 @@
 }
 
 /* TITLES for the see all and explore etc. */
-.explore h1,
-.popular h1 {
+.explore h1 {
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 2%;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222122;
+}
+
+.popular h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 1%;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
@@ -268,6 +278,13 @@
 .explore a:hover .arrow,
 .popular a:hover .arrow {
   transform: translateX(5px);
+}
+
+/*  POPULAR EMOJI  */
+#popular-emoji {
+  padding-left: 1%;
+  width: 6%;
+  height: autos;
 }
 
 /* GENERAL PANEL INFO */
