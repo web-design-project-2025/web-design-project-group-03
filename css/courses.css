@@ -549,7 +549,7 @@ body {
   width: 95%;
   height: auto;
   background-color: rgb(34, 33, 34);
-  border-radius: 40px;
+  border-radius: 20px;
   border: 5px solid rgb(226, 220, 203, 0.5);
   margin: 1.2rem auto 0 auto;
 }

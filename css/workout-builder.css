@@ -45,20 +45,60 @@ h2 {
 
 /*  YOUR SAVED WORKOUTS */
 .workout-panel {
+  height: auto;
   background-color: rgb(34, 33, 34);
   border-radius: 20px;
   border: 5px solid rgb(226, 220, 203, 0.5);
+  margin: 1.2rem auto 0 auto;
+}
 
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
+.placeholder {
+  color: #777;
+  width: 90%;
+  height: auto;
+
+  padding: 1rem;
+  margin: 0 auto;
+
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.workout-list {
+  padding: 0%;
+}
+
+.remove-btn {
+  margin: 1.5rem auto;
+  background-color: transparent;
+  color: rgb(226, 220, 203);
+  padding: 1rem 2rem;
+  height: 3.5rem;
+  border: 3px solid rgb(226, 220, 203);
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: rgb(226, 106, 69);
 }
 
 /* HEADER (everything before filtering) */
 
 #save-workout,
 .action-button {
-  margin-top: 1.8vh;
+  margin: 1.5rem auto;
   background-color: transparent;
   color: rgb(226, 220, 203);
   padding: 1rem 2rem;
@@ -80,36 +120,6 @@ h2 {
 .action-button:hover {
   background-color: rgb(226, 220, 203);
   color: #222122;
-}
-
-.workout-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.workout-list li {
-  margin: 6px 0;
-  padding: 6px 10px;
-  background-color: #2b2b2b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.workout-list .remove-btn {
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 10px 40px;
-  font-style: normal;
-  font-weight: 700;
-  background-color: transparent;
-  color: rgb(226, 220, 203);
-  border: 3px solid rgb(226, 220, 203);
-  border-radius: 40px;
-  cursor: pointer;
-}
-.workout-list .remove-btn:hover {
-  background-color: rgb(226, 106, 69);
 }
 
 /* EXERCISES */
@@ -164,10 +174,6 @@ p {
   border-radius: 20px;
   font-size: 1rem;
   color: rgb(221, 124, 128);
-}
-
-.placeholder {
-  color: #777;
 }
 
 button.add-button {
