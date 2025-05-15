@@ -52,7 +52,8 @@ h2 {
   margin: 1.2rem auto 0 auto;
 }
 
-.placeholder {
+.placeholder,
+.workout-list {
   color: #777;
   width: 90%;
   height: auto;
@@ -176,22 +177,6 @@ p {
   color: rgb(221, 124, 128);
 }
 
-button.add-button {
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 10px 40px;
-  font-style: normal;
-  font-weight: 700;
-  background-color: transparent;
-  color: rgb(226, 220, 203);
-  border: 3px solid rgb(226, 220, 203);
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-button.add-button:hover {
-  background-color: rgb(96, 132, 164);
-}
 button:active {
   transform: scale(0.95);
   background-color: rgb(226, 220, 203);
