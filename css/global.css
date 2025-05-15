@@ -294,13 +294,6 @@ footer p {
   padding-right: 10vw;
 }
 
-.trapezoid-svg {
-  width: 100%;
-  height: auto;
-  max-height: 100px;
-  display: block;
-}
-
 .nav-column {
   display: flex;
   flex-direction: column;
