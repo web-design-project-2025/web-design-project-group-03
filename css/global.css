@@ -284,6 +284,7 @@ footer p {
 
 .navigation-container {
   font-style: italic;
+  text-transform: uppercase;
   display: flex;
   align-items: flex-start;
   justify-content: center;
