@@ -1,6 +1,6 @@
 .backgroundAcc {
-  width: 191vh;
-  height: 1728px;
+  width: auto; /* Reduce the width */
+  height: auto; /* Keep height dynamic based on content */
   background-color: #222122;
   border-radius: 19px;
   position: relative;
@@ -8,11 +8,17 @@
   top: 10px;
 }
 
+.aboutImg {
+  width: 100%; /* Set to 100% to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 30px;
+}
+
 .aboutBlnceLogo {
-  display: grid;
   position: absolute;
-  top: 18%;
+  top: 14%;
   left: 50%;
+  transform: translateX(-50%);
   width: auto;
   height: auto;
   padding-bottom: 30vh;
@@ -20,32 +26,84 @@
 
 .aboutHeader {
   position: absolute;
-  top: 33%;
-  left: 45%;
-  width: 50vh;
-  border-radius: 10px;
+  top: 27%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding-bottom: 30vh;
   color: #e2dccb;
   stroke-width: 20%;
   font-size: 9vh;
 }
 
-.about {
-  display: flex;
+.aboutSpan {
+  display: block;
+  width: 40%;
+  height: 5px;
+  background-color: #e2dccb;
+  margin: 10px auto;
+  position: relative;
+  top: -75vh;
+}
+
+.intro {
+  font-family: "Josefin Sans", sans-serif;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60vh;
-  border-radius: 10px;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding-bottom: 30vh;
   color: #e2dccb;
+  font-size: 4vh;
+  font-weight: 700;
+  text-align: center;
 }
 
-.feture {
-  display: flex;
-  flex-direction: row;
-  top: 50%;
+.features {
+  font-family: "Josefin Sans", sans-serif;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding-bottom: 30vh;
+  color: #e2dccb;
+  font-size: 4vh;
+  font-weight: 700;
+  text-align: center;
 }
 
-.aboutImg {
-  border-radius: 30px;
+.meetTheTeam {
+  padding: 0; /* Add padding inside the container */
+  margin: 0;
+  background-color: #f6f6f6; /* Optional: Background color */
+  color: #222122; /* Text color */
+  border-radius: 10px; /* Optional: Rounded corners */
+  text-align: center;
+}
+
+.aboutBlnceLogoAlt {
+  position: relative;
+  width: 500px; /* Set a fixed width */
+  left: 1%;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't exceed the container's width */
+  display: block; /* Ensure proper layout */
+  margin: 0 auto;
+}
+
+.meetTheTeamTxt {
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
+  width: auto;
+  height: auto;
+  padding-bottom: 30vh;
+  color: #222122;
+  font-size: 4vh;
+  font-weight: 700;
+  text-align: center;
 }
