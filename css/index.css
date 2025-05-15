@@ -1,0 +1,526 @@
+/* WEB HERO */
+#home-video {
+  width: 95vw;
+  height: auto;
+  display: block;
+  border-radius: 19px;
+  margin: 0 auto;
+  pointer-events: auto;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 1%;
+  left: 51%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 8px 12px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.video-controls:not(.hide) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#playPauseBtn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  margin-right: 4%;
+  margin-left: 2%;
+}
+
+#video-text {
+  margin-left: 1%;
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 29px;
+  flex: 1;
+  color: white;
+  text-align: left;
+  padding: 0 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#videoTime {
+  font-size: 18px;
+  color: white;
+  margin-left: 10vw;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.content {
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.content img {
+  width: 95vw;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.joinrect h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 1%;
+}
+
+.joinrect p {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.joinrect button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: #222122;
+  border: 3px solid #222122;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.joinrect button:hover {
+  background-color: #222122;
+  color: white;
+}
+
+#about-vector {
+  padding-top: 2%;
+  width: 3vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* STATIC INFO / BEFORE MOVING  */
+.explore,
+.popular {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-bottom: -1.5%;
+}
+
+.explore-panels,
+.popular-panels {
+  display: flex;
+  width: 100%;
+  height: 30em;
+  gap: 0.5rem;
+}
+
+.explore-panels .panel:first-child,
+.popular-panels .panel:first-child {
+  flex-grow: 3;
+}
+
+.explore-panels .panel:first-child .panel-text,
+.popular-panels .panel:first-child .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.explore-panels .popular-panels {
+  display: flex;
+}
+
+.panel {
+  flex: 1;
+  transition: flex 0.3s ease;
+}
+
+.panel:hover {
+  flex: 3;
+}
+
+/* shrink others when one is hovered */
+.explore-panels:hover .panel,
+.popular-panels:hover .panel {
+  flex: 1; /* default size of non-hovered */
+}
+
+/* maintain flex: 3 on the hovered one */
+.explore-panels:hover .panel:hover,
+.popular-panels:hover .panel:hover {
+  flex: 3;
+}
+
+.panel-text {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* text visability when not hovered */
+.explore-panels:hover .panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* text visability when */
+.explore-panels:hover .panel:hover .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* POPULAR PANEL HOVER LOGIC */
+.popular-panels .panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-panels .panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 225, 209);
+  z-index: 1;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Default: remove overlay from first panel */
+.popular-panels .panel:first-child::after {
+  opacity: 0;
+}
+
+/* When .popular-panels is hovered, let hover state control overlays (even first panel) */
+.popular-panels:hover .panel:first-child::after {
+  opacity: 1;
+}
+
+/* Hide overlay on hovered panel */
+.popular-panels:hover .panel:hover::after {
+  opacity: 0;
+}
+
+/* Hide all panel-texts when hovering over panel group */
+.popular-panels:hover .panel .panel-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show only hovered panel's text */
+.popular-panels:hover .panel:hover .panel-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* TITLES for the see all and explore etc. */
+.explore h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 2%;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222122;
+}
+
+.popular h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 1%;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222122;
+}
+
+/* see all part */
+.explore a,
+.popular a {
+  padding-right: 3%;
+  margin-left: auto;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.explore a .arrow,
+.popular a .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.explore a:hover .arrow,
+.popular a:hover .arrow {
+  transform: translateX(5px);
+}
+
+/*  POPULAR EMOJI  */
+#popular-emoji {
+  padding-left: 1%;
+  width: 6%;
+  height: autos;
+}
+
+/* GENERAL PANEL INFO */
+.panel {
+  flex: 1;
+  transition: flex 0.5s ease;
+  margin: 10px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.panel h3 {
+  font-size: 2rem;
+  padding-left: 4%;
+  margin-top: 20rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.panel p {
+  font-size: 1rem;
+  padding-left: 4%;
+  padding-right: 3%;
+  margin-top: 0;
+  color: white;
+}
+
+#cycling {
+  background-image: url("/img/bike-close-up.jpg");
+}
+
+#powerlifting {
+  background-image: url("/img/powerlifting.png");
+}
+
+#yoga {
+  background-image: url("/img/yoga.png");
+}
+
+#high,
+#medium,
+#low {
+  background-color: rgb(226, 220, 203);
+}
+
+/*  RESPONSIVENESS, MEDIA QUERIES  */
+
+/* small screens (phones) */
+/* @media (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .search {
+    width: 80vw;
+    left: 10%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .person-icon,
+  .settings-icon {
+    width: 8vw;
+    right: 5%;
+  }
+
+  #nav-logo {
+    width: 10vw;
+  }
+
+  .explore-panels,
+  .popular-panels {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .panel {
+    height: 30vh;
+  }
+
+  footer {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .navigation-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #finalname {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+  */
+
+/* medium screens (tablets) */
+/*@media (min-width: 601px) and (max-width: 1024px) {
+  .nav-bar {
+    padding: 1rem;
+  }
+
+  .search {
+    width: 30vw;
+    left: 55%;
+  }
+
+  .person-icon,
+  .settings-icon {
+    width: 6vw;
+  }
+
+  .explore-panels,
+  .popular-panels {
+    width: 80vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .panel {
+    height: 35vh;
+    width: 48%;
+  }
+
+  footer {
+    padding: 3rem 2rem;
+    height: auto;
+  }
+
+  .navigation-container {
+    gap: 10vw;
+  }
+
+  #finalname {
+    font-size: 8rem;
+  }
+}
+*/
+/* large screens (desktops and up) */
+/*@media (min-width: 1025px) {
+  .nav-bar {
+    max-width: 75%;
+  }
+
+  .search {
+    width: 25vh;
+  }
+
+  .person-icon,
+  .settings-icon {
+    width: 2vw;
+  }
+
+  .explore-panels,
+  .popular-panels {
+    width: 100vw;
+    flex-direction: row;
+  }
+
+  .panel {
+    height: 40vh;
+  }
+
+  footer {
+    max-width: 95vw;
+    padding: 4rem 2rem;
+  }
+
+  .navigation-container {
+    gap: 55vw;
+  }
+
+  #finalname {
+    font-size: 15rem;
+  }
+}
+*/
+/* Extra-large screens (ultrawide monitors) */
+/*@media (min-width: 1600px) {
+  .nav-bar {
+    max-width: 60%;
+  }
+
+  .search {
+    left: 65%;
+    width: 30vh;
+  }
+
+  #nav-logo {
+    width: 2vw;
+  }
+
+  .person-icon,
+  .settings-icon {
+    width: 1.5vw;
+  }
+
+  .explore-panels,
+  .popular-panels {
+    width: 50vw;
+  }
+
+  .panel h3 {
+    font-size: 2.5rem;
+  }
+
+  #finalname {
+    font-size: 20rem;
+  }
+}
+*/

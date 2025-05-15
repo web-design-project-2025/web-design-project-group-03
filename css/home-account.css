@@ -1,4 +1,66 @@
+* {
+  margin: 10px;
+}
 #account-home-logo {
   width: 100%;
   height: auto;
+}
+
+#favorite-container {
+  margin-top: 2rem;
+  background-color: rgb(212, 193, 229);
+  width: 98%;
+  height: auto;
+  padding: 2%;
+}
+
+#saved-container {
+  margin-top: 2rem;
+  background-color: rgb(212, 193, 229);
+  width: 98%;
+  height: auto;
+  padding: 2%;
+}
+
+.favorite-item h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 2%;
+}
+
+.remove-favorite {
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(34, 33, 34);
+  border: 3px solid rgb(34, 33, 34);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.remove-favorite:active {
+  transform: scale(0.95);
+}
+
+.remove-saved {
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(34, 33, 34);
+  border: 3px solid rgb(34, 33, 34);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.remove-saved:active {
+  transform: scale(0.95);
+}
+
+#saved-container p {
+  color: royalblue;
 }

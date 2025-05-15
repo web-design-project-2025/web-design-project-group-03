@@ -10,187 +10,173 @@
   font-style: normal;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #222122;
-  overflow-x: hidden;
+.body {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 a {
+  outline: none;
   text-decoration: none;
 }
 
-
-/* WEB HERO */
-#inspo-hero {
-  position: relative;
-  width: 95vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  z-index: 1;
+a:focus {
+  outline: none;
 }
 
-.background-section {
-  position: relative;
-  background-image: url("/img/scaling-mountains 1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: -20vh;
-  width: 100%;
-  height: 2250px;
+/* NAVIGATION BAR */
+.logo-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 6.1vw;
+  top: -4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
-h1 {
-  font-style: black;
-  font-weight: 900;
-  font-size: 48px;
-  color: #222122;
-  position: relative;
-  z-index: 10;
-  top: 30vh;
-  text-align: center;
+#nav-bar-background {
+  z-index: 0;
 }
 
-.larger-text-title {
-  font-style: black;
-  font-weight: 900;
-  font-size: 96px;
+#nav-logo {
+  width: clamp(30px, 3vw, 80px);
+  position: absolute;
+  top: 4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60%;
+  pointer-events: auto;
+  margin-top: 0.1%;
+  z-index: 100;
 }
 
-#body-text {
-  position: relative;
-  text-align: left;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  font-size: 18px;
-  z-index: 10;
-  width: 60%;
-  max-width: 600px;
+nav {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
 }
 
-.subheadings {
-  font-weight: 800;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
-.img-p-container {
-  padding-top: 40vh;
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  max-width: 100%;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem;
   display: flex;
   align-items: center;
-  gap: 8rem;
-}
-
-#indoor-climbing-bw {
-  padding-bottom: 20vh;
-  width: 40%;
-  height: auto;
-}
-
-#running-bw {
-  margin-top: -40vh;
-  display: block;
-}
-
-#climbing-bw,
-#sparring-bw {
-  width: 100%;
-  max-width: 100vw;
-}
-
-.content {
-  width: 95vw;
-  height: auto;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  position: relative;
-}
-
-.image-row {
-  display: flex;
-  gap: 2rem;
-}
-
-#weights-bw {
-  position: relative;
-  width: 30vw;
-  height: auto;
-  display: block;
-  z-index: 2;
-  margin-right: 12vw;
-  top: -35vh;
-  align-self: flex-start;
-}
-
-#bike-bw {
-  position: relative;
-  width: 40vw;
-  height: auto;
-  display: block;
-  z-index: 1;
-  margin-left: 5vw;
-  top: -48vh;
-}
-
-.middle-container {
-  display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
 }
 
-#white-text-overlay {
+#logo img {
+  max-height: 10px;
+  width: auto;
   position: relative;
-  top: -50vh;
-  margin-left: 10vw;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  color: white;
-  width: 60vw;
-  z-index: 30;
-  text-align: right;
+  top: -10px;
+  display: inline-block;
 }
 
-#citation {
-  position: relative;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  text-align: right;
-  color: #8e8e8e;
-  z-index: 30;
-  width: 35vw;
-  top: -50vh;
-  margin-left: 45vw;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-/*off screen menu*/
+/* SEARCH FUNCTION */
+.search {
+  position: absolute;
+  top: 25%;
+  left: 64%;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-left: 4vw;
+  border-radius: 28px;
+  background: #ffffff;
+  width: 20vh;
+}
+
+.search-input {
+  border: none;
+  color: rgba(34, 33, 34, 0.7);
+  width: 17vh;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="text"] {
+  width: 150px;
+  border-radius: 28px;
+  background: #ffffff;
+}
+
+/* PERSON ICON */
+.person-icon {
+  position: absolute;
+  top: 23%;
+  right: 9%;
+  width: 3vw;
+  height: auto;
+  fill: white;
+  cursor: pointer;
+}
+
+.settings-icon {
+  position: absolute;
+  top: 25%;
+  right: 3%;
+  width: 3vw;
+  height: auto;
+  fill: white;
+  cursor: pointer;
+}
+
+/* OFF SCREEN MENU FUNCTION */
 .off-screen-menu {
   position: fixed;
-  top: -501%; /* Initial position when hidden */
+  top: -501%; /* initial pos when hidden */
   left: 0;
-  width: 40%;
+  width: 35%;
   height: 280px;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Glass effect */
-  -webkit-backdrop-filter: blur(10px); /* Glass effect for WebKit browsers */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for depth */
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  backdrop-filter: blur(10px); /* glass effect */
+  /* glass effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
-  justify-content: flex-start; /* Align items to the top */
-  transition: top 0.3s ease; /* Smooth transition */
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: top 0.3s ease;
   z-index: 999;
-  border-radius: 46px; /* Optional: Rounded corners */
+  border-radius: 46px;
 }
 
 .off-screen-menu a {
@@ -198,13 +184,16 @@ h1 {
   text-align: justify;
   color: #f6f6f6;
   font-size: 2.8rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding-left: 1rem;
   padding-bottom: 1rem;
   display: block;
   list-style-type: none;
   line-height: 0.8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  transform: translate(20px, 30px);
+  transform: translate(20px, 25px);
 }
 
 .off-screen-menu li {
@@ -225,7 +214,7 @@ nav {
   margin-right: auto;
   margin-left: -160px;
   position: relative;
-  z-index: 1001; /* Ensure the hamburger menu is above the off-screen menu */
+  z-index: 1001; /* ensure menu is above off-screen menu */
 }
 
 .ham-menu span {
@@ -235,7 +224,7 @@ nav {
   border-radius: 25px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Adjust for centering */
+  transform: translateX(-50%);
   transition: 0.3s ease;
   z-index: 1003;
 }
@@ -243,7 +232,7 @@ nav {
 .ham-menu-button {
   position: absolute;
   top: 0;
-  left: 200px; /* Adjust to change x position */
+  left: 200px;
   width: 100%;
   height: 100%;
   background: transparent;
@@ -284,8 +273,6 @@ footer {
   margin: 0 auto;
   padding-bottom: 0%;
   margin-top: 30px;
-  border: 4px solid #e2dccb;
-  border-bottom: none;
 }
 
 footer p {
@@ -365,7 +352,7 @@ footer p {
 }
 
 #finalname {
-  font-size: 15rem;
+  font-size: 14rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -399,6 +386,9 @@ footer p {
 
 /*  BACK TO TOP LOGIC  */
 #backToTop {
+  width: 3.5vw;
+  height: 3.5vw;
+  min-width: 3.5vw;
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -426,26 +416,30 @@ footer p {
   height: auto;
 }
 
-/* FEATURES */
-.intro h2,
-.features h3,
-.team h3 {
-  color: #111;
-  margin-bottom: 15px;
+#search-page {
+  margin-top: 10rem;
+  margin-left: 5rem;
+}
+#search-page h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.intro p,
-.team p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.features ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.features li {
-  margin-bottom: 10px;
+#search-page a {
+  margin: 0 auto;
   font-size: 1rem;
+  padding: 10px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgb(34, 33, 34);
+  border: 3px solid rgb(34, 33, 34);
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+#settings {
+  margin-top: 10rem;
+  margin-left: 5rem;
 }

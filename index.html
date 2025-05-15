@@ -10,15 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
       rel="stylesheet"
@@ -26,11 +25,11 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <nav class="nav-bar"> 
+    <nav class="nav-bar">
       <div class="off-screen-menu">
         <li><a href="community.html">community</a></li>
         <li><a href="about.html">about</a></li>
-        <li><a href="courses.html">Courses</a></li>
+        <li><a href="courses.html">workout</a></li>
         <li><a href="goals.html">Goals</a></li>
         <li><a href="inspiration.html">Inspiration</a></li>
       </div>
@@ -90,15 +89,20 @@
       </div>
 
       <!-- Search box -->
-      <form>
-        <div class="search" id="search-box">
+      <form onsubmit="return searchPage()">
+        <div class="search">
           <span
             class="search-icon material-symbols-outlined"
             onclick="searchPage()"
           >
             search
           </span>
-          <input class="search-input" type="search" placeholder="search..." />
+          <input
+            class="search-input"
+            id="search-box"
+            type="search"
+            placeholder="search..."
+          />
         </div>
       </form>
 
@@ -143,6 +147,10 @@
           </video>
 
           <div class="video-controls" id="videoControls">
+            <p id="video-text">
+              We're committed to guiding you towards a stronger body, a
+              healthier mind, and a balanced life.
+            </p>
             <span id="videoTime">0s</span>
             <button id="playPauseBtn">⏸</button>
           </div>
@@ -176,63 +184,85 @@
             right by your body, we have a variety of workouts<br />
             and tips for you, every step of the way.
           </p>
-          <button>JOIN TODAY</button>
+          <a href="Register.html">
+            <button>JOIN TODAY</button>
+          </a>
         </div>
 
-        <div class="Explore">
+        <section class="explore">
           <h1>Explore</h1>
-          <a href="courses.html">See all -></a>
-        </div>
+          <a href="courses.html">See all <span class="arrow">-></span></a>
+        </section>
         <div class="explore-panels">
-          <div id="Cycling" class="panel">
-            <h3>Cycling</h3>
-            <p>
-              A low-impact way to boost you cardiovascular health (that's your
-              heart and blood vessels!). This exercise type also builds
-              strength, without putting too much pressure on your knees.
-            </p>
+          <div id="cycling" class="panel">
+            <a class="panel-text" href="exercise.html?id=1">
+              <h3>Cycling</h3>
+              <p>
+                A low-impact way to boost you cardiovascular health (that's your
+                heart and blood vessels!). This exercise type also builds
+                strength, without putting too much pressure on your knees.
+              </p>
+            </a>
           </div>
-          <div id="Powerlifting" class="panel">
-            <h3>Powerlifting</h3>
-            <p>
-              A powerful way to boost your overall strength and support healthy
-              joints (including your knees and hips!). This exercise style also
-              improves muscle mass and bone health, without the high-impact
-              stress of activities like running.
-            </p>
+          <div id="powerlifting" class="panel">
+            <a class="panel-text" href="exercise.html?id=2">
+              <h3>Powerlifting</h3>
+              <p>
+                A powerful way to boost your overall strength and support
+                healthy joints (including your knees and hips!). This exercise
+                style also improves muscle mass and bone health, without the
+                high-impact stress of activities like running.
+              </p>
+            </a>
           </div>
-          <div id="Yoga" class="panel">
-            <h3>Yoga</h3>
-            <p>
-              A gentle way to enhance your flexibility and balance (great for
-              your muscles and joints!). This exercise type also helps build
-              strength and reduce stress, without putting too much strain on
-              your body."
-            </p>
+          <div id="yoga" class="panel">
+            <a class="panel-text" href="exercise.html?id=3">
+              <h3>Yoga</h3>
+              <p>
+                A gentle way to enhance your flexibility and balance (great for
+                your muscles and joints!). This exercise type also helps build
+                strength and reduce stress, without putting too much strain on
+                your body."
+              </p>
+            </a>
           </div>
         </div>
 
-        <div class="Popular">
-          <h1>Popular</h1>
-          <a href="inspiration.html">See all -></a>
+        <div class="popular">
+          <svg
+            id="popular-emoji"
+            viewBox="0 0 107 107"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40.125 42.6308C40.125 38.4174 34.4926 37.3006 32.9983 41.243C29.3837 50.7795 26.75 59.3106 26.75 63.9229C26.75 78.6223 38.7264 90.5385 53.5 90.5385C68.2736 90.5385 80.25 78.6223 80.25 63.9229C80.25 58.9676 77.21 49.489 73.1797 39.1C67.9588 25.6421 65.3483 18.9131 62.126 18.5507C61.0948 18.4347 59.97 18.6432 59.05 19.1209C56.175 20.6135 56.175 27.9526 56.175 42.6308C56.175 47.0406 52.5821 50.6155 48.15 50.6155C43.7179 50.6155 40.125 47.0406 40.125 42.6308Z"
+              fill="#222222"
+            />
+            <ellipse
+              cx="52.4712"
+              cy="73.048"
+              rx="11.3173"
+              ry="11.3173"
+              fill="white"
+            />
+          </svg>
+
+          <h1>popular workouts</h1>
+          <a href="courses.html">See all <span class="arrow">-></span></a>
         </div>
         <div class="popular-panels">
-          <div id="high" class="panel">
-            <h3>high</h3>
-          </div>
-          <div id="medium" class="panel">
-            <h3>medium</h3>
-          </div>
-          <div id="low" class="panel">
-            <h3>low</h3>
-          </div>
+          <div id="high" class="panel"></div>
+
+          <div id="medium" class="panel"></div>
+          <div id="low" class="panel"></div>
         </div>
       </div>
     </main>
     <footer>
       <section class="navigation-container">
         <div class="nav-column">
-          <a href="exercises.html">exercises ➔</a>
+          <a href="courses.html">workout ➔</a>
           <a href="community.html">community ➔</a>
           <a href="inspiration.html">get inspired ➔</a>
           <a href="Goals.html">set goals ➔</a>

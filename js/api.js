@@ -39,9 +39,9 @@ async function fetchExercises() {
 }
 
 function renderExercises(exercises) {
-  exerciseContainer.innerHTML = "";
+  exerciseContainer.innerHTML = ""; // Clear previous content
   exercises.forEach((exercise) => {
-    const card = createExerciseCard(exercise, true);
+    const card = createExerciseCard(exercise, true); // true = show "Add to Workout"
     exerciseContainer.appendChild(card);
   });
 }

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLNCE 丨 ABOUT</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/about.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
       rel="stylesheet"
@@ -21,7 +22,7 @@
         <div class="off-screen-menu">
           <li><a href="community.html">community</a></li>
           <li><a href="about.html">about</a></li>
-          <li><a href="courses.html">Courses</a></li>
+          <li><a href="courses.html">workout</a></li>
           <li><a href="goals.html">Goals</a></li>
           <li><a href="inspiration.html">Inspiration</a></li>
         </div>
@@ -82,14 +83,19 @@
 
         <!-- Search box -->
         <form>
-          <div class="search" id="search-box">
+          <div class="search">
             <span
               class="search-icon material-symbols-outlined"
               onclick="searchPage()"
             >
               search
             </span>
-            <input class="search-input" type="search" placeholder="search..." />
+            <input
+              class="search-input"
+              id="search-box"
+              type="search"
+              placeholder="search..."
+            />
           </div>
         </form>
 
@@ -127,45 +133,58 @@
         </a>
       </nav>
     </div>
-
     <main class="about">
-      <section class="intro">
-        <h2>About Us</h2>
-        <p>
-          At <strong>BLNCE</strong>, we believe fitness is more than a routine —
-          it’s a lifestyle. Our goal is to help you find your perfect balance of
-          strength, endurance, and recovery through personalized workouts and
-          smart tracking tools.
-        </p>
-      </section>
+      <div class="backgroundAcc">
+        <img src="img/rowing.jpg" class="aboutImg" alt="Rowing machine" />
+        <img
+          src="img/Beige-blnce-logo.png"
+          class="aboutBlnceLogo"
+          alt="company logo"
+        />
+        <h2 class="aboutHeader">About Us</h2>
+        <span class="aboutSpan"></span>
 
-      <section class="features">
-        <h3>Why BLNCE?</h3>
-        <ul>
-          <li>🧘 Personalized fitness plans for all levels</li>
-          <li>📊 Real-time progress tracking</li>
-          <li>
-            🎯 Goal-focused workouts: strength, flexibility, endurance & more
-          </li>
-          <li>🧠 Built with science-backed training methods</li>
-        </ul>
-      </section>
+        <section class="intro">
+          <p>
+            "At <strong>BLNCE</strong>, we believe fitness is more than a
+            routine — it’s a lifestyle. Our goal is to help you find your
+            perfect balance of strength, endurance, and recovery through
+            personalized workouts and smart tracking tools."
+          </p>
+        </section>
 
-      <img src="img/blnce-logo.png" alt="blnce logo" />
-
-      <section class="team">
-        <h3>Meet the Team</h3>
-        <p>
-          We're a passionate group of trainers, developers, and wellness nerds
-          dedicated to building a better fitness future.
-        </p>
-      </section>
+        <section class="features">
+          <h3>Why BLNCE?</h3>
+          <ul>
+            <li>🧘 Personalized fitness plans for all levels</li>
+            <li>📊 Real-time progress tracking</li>
+            <li>
+              🎯 Goal-focused workouts: strength, flexibility, endurance & more
+            </li>
+            <li>🧠 Built with science-backed training methods</li>
+          </ul>
+        </section>
+      </div>
+      <div class="meetTheTeam">
+        <img
+          src="img/blnce-logo.png"
+          class="aboutBlnceLogoAlt"
+          alt="blnce logo"
+        />
+        <div class="meetTheTeamTxt">
+          <h3>Meet the Team</h3>
+          <p>
+            We're a passionate group of trainers, developers, and wellness nerds
+            dedicated to building a better fitness future.
+          </p>
+        </div>
+      </div>
     </main>
 
     <footer>
       <section class="navigation-container">
         <div class="nav-column">
-          <a href="exercises.html">exercises ➔</a>
+          <a href="courses.html">workout ➔</a>
           <a href="community.html">community ➔</a>
           <a href="inspiration.html">get inspired ➔</a>
           <a href="Goals.html">set goals ➔</a>

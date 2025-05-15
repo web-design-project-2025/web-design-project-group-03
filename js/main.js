@@ -28,71 +28,118 @@ backToTopButton.addEventListener("click", () => {
 // --- VIDEO LOGIC ---
 // show video controls and clear the hide timer
 function showControls() {
-  controls.classList.remove("hide");
-  clearTimeout(hideTimeout);
+  if (controls) {
+    controls.classList.remove("hide");
+    clearTimeout(hideTimeout);
+  }
 }
 
-// Hide video controls after a delay
 function startHideTimer() {
-  clearTimeout(hideTimeout);
-  hideTimeout = setTimeout(() => controls.classList.add("hide"), 2000);
+  if (controls) {
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => controls.classList.add("hide"), 2000);
+  }
+}
+
+if (controls) {
+  showControls();
+  startHideTimer();
 }
 
 // Mouse enter: Show controls
-videoWrapper.addEventListener("mouseenter", showControls);
+if (videoWrapper) {
+  videoWrapper.addEventListener("mouseenter", showControls);
+  videoWrapper.addEventListener("mouseleave", startHideTimer);
+}
 
 // Mouse leave: Start hide timer
-videoWrapper.addEventListener("mouseleave", startHideTimer);
+if (videoWrapper) {
+  videoWrapper.addEventListener("mouseleave", startHideTimer);
+} //
+// videoWrapper.addEventListener("mouseleave", startHideTimer);
 
 // Play/Pause button click
-playPauseBtn.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    playPauseBtn.textContent = "⏸"; // Pause icon
-  } else {
-    video.pause();
-    playPauseBtn.textContent = "▶"; // Play icon
-  }
-  showControls(); // Reset hide timer
-});
-
-// Update time display as video plays
-video.addEventListener("timeupdate", () => {
-  videoTime.textContent = `${Math.floor(video.currentTime)}s`;
-});
-
-// Reset play button when video ends
-video.addEventListener("ended", () => {
-  playPauseBtn.textContent = "▶"; // Reset to play icon
-});
-
-// --- SEARCH FUNCTIONALITY ---
-
-document
-  .getElementById("search-box")
-  .addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      searchPage();
+if (playPauseBtn && video) {
+  playPauseBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      playPauseBtn.textContent = "⏸"; // Pause icon
+    } else {
+      video.pause();
+      playPauseBtn.textContent = "▶"; // Play icon
     }
+    showControls(); // Reset hide timer
+  });
+}
+
+if (video && videoTime) {
+  video.addEventListener("timeupdate", () => {
+    videoTime.textContent = `${Math.floor(video.currentTime)}s`;
   });
 
-// Handle page redirection based on search input
-function searchPage() {
-  const query = document
-    .getElementById("search-box")
-    .value.trim()
-    .toLowerCase();
-  const pages = {
-    about: "about.html",
-    community: "Community.html",
-    courses: "courses.html",
-    goals: "Goals.html",
-    inspiration: "inspiration.html",
-  };
-
-  window.location.href = pages[query] || "search.html";
+  video.addEventListener("ended", () => {
+    if (playPauseBtn) playPauseBtn.textContent = "▶"; // Reset to play icon
+  });
 }
 
 // Initial display of controls and timer start
 showControls();
 startHideTimer();
+
+// Handle page redirection based on search input
+function searchPage() {
+  const searchBox = document.getElementById("search-box");
+  if (!searchBox) {
+    console.warn("Search box not found!");
+    return;
+  }
+  let query = searchBox.value.toLowerCase();
+  if (query === "home") {
+    window.location.href = "index.html";
+  } else if (query === "about") {
+    window.location.href = "about.html";
+  } else if (query === "account") {
+    window.location.href = "Account.html";
+  } else if (query === "workouts") {
+    window.location.href = "workouts.html";
+  } else if (query === "Community") {
+    window.location.href = "Community.html";
+  } else if (query === "exercise") {
+    window.location.href = "exercise.html";
+  } else if (query === "favorite") {
+    window.location.href = "favorite.html";
+  } else if (query === "inspiration") {
+    window.location.href = "inspiration.html";
+  } else if (query === "products") {
+    window.location.href = "products.html";
+  } else if (query === "goals") {
+    window.location.href = "Goals.html";
+  } else {
+    window.location.href = "search.html";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const workoutPages = {
+    high: "workouts.html?id=6",
+    medium: "workouts.html?id=2",
+    low: "workouts.html?id=9",
+  };
+
+  Object.entries(workoutPages).forEach(([intensity, url]) => {
+    const panel = document.getElementById(intensity);
+    if (panel) {
+      const iframe = document.createElement("iframe");
+      iframe.src = url;
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      panel.appendChild(iframe);
+    }
+  });
+});
+const navbar = document.querySelector(".nav-bar");
+const footer = document.querySelector("footer");
+
+navbar.classList.add("hidden");
+footer.classList.add("hidden");
