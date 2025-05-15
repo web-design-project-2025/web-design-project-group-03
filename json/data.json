@@ -9,7 +9,7 @@
       "Enhances joint mobility",
       "Improves coordination and balance"
     ],
-    "quote": "Cycling is great because it's easy on your body - Mari Holden, Olympic cyclist",
+    "quote": "“Cycling is great because it's easy on your body - Mari Holden, Olympic cyclist”",
     "image": "img/bike.jpg"
   },
   "2": {
@@ -22,8 +22,8 @@
       "Enhances mental toughness",
       "Increases functional strength for daily activities"
     ],
-    "quote": "Powerlifting is a great way to build strength and muscle mass",
-    "image": "img/blackandwhite-weights-1634747_640 kopiera.jpg"
+    "quote": "“Strength doesn't come from what you can do. It comes from overcoming the things you once thought you couldn't.” - Rikki Rogers",
+    "image": "img/powerlifting-courses.png"
   },
   "3": {
     "name": "Yoga",
@@ -35,8 +35,8 @@
       "Improves mental clarity",
       "Promotes relaxation and mindfulness"
     ],
-    "quote": "Yoga is the journey of the self, through the self, to the self - The Bhagavad Gita",
-    "image": "img/bwyoga.jpg"
+    "quote": "“Yoga is the journey of the self, through the self, to the self - The Bhagavad Gita”",
+    "image": "img/yoga-exercise-page.jpg"
   },
   "4": {
     "name": "high-intensity interval training (HIIT)",
