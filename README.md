@@ -1,11 +1,11 @@
-BLNCE – Workout & Wellness Website
+# BLNCE – Workout & Wellness Website
 
-Welcome to BLNCE, a modern  workout website designed to help users achieve balance in their fitness journey. BLNCE offers guidance, inspiration and curated workout content to help the user get moving
+Welcome to **BLNCE**, a modern  workout website designed to help users achieve balance in their fitness journey. BLNCE offers guidance, inspiration and curated workout content to help the user get moving
 
 
-Overview
+## Overview
 
-BLNCE is a responsive web application built as part of a design project. It showcases front-end development skills using HTML, CSS, and JavaScript, focused on providing an engaging and user-friendly fitness platform.
+**BLNCE** is a responsive web application built as part of a design project. It showcases front-end development skills using HTML, CSS, and JavaScript, focused on providing an engaging and user-friendly fitness platform.
 
 ---
 
