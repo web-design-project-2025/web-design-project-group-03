@@ -421,6 +421,24 @@ body {
   visibility: visible;
 }
 
+/* responsiveness for the code above*/
+@media screen and (max-width: 1090px) {
+  .background-rect {
+    height: 155vh;
+  }
+  .exercise-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 11vh;
+  }
+
+  .exercise-item {
+    width: 100%;
+    height: auto;
+  }
+  .popular {
+    margin-top: 8vh;
+  }
+}
 /*  WORKOUT SPECIFICS */
 #workout-body {
   background-color: rgb(34, 33, 34);
