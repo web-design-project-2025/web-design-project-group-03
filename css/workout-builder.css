@@ -1,10 +1,15 @@
-* {
-  background-color: rgb(226, 220, 203);
+/* GLOBAL STYLES */
+
+/* HEADER (everything before filtering) */
+#workout-builder-header {
+  padding-top: 0.8em;
+  padding-left: 0.8em;
 }
 
 .container {
   margin-top: 10rem;
 }
+
 h1 {
   font-size: 5rem;
   color: rgb(34, 33, 34);
