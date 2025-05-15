@@ -438,6 +438,17 @@ body {
   .popular {
     margin-top: 8vh;
   }
+  .description {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #exercise-benefits {
+    width: 60vw;
+  }
+  .goals {
+    margin-top: 26vh;
+  }
 }
 
 /*  WORKOUT SPECIFICS */
