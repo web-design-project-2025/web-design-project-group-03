@@ -26,7 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const users = JSON.parse(localStorage.getItem("users")) || {};
 
-    if (users[username] && users[username] === password) {
+    const hardcodedUsername = "user123";
+    const hardcodedPassword = "user123";
+
+    // Check against hardcoded credentials first
+    if (username === hardcodedUsername && password === hardcodedPassword) {
       const loginDuration = 10 * 60 * 1000; // 10 minutes
       const expiryTime = Date.now() + loginDuration;
 
