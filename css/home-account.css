@@ -62,9 +62,51 @@ nav h2 {
   margin-top: -1rem;
   font-size: 1.2rem;
   font-weight: 300;
-  text-transform: capitalize;
 }
 
+.search {
+  background-color: #e5e1d1;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+.search-input {
+  background-color: #e5e1d1;
+}
+
+#join-button {
+  margin-top: 0.4rem;
+  margin-left: 39rem;
+  display: block;
+  float: right;
+  font-size: 1rem;
+  padding: 8px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: #222122;
+  border: 3px solid #222122;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#join-button:hover {
+  background-color: #222122;
+  color: white;
+}
+
+.settings-icon {
+  top: 1.8rem;
+  width: 3rem;
+  height: auto;
+
+  float: right;
+  margin-right: -0.2rem;
+}
+
+/*  FAVORITES  */
 #favorite-container {
   margin-top: 2rem;
   background-color: rgb(212, 193, 229);
