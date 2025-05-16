@@ -24,28 +24,37 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const users = JSON.parse(localStorage.getItem("users")) || {};
-
+    // Hardcoded login
     const hardcodedUsername = "user123";
     const hardcodedPassword = "user123";
 
-    // Check against hardcoded credentials first
     if (username === hardcodedUsername && password === hardcodedPassword) {
-      const loginDuration = 10 * 60 * 1000; // 10 minutes
-      const expiryTime = Date.now() + loginDuration;
+      loginSuccess(username);
+      return;
+    }
 
-      localStorage.setItem("loggedIn", "true");
-      localStorage.setItem("expiryTime", expiryTime);
-      localStorage.setItem("username", username);
+    // (Only chec localStorage if not hardcoded)
+    const users = JSON.parse(localStorage.getItem("users")) || {};
 
-      window.location.href = "home-account.html";
+    if (users[username] && users[username] === password) {
+      loginSuccess(username);
     } else {
       alert("Invalid username or password.");
     }
   });
 });
 
-// Example validators — customize or remove as needed
+function loginSuccess(username) {
+  const loginDuration = 10 * 60 * 1000; // 10 minutes
+  const expiryTime = Date.now() + loginDuration;
+
+  localStorage.setItem("loggedIn", "true");
+  localStorage.setItem("expiryTime", expiryTime);
+  localStorage.setItem("username", username);
+
+  window.location.href = "home-account.html";
+}
+
 function validateUsername(username) {
   return /^[a-zA-Z0-9]{5,20}$/.test(username);
 }
