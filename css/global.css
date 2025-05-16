@@ -111,14 +111,14 @@ nav {
 .search {
   position: absolute;
   top: 25%;
-  left: 64%;
+  left: 55%;
   display: flex;
   align-items: center;
   padding: 8px;
   margin-left: 4vw;
   border-radius: 28px;
   background: #ffffff;
-  width: 20vh;
+  width: 25vh;
 }
 
 .search-input {
@@ -164,8 +164,8 @@ input[type="text"] {
   position: fixed;
   top: -501%; /* initial pos when hidden */
   left: 0;
-  width: 35%;
-  height: 280px;
+  width: 340px;
+  height: 240px;
   background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
   backdrop-filter: blur(10px); /* glass effect */
   /* glass effect */
@@ -442,4 +442,34 @@ footer p {
 #settings {
   margin-top: 10rem;
   margin-left: 5rem;
+}
+
+@media screen and (max-width: 968px) {
+  .search {
+    width: 0vh;
+    top: -100%;
+  }
+
+  .search-input {
+    width: 0vh;
+  }
+
+  .person-icon {
+    position: absolute;
+    top: 23%;
+    left: 70%;
+  }
+
+  .settings-icon {
+    position: absolute;
+    top: 25%;
+    left: 85%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .search {
+    width: 20vh;
+    left: 56%;
+  }
 }
