@@ -1,37 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("register-form");
+  const registerForm = document.getElementById("register-form");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  registerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const username = document.getElementById("register-username").value.trim();
-    const password = document.getElementById("register-password").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    if (!username || !password) {
-      alert("Please fill in both fields.");
-      return;
-    }
+    // Load existing users or create new object
+    const users = JSON.parse(localStorage.getItem("users")) || {};
 
-    if (!/^[a-zA-Z0-9]{5,20}$/.test(username)) {
-      alert("Username must be 5-20 characters and only letters/numbers.");
-      return;
-    }
-
-    if (password.length < 6) {
-      alert("Password must be at least 6 characters.");
-      return;
-    }
-
-    const users = JSON.parse(localStorage.getItem("users") || "{}");
-
-    if (users[username]) {
-      alert("Username already taken.");
-      return;
-    }
-
+    // Store new user
     users[username] = password;
+
+    // Save updated users back to localStorage
     localStorage.setItem("users", JSON.stringify(users));
-    alert("Registration successful. You can now log in.");
-    window.location.href = "Account.html";
+
+    alert("Account created!");
+    registerForm.reset();
   });
 });
