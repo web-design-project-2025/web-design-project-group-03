@@ -663,3 +663,53 @@ footer {
   border: 4px solid #e2dccb;
   border-bottom: none;
 }
+
+.nav-bar-trap {
+  color: #ffffff;
+}
+
+.nav-logo-svg {
+  color: #222122;
+}
+
+.person-icon {
+  color: #ffffff;
+}
+
+.settings-icon {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1090px) {
+  .ham-menu span {
+    background-color: #222122;
+  }
+
+  .nav-bar-trap {
+    color: #222122;
+  }
+
+  .nav-logo-svg {
+    color: #e2dccb;
+  }
+
+  .person-icon {
+    color: #222122;
+  }
+
+  .settings-icon {
+    color: #222122;
+  }
+
+  .nav-bar-trap:hover {
+    color: #e2dccb;
+  }
+
+  .person-icon:hover {
+    color: #e2dccb;
+  }
+
+  .settings-icon:hover {
+    color: #e2dccb;
+  }
+}

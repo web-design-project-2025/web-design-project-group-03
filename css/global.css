@@ -465,6 +465,26 @@ footer p {
     top: 25%;
     left: 85%;
   }
+
+  .ham-menu span {
+    left: 5%;
+  }
+
+  #footer-place {
+    position: relative;
+    padding-left: 13.5vw;
+    top: 8.5vh;
+  }
+
+  #finalname {
+    font-size: 8rem; /* Reduce font size further */
+    max-width: 90vw; /* Limit width to viewport */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal; /* Allow wrapping */
+    margin: 0 auto;
+    padding-top: 2vh;
+  }
 }
 
 @media screen and (max-width: 1160px) {
