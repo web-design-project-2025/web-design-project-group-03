@@ -164,7 +164,7 @@ input[type="text"] {
   position: fixed;
   top: -501%; /* initial pos when hidden */
   left: 0;
-  width: 25%;
+  width: 340px;
   height: 240px;
   background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
   backdrop-filter: blur(10px); /* glass effect */
