@@ -465,6 +465,12 @@ footer p {
     top: 25%;
     left: 85%;
   }
+
+  #footer-place {
+    position: relative;
+    padding-left: 13.5vw;
+    top: 8.5vh;
+  }
 }
 
 @media screen and (max-width: 1160px) {
