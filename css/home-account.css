@@ -1,9 +1,68 @@
-* {
-  margin: 10px;
-}
+/*  NAV  */
 #account-home-logo {
-  width: 100%;
+  width: 5rem;
   height: auto;
+  position: fixed;
+
+  top: 2vh;
+  left: 1vw;
+  z-index: 10;
+}
+
+#nav-bar-background {
+  width: 5rem;
+  height: auto;
+  position: fixed;
+
+  top: 10rem;
+  left: 1vw;
+  z-index: 5;
+}
+
+#goal-button {
+  width: 5rem;
+  height: auto;
+  position: fixed;
+
+  top: 8rem;
+  left: 1vw;
+  z-index: 5;
+}
+
+#home-nav-bar {
+  width: 3rem;
+  height: auto;
+  position: fixed;
+
+  top: 15rem;
+  left: 2vw;
+  z-index: 5;
+}
+
+#favorites-logo {
+  width: 3rem;
+  height: auto;
+  position: fixed;
+
+  top: 20.6rem;
+  left: 2vw;
+  z-index: 5;
+}
+
+nav,
+#user-name h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+nav h2 {
+  margin: 0;
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: capitalize;
 }
 
 #favorite-container {
