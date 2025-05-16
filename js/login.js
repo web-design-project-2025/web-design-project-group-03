@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("loggedIn", "true");
       localStorage.setItem("expiryTime", expiryTime);
 
+      localStorage.setItem("username", username);
+
       window.location.href = "home-account.html";
     } else {
       alert("Invalid username or password.");
