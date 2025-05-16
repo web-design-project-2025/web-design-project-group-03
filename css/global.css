@@ -466,6 +466,10 @@ footer p {
     left: 85%;
   }
 
+  .ham-menu span {
+    left: 5%;
+  }
+
   #footer-place {
     position: relative;
     padding-left: 13.5vw;
