@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Hardcoded login
+    // Hardcoded login, use for demo
     const hardcodedUsername = "user123";
     const hardcodedPassword = "user123";
 
