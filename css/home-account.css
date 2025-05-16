@@ -69,6 +69,7 @@ nav h2 {
   position: absolute;
   top: 2rem;
   right: 0;
+  margin: 0;
 }
 
 .search-input {
@@ -108,19 +109,29 @@ nav h2 {
 
 /*  FAVORITES  */
 #favorite-container {
+  border-radius: 20px;
+  margin-left: 7rem;
   margin-top: 2rem;
-  background-color: rgb(212, 193, 229);
-  width: 98%;
+  background-color: rgba(226, 220, 203, 1);
+  width: 85%;
   height: auto;
   padding: 2%;
 }
 
 #saved-container {
+  border-radius: 20px;
+  margin-left: 7rem;
   margin-top: 2rem;
-  background-color: rgb(212, 193, 229);
-  width: 98%;
+  background-color: rgba(226, 220, 203, 1);
+  width: 85%;
   height: auto;
   padding: 2%;
+}
+
+.titles {
+  font-size: 2.3rem;
+  margin-left: 7rem;
+  margin-top: 3rem;
 }
 
 .favorite-item h3 {
@@ -163,5 +174,5 @@ nav h2 {
 }
 
 #saved-container p {
-  color: royalblue;
+  color: #333;
 }
