@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ----- GLOBAL UI FUNCTIONALITY -----
 
+  // back button functionality
+  const backButton = document.getElementById("back-button");
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      window.history.back();
+    });
+  }
+
   // hamburger menu toggle
   const hamMenu = document.querySelector(".ham-menu");
   const offScreenMenu = document.querySelector(".off-screen-menu");
