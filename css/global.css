@@ -119,12 +119,14 @@ nav {
   border-radius: 28px;
   background: #ffffff;
   width: 25vh;
+  transition: opacity 0.4s ease, width 0.4s, top 0.4s;
 }
 
 .search-input {
   border: none;
   color: rgba(34, 33, 34, 0.7);
   width: 17vh;
+  transition: opacity 0.4s ease, width 0.4s, top 0.4s;
 }
 
 .search-input:focus {
@@ -258,6 +260,39 @@ nav {
 .ham-menu.active span:nth-child(3) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*  BACK BTN  */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 25rem;
+  padding: 0.5rem;
+}
+
+#back-button {
+  position: fixed;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.4rem 1.4rem;
+  cursor: pointer;
+  transition: border-color 0.4s ease, border-width 0.4s ease,
+    background-color 0.3s, color 0.3s;
+  display: block;
+  margin-top: 0.7rem;
+  margin-left: 0;
+  margin-right: auto;
+  left: 16%;
+  top: 8%;
+}
+
+#back-button:hover {
+  transform: scale(1.05);
+  border: 3px solid white;
 }
 
 /* COMPLETE FOOTER */
@@ -448,6 +483,8 @@ footer p {
   .search {
     width: 0vh;
     top: -100%;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .search-input {
@@ -464,6 +501,10 @@ footer p {
     position: absolute;
     top: 25%;
     left: 85%;
+  }
+
+  #back-button {
+    border-color: rgba(255, 255, 255, 0);
   }
 
   .ham-menu span {
@@ -492,34 +533,4 @@ footer p {
     width: 20vh;
     left: 56%;
   }
-}
-
-/*  BACK BTN  */
-.nav-controls {
-  display: flex;
-  align-items: center;
-  gap: 25rem;
-  padding: 0.5rem;
-}
-
-#back-button {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-  border-radius: 40px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0.4rem 1.4rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  display: block;
-  margin-top: 0.7rem;
-  margin-left: 0;
-  margin-right: auto;
-}
-
-#back-button:hover {
-  transform: scale(1.05);
-  border: 3px solid white;
 }
