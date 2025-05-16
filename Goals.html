@@ -165,7 +165,9 @@
     <main>
       <section class="content">
         <div class="dropdown-container">
-          <button class="dropdown-button">Current goals</button>
+          <button class="dropdown-button" data-dropdown-btn>
+            Current goals
+          </button>
           <div class="dropdown-panel">
             <ul class="dropdown-panel-list">
               <li>goal 1</li>
@@ -175,15 +177,44 @@
             </ul>
           </div>
         </div>
+
         <div class="completed-goals">
           <h2>completed goals</h2>
           <p>you have completed 15 goals</p>
-          <p>click here to see your completed goals</p>
         </div>
-        <!--graph or something with complete goals -->
+
         <div class="dropdown-container2">
-          <p>Create a new goal</p>
-          <button class="dropdown-button2">+</button>
+          <button class="dropdown-button2" data-dropdown-btn>
+            <h1 id="create-title">Create new goal</h1>
+            <svg
+              id="add-goal"
+              width="87"
+              height="87"
+              viewBox="0 0 87 87"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="42.5"
+                cy="43.5"
+                r="31"
+                stroke="#E5E1D1"
+                stroke-width="3"
+              />
+              <path
+                d="M43.5 31.7885L43.5 55.2115"
+                stroke="#E5E1D1"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M55.2114 43.5L31.7883 43.5"
+                stroke="#E5E1D1"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
           <div class="dropdown-panel2">
             <form action="submit_goal.php" method="post" class="goal-form">
               <p>What type of goal is it?</p>
@@ -192,7 +223,7 @@
               <label> <input type="radio" name="type" />Endurance</label>
               <label> <input type="radio" name="type" />Balance</label>
 
-              <label for="goal">Goal:</label>
+              <label for="goal">←</label>
               <input type="text" id="goal" name="goal" required />
               <label for="deadline">Deadline:</label>
               <input type="date" id="deadline" name="deadline" required />
@@ -202,6 +233,7 @@
         </div>
       </section>
     </main>
+
     <footer>
       <section class="navigation-container">
         <div class="nav-column">
