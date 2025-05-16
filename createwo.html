@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/workout-builder.css" />
     <script src="js/api.js" defer></script>
-    <script src="js/favorite.js" defer></script>
     <script src="js/global.js" defer></script>
   </head>
   <body id="create-body">
@@ -131,15 +130,15 @@
       <div class="container">
         <div class="workout-panel">
           <h2>Your Workout</h2>
-          <ul class="workout-list">
+          <ul id="workout-list" class="workout-list">
             <li class="placeholder">No exercises added yet.</li>
           </ul>
           <button id="save-workout">Save Workout</button>
         </div>
 
-        <h2>Available Exercises</h2>
+        <h2 id="filter-header">Available Exercises</h2>
         <section id="filter-container">
-          <div id="muscle-filter-buttons">
+          <div id="muscle-filter-buttons" class="filter-buttons">
             <button class="muscle-button" data-muscle="Shoulders">
               Shoulders
             </button>
@@ -150,22 +149,23 @@
             <button class="muscle-button" data-muscle="Core">Core</button>
           </div>
         </section>
-        <div id="exercise-list">
+        <div id="exercise-list" class="exercise-list">
           <div class="loading">Loading exercises...</div>
         </div>
       </div>
 
       <template id="exercise-template">
         <div class="exercise-card">
-          <div class="exercise-title"></div>
-          <div class="exercise-cat"></div>
+          <h3 class="exercise-title"></h3>
+          <p class="exercise-cat"></p>
           <div class="exercise-description"></div>
-          <p>Target Muscles:</p>
-          <div class="tags muscles"></div>
-          <br />
-          <p>Equipment:</p>
-          <div class="tags equipment"></div>
-          <button class="action-button">Add to workout</button>
+          <div class="tags">
+            <div><strong>Muscles:</strong> <span class="muscles"></span></div>
+            <div>
+              <strong>Equipment:</strong> <span class="equipment"></span>
+            </div>
+            <button class="action-button">Add to Workout</button>
+          </div>
         </div>
       </template>
 
