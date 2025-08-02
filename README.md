@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/Beige-blnce-logo.png" alt="BLNCE Logo" width="70">
+</p>
+
 # BLNCE – Workout & Wellness Application
 
 Welcome to **BLNCE**, a modern workout application designed to help users achieve balance in their fitness journey. BLNCE offers guidance, inspiration and curated workout content to help the user get moving in whatever way they need.
@@ -6,7 +10,7 @@ Welcome to **BLNCE**, a modern workout application designed to help users achiev
 
 **BLNCE** is a responsive web application built as part of the class "Web Design Project" at Jönköping University during the spring term of 2025. It showcases front-end development competence using HTML, CSS, and JavaScript as well as visual design and user experience elements.
 
-The project was made with the thought of possible expansion in mind, leaving space towards possibilites such as scale and complexity.
+The project was made with the thought of possible expansion in mind, leaving space towards possibilites for scale and complexity.
 
 ---
 
@@ -32,3 +36,9 @@ To run the project locally:
 ```bash
 git clone https://github.com/web-design-project-2025/web-design-project-group-03.git
 ```
+
+## Authors
+
+[![aonajin](https://img.shields.io/badge/GitHub-aonajin-pink?logo=github)](https://github.com/yourusername)
+[![tutatrumpet](https://img.shields.io/badge/GitHub-tutatrumpet-orange?logo=github)](https://github.com/yourusername)
+[![Maxliljeqvist](https://img.shields.io/badge/GitHub-Maxliljeqvist-blue?logo=github)](https://github.com/yourusername)
