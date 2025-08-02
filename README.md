@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/Beige-blnce-logo.png" alt="BLNCE Logo" width="70">
+  <img src="img/beige-blnce-logo.png" alt="BLNCE Logo" width="70">
 </p>
 
 # BLNCE – Workout & Wellness Application
