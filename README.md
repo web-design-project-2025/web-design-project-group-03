@@ -8,9 +8,9 @@ Welcome to **BLNCE**, a modern workout application designed to help users achiev
 
 ## Overview
 
-**BLNCE** is a responsive web application built as part of the class "Web Design Project" at Jönköping University during the spring term of 2025. It showcases front-end development competence using HTML, CSS, and JavaScript as well as visual design and user experience elements.
+**BLNCE** is a responsive web application developed during the _Web Design Project_ course at Jönköping University in the spring of 2025. It demonstrates front-end development skills using HTML, CSS, and JavaScript, while also integrating visual design and user experience principles.
 
-The project was made with the thought of possible expansion in mind, leaving space towards possibilites for scale and complexity.
+The project was built with scalability in mind, allowing room for future expansion in both functionality and complexity.
 
 ---
 
@@ -26,6 +26,12 @@ The project was made with the thought of possible expansion in mind, leaving spa
 - **Get inspired** – Get inspired with scientifically backed facts about why you should move your body!
 
 ---
+
+## Built with / tech stack
+
+- [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Getting Started
 
