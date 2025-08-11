@@ -9,10 +9,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // hamburger menu toggle
   const hamMenu = document.querySelector(".ham-menu");
   const offScreenMenu = document.querySelector(".off-screen-menu");
+  const search = document.querySelector(".search");
 
+  const originalParent = search.parentElement;
+  let originalNextSibling = search.nextElementSibling; // might be null
+
+  function moveSearchIntoMenu() {
+    if (!offScreenMenu.contains(search)) {
+      offScreenMenu.prepend(search);
+      search.classList.add("slide-in");
+    }
+  }
+
+  function moveSearchBack() {
+    if (!originalParent.contains(search)) {
+      if (
+        originalNextSibling &&
+        originalNextSibling.parentElement === originalParent
+      ) {
+        originalParent.insertBefore(search, originalNextSibling);
+      } else {
+        originalParent.appendChild(search);
+      }
+      search.classList.remove("slide-in");
+    }
+    // Uupd sibling every time we move it back
+    originalNextSibling = search.nextElementSibling;
+  }
+
+  function checkWidthAndMoveSearch() {
+    if (window.innerWidth <= 968) {
+      moveSearchIntoMenu();
+    } else {
+      moveSearchBack();
+    }
+  }
+
+  // initall setup on page load
+  window.addEventListener("load", () => {
+    checkWidthAndMoveSearch();
+    // upd sibling in case search is inside original parent on load
+    if (originalParent.contains(search)) {
+      originalNextSibling = search.nextElementSibling;
+    }
+  });
+
+  // listen resize
+  window.addEventListener("resize", checkWidthAndMoveSearch);
+
+  // ham toggle purely toggles menu visibility
   if (hamMenu && offScreenMenu) {
     hamMenu.addEventListener("click", () => {
       hamMenu.classList.toggle("active");
