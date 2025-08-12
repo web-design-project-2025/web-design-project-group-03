@@ -243,7 +243,7 @@ nav {
 
 .ham-menu-button {
   position: absolute;
-  top: -0.3rem;
+  top: -0.1rem;
   left: 12rem;
   width: 100%;
   height: 100%;
@@ -501,9 +501,8 @@ footer p {
 @media (max-width: 600px) {
   .nav-bar {
     flex-direction: column;
-    height: auto;
+    height: 4.7rem;
     gap: 0.5rem;
-    padding: 0.75rem 1rem;
   }
 
   .ham-menu {
@@ -543,9 +542,24 @@ footer p {
 
 @media screen and (max-width: 968px) {
   .search {
+    margin-top: 1rem;
+    margin-left: 2rem;
     opacity: 1;
-    width: 14vw;
+    width: 24vw;
     pointer-events: auto;
+  }
+
+  .off-screen-menu.active {
+    top: 100px;
+  }
+
+  .off-screen-menu {
+    width: 20rem;
+    left: 5rem;
+  }
+
+  .off-screen-menu a {
+    font-size: 2rem;
   }
 
   .nav-bar {
