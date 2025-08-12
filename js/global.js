@@ -9,57 +9,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const hamMenu = document.querySelector(".ham-menu");
+  // Move search between desktop and hamburger menu
+  const search = document.querySelector(".search"); // desktop search
   const offScreenMenu = document.querySelector(".off-screen-menu");
-  const search = document.querySelector(".search");
 
-  const originalParent = search.parentElement;
-  let originalNextSibling = search.nextElementSibling; // might be null
+  let placeholder;
+  if (search && offScreenMenu) {
+    const originalParent = search.parentNode;
+    placeholder = document.createElement("div");
+    placeholder.style.display = "none";
+    originalParent.insertBefore(placeholder, search);
 
-  function moveSearchIntoMenu() {
-    if (!offScreenMenu.contains(search)) {
-      offScreenMenu.prepend(search);
-      search.classList.add("slide-in");
-    }
-  }
-
-  function moveSearchBack() {
-    if (!originalParent.contains(search)) {
-      if (
-        originalNextSibling &&
-        originalNextSibling.parentElement === originalParent
-      ) {
-        originalParent.insertBefore(search, originalNextSibling);
-      } else {
-        originalParent.appendChild(search);
+    function moveSearchIntoMenu() {
+      if (search.parentNode !== offScreenMenu) {
+        offScreenMenu.prepend(search);
       }
-      search.classList.remove("slide-in");
     }
-    // Uupd sibling every time we move it back
-    originalNextSibling = search.nextElementSibling;
+
+    function moveSearchBack() {
+      if (search.parentNode !== originalParent) {
+        originalParent.insertBefore(search, placeholder);
+      }
+    }
+
+    function handleResize() {
+      if (window.innerWidth <= 968) {
+        moveSearchIntoMenu();
+      } else {
+        moveSearchBack();
+      }
+    }
+
+    // Run once and on resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
   }
-
-  function checkWidthAndMoveSearch() {
-    if (window.innerWidth <= 968) {
-      moveSearchIntoMenu();
-    } else {
-      moveSearchBack();
-    }
-  }
-
-  // initall setup on page load
-  window.addEventListener("load", () => {
-    checkWidthAndMoveSearch();
-    // upd sibling in case search is inside original parent on load
-    if (originalParent.contains(search)) {
-      originalNextSibling = search.nextElementSibling;
-    }
-  });
-
-  // listen resize
-  window.addEventListener("resize", checkWidthAndMoveSearch);
 
   // ham toggle purely toggles menu visibility
+  const hamMenu = document.querySelector(".ham-menu");
   if (hamMenu && offScreenMenu) {
     hamMenu.addEventListener("click", () => {
       hamMenu.classList.toggle("active");
@@ -69,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // back-to-top button logic
   const backToTopButton = document.getElementById("backToTop");
-
   if (backToTopButton) {
     window.addEventListener("scroll", () => {
       backToTopButton.classList.toggle("visible", window.scrollY > 300);
