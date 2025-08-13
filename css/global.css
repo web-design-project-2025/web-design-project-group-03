@@ -499,6 +499,10 @@ footer p {
 
 /*  MEDIA QUERIES / responsivenesss  */
 @media (max-width: 600px) {
+  #nav-bar-background {
+    margin-top: 1.7rem;
+  }
+
   .nav-bar {
     flex-direction: column;
     height: 4.7rem;
@@ -508,9 +512,69 @@ footer p {
   .ham-menu {
     left: -16.5rem;
   }
+
+  .navigation-container {
+    display: block;
+    padding-top: 5vh;
+  }
+
+  footer {
+    height: 30vh;
+  }
+
+  #logo-footer {
+    margin-bottom: 20vh;
+  }
+
+  .explore,
+  .popular {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .explore-panels,
+  .popular-panels {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .explore a,
+  .popular a {
+    padding-top: 1rem;
+    font-size: 0.5rem;
+  }
+
+  .panel {
+    flex: none;
+    width: 100%;
+  }
+
+  .explore-panels:hover .panel,
+  .popular-panels:hover .panel {
+    flex: none;
+  }
+
+  .panel:hover {
+    flex: none;
+  }
+
+  .panel .panel-text {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .content {
+    padding-top: 0rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  #nav-bar-background {
+    margin-top: 1.5rem;
+  }
   .nav-links {
     display: none;
   }
@@ -525,6 +589,10 @@ footer p {
 }
 
 @media screen and (min-width: 769px) {
+  #nav-bar-background {
+    margin-top: 1.5rem;
+  }
+
   .nav-links {
     display: flex;
     justify-content: center;
@@ -533,17 +601,22 @@ footer p {
   }
 
   .search {
+    margin-left: 27rem;
     opacity: 1;
     width: 14vw;
     pointer-events: auto;
     top: 25%;
+  }
+
+  #logo-footer {
+    margin-bottom: 20vh;
   }
 }
 
 @media screen and (max-width: 968px) {
   .search {
     margin-top: 1rem;
-    margin-left: 2rem;
+    margin-left: 8rem;
     opacity: 1;
     width: 24vw;
     pointer-events: auto;
@@ -603,5 +676,31 @@ footer p {
     white-space: normal;
     margin: 0 auto;
     padding-top: 2vh;
+  }
+
+  footer {
+    height: 40vh;
+  }
+
+  #logo-footer {
+    margin-bottom: 20vh;
+  }
+}
+
+@media screen and (min-width: 1820px) {
+  footer {
+    height: 40vh;
+  }
+
+  #logo-footer {
+    margin-bottom: 20vh;
+  }
+
+  #nav-bar-background {
+    margin-top: 1.4rem;
+  }
+
+  .search {
+    margin-left: 45rem;
   }
 }
