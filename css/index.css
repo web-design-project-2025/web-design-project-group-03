@@ -133,14 +133,12 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 2%;
-  margin-bottom: -1.5%;
 }
 
 .explore-panels,
 .popular-panels {
   display: flex;
   width: 95vw;
-  height: auto;
   gap: 0.5rem;
 }
 
