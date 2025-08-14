@@ -76,13 +76,14 @@ function createExerciseCard(ex, showAddButton = true) {
     button.className = showAddButton
       ? "add-button action-button"
       : "remove-btn action-button";
-    button.onclick = () => {
+
+    button.addEventListener("click", () => {
       if (showAddButton) {
         addToWorkout(ex);
       } else {
         removeFromWorkout(ex.id);
       }
-    };
+    });
   }
 
   return clone;

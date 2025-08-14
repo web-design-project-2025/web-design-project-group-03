@@ -1,115 +1,192 @@
 /* GLOBAL STYLES */
-
-/* HEADER (everything before filtering) */
-#workout-builder-header {
-  padding-top: 0.8em;
-  padding-left: 0.8em;
+#create-body {
+  background-color: rgb(34, 33, 34);
+  color: rgb(226, 220, 203);
 }
 
 .container {
-  margin-top: 10rem;
-}
-
-h1 {
-  font-size: 5rem;
-  color: rgb(34, 33, 34);
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 0%;
-}
-
-#yourwoh2 {
-  font-size: 2.5rem;
+  margin-top: 8rem;
   color: rgb(226, 220, 203);
-  background-color: rgb(34, 33, 34);
-  font-weight: bold;
+  position: relative;
+  width: 95%;
+  height: auto;
+
+  background-color: #222122;
+  background-size: cover;
+  background-position: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+
+.container h1 {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  margin-left: 1.5rem;
   margin-bottom: 0%;
+
+  color: rgb(226, 220, 203);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 5rem;
 }
 
 h2 {
-  color: rgb(34, 33, 34);
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0%;
-}
-
-.save-button {
-  display: block;
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 10px 40px;
-  font-style: normal;
-  font-weight: 700;
-  background-color: transparent;
   color: rgb(226, 220, 203);
-  border: 3px solid rgb(226, 220, 203);
-  border-radius: 40px;
-  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5rem;
+
+  margin: 1.2rem;
 }
 
+/*  YOUR SAVED WORKOUTS */
 .workout-panel {
+  height: auto;
   background-color: rgb(34, 33, 34);
-  padding: 15px;
-  width: 98%;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 5px solid rgb(226, 220, 203, 0.5);
+  margin: 1.2rem auto 0 auto;
+  margin-top: 2rem;
+}
+
+.placeholder,
+.workout-list {
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 1rem;
+
+  color: #777;
+  border-radius: 20px;
+  width: 90%;
+  height: auto;
+
+  margin: auto;
+  justify-content: center;
+  align-items: start;
+  list-style: none;
 }
 
 .workout-list {
-  list-style: none;
-  padding-left: 0;
+  padding: 0%;
 }
 
-.workout-list li {
-  margin: 6px 0;
-  padding: 6px 10px;
-  background-color: #2b2b2b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.workout-list .remove-btn {
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 10px 40px;
-  font-style: normal;
-  font-weight: 700;
+.remove-btn {
+  margin: 1.5rem auto;
   background-color: transparent;
   color: rgb(226, 220, 203);
+  padding: 1rem 2rem;
+  height: 3.5rem;
   border: 3px solid rgb(226, 220, 203);
+  font-size: 1rem;
+  font-weight: bolder;
   border-radius: 40px;
   cursor: pointer;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.workout-list .remove-btn:hover {
+
+.remove-btn:hover {
   background-color: rgb(226, 106, 69);
 }
 
+#save-workout,
+.action-button {
+  margin: 1.5rem auto;
+  background-color: transparent;
+  color: rgb(226, 220, 203);
+  padding: 1rem 2rem;
+  height: 3.5rem;
+  border: 3px solid rgb(226, 220, 203);
+  font-size: 1rem;
+  font-weight: bolder;
+  border-radius: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#save-workout:hover,
+.action-button:hover {
+  background-color: rgb(226, 220, 203);
+  color: #222122;
+}
+
+/* MUSCLE GROUP FILTERING */
+#filter-header {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#filter-container {
+  margin-bottom: 3%;
+  margin-left: 1.2rem;
+}
+
+#muscle-filter-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+#muscle-filter-buttons button {
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: rgba(166, 163, 149, 1);
+  margin: 0;
+}
+
+/* EXERCISES */
+#exercise-list,
+.exercise-list {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 1rem;
+}
+
 .exercise-card {
-  background-color: rgb(34, 33, 34);
+  width: 33rem;
+  border: 4px solid rgba(229, 225, 209, 0.2);
+  color: rgb(226, 220, 203);
   margin: 20px 0;
-  padding: 20px;
+  padding: 2rem;
+  padding-left: 2rem;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .exercise-title {
   font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 2%;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
   background-color: rgb(34, 33, 34);
   color: rgb(226, 220, 203);
 }
 
 .exercise-cat {
-  font-size: 1rem;
-  color: rgb(226, 220, 203);
+  font-size: 1.2rem;
+  color: rgb(226, 220, 203, 0.5);
   margin-bottom: 15px;
   background-color: rgb(34, 33, 34);
 }
 
 .exercise-description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 15px;
   background-color: rgb(34, 33, 34);
@@ -117,7 +194,7 @@ h2 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: rgb(34, 33, 34);
   color: rgb(226, 220, 203);
   text-align: left;
@@ -125,11 +202,19 @@ p {
   margin-top: 2%;
 }
 
-.tags {
-  background-color: rgb(34, 33, 34);
-  gap: 90px;
-  margin-bottom: 3%;
+strong {
+  color: rgb(226, 220, 203, 0.5);
 }
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 2vh;
+  padding: 1rem;
+  background-color: rgb(34, 33, 34);
+  line-height: 3rem;
+}
+
 .tag {
   background-color: #333;
   padding: 5px 10px;
@@ -138,26 +223,6 @@ p {
   color: rgb(221, 124, 128);
 }
 
-.placeholder {
-  color: #777;
-}
-
-button.add-button {
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 10px 40px;
-  font-style: normal;
-  font-weight: 700;
-  background-color: transparent;
-  color: rgb(226, 220, 203);
-  border: 3px solid rgb(226, 220, 203);
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-button.add-button:hover {
-  background-color: rgb(96, 132, 164);
-}
 button:active {
   transform: scale(0.95);
   background-color: rgb(226, 220, 203);
@@ -168,4 +233,21 @@ button:active {
   margin-top: 100px;
   font-size: 2rem;
   color: rgb(34, 33, 34);
+}
+
+/* FOOTER */
+footer {
+  background-color: #222122;
+  width: 95vw;
+  height: 80vh;
+  display: block;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0 auto;
+  padding-bottom: 0%;
+  margin-top: 30px;
+  border: 4px solid #e2dccb;
+  border-bottom: none;
 }

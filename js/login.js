@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("login-form");
 
   form.addEventListener("submit", (event) => {
-    event.preventDefault(); // prevent default form submission
+    event.preventDefault();
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -32,17 +32,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const validPassword = "password123";
 
     if (username === validUsername && password === validPassword) {
+      // set login state and expiry
+      const loginDuration = 10 * 60 * 1000; // 10 minutes
+      const expiryTime = Date.now() + loginDuration;
+
       localStorage.setItem("loggedIn", "true");
-      window.location.href = "home-account.html"; // redirect if login is successful
+      localStorage.setItem("expiryTime", expiryTime);
+
+      localStorage.setItem("username", username);
+
+      window.location.href = "home-account.html";
     } else {
       alert("Invalid username or password.");
     }
   });
 });
 
-// redirect if already logged in
+// redirect or logout if session is expired
 window.addEventListener("load", () => {
-  if (localStorage.getItem("loggedIn") === "true") {
-    window.location.href = "home-account.html";
+  const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+  const expiryTime = localStorage.getItem("expiryTime");
+
+  if (!isLoggedIn || !expiryTime || Date.now() > Number(expiryTime)) {
+    // session expired or invalid
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("expiryTime");
+
+    if (window.location.pathname.includes("home-account.html")) {
+      alert("Your session has expired. Please log in again.");
+      window.location.href = "login.html";
+    }
   }
 });
