@@ -279,3 +279,20 @@ nav h2 {
   padding-left: 1rem;
   margin: 0;
 }
+
+/*responsive*/
+@media (max-width: 1200px) {
+  .activity-container,
+  .goals-and-latest-workout {
+    flex-direction: column;
+
+    margin-left: 2rem;
+    gap: 2rem;
+  }
+  .stack {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
