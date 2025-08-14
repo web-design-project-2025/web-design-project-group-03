@@ -1,10 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ----- GLOBAL UI FUNCTIONALITY -----
 
-  // hamburger menu toggle
-  const hamMenu = document.querySelector(".ham-menu");
+  // back button functionality
+  const backButton = document.getElementById("back-button");
+  if (backButton) {
+    backButton.addEventListener("click", () => {
+      window.history.back();
+    });
+  }
+
+  // Move search between desktop and hamburger menu
+  const search = document.querySelector(".search"); // desktop search
   const offScreenMenu = document.querySelector(".off-screen-menu");
 
+  let placeholder;
+  if (search && offScreenMenu) {
+    const originalParent = search.parentNode;
+    placeholder = document.createElement("div");
+    placeholder.style.display = "none";
+    originalParent.insertBefore(placeholder, search);
+
+    function moveSearchIntoMenu() {
+      if (search.parentNode !== offScreenMenu) {
+        offScreenMenu.prepend(search);
+      }
+    }
+
+    function moveSearchBack() {
+      if (search.parentNode !== originalParent) {
+        originalParent.insertBefore(search, placeholder);
+      }
+    }
+
+    function handleResize() {
+      if (window.innerWidth <= 968) {
+        moveSearchIntoMenu();
+      } else {
+        moveSearchBack();
+      }
+    }
+
+    // Run once and on resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
+  }
+
+  // ham toggle purely toggles menu visibility
+  const hamMenu = document.querySelector(".ham-menu");
   if (hamMenu && offScreenMenu) {
     hamMenu.addEventListener("click", () => {
       hamMenu.classList.toggle("active");
@@ -14,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // back-to-top button logic
   const backToTopButton = document.getElementById("backToTop");
-
   if (backToTopButton) {
     window.addEventListener("scroll", () => {
       backToTopButton.classList.toggle("visible", window.scrollY > 300);

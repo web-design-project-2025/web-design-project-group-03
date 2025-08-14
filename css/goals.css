@@ -1,40 +1,173 @@
-/*current goals*/
+/*  NAV  */
+#account-home-logo {
+  width: 5rem;
+  height: auto;
+  position: fixed;
+
+  top: 2vh;
+  left: 1vw;
+  z-index: 10;
+}
+
+#nav-bar-background {
+  width: 5rem;
+  height: auto;
+  position: fixed;
+
+  top: 10rem;
+  left: 1vw;
+  z-index: 5;
+}
+
+#goal-button {
+  width: 5rem;
+  height: auto;
+  position: fixed;
+
+  top: 8rem;
+  left: 1vw;
+  z-index: 5;
+}
+
+#home-nav-bar {
+  width: 3rem;
+  height: auto;
+  position: fixed;
+
+  top: 15rem;
+  left: 2vw;
+  z-index: 5;
+}
+
+#favorites-logo {
+  width: 3rem;
+  height: auto;
+  position: fixed;
+
+  top: 20.6rem;
+  left: 2vw;
+  z-index: 5;
+}
+
+nav,
+#user-name h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+nav h2 {
+  margin: 0;
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.search {
+  background-color: #e5e1d1;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  margin: 0;
+}
+
+.search-input {
+  background-color: #e5e1d1;
+}
+
+#join-button {
+  margin-top: 0.4rem;
+  margin-left: 42rem;
+  display: block;
+  float: right;
+  font-size: 1rem;
+  padding: 8px 40px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: #222122;
+  border: 3px solid #222122;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#join-button:hover {
+  background-color: #222122;
+  color: white;
+}
+
+.settings-icon {
+  top: 1.8rem;
+  width: 3rem;
+  height: auto;
+
+  float: right;
+  margin-right: -0.2rem;
+}
+
+/*  GENERAL  */
+.goals-intro {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.content {
+  border-radius: 20px;
+  margin-left: 7rem;
+  margin-top: 2rem;
+  background-color: rgba(226, 220, 203, 1);
+  width: 85%;
+  height: auto;
+  padding: 2%;
+}
+
+/*  INSIDE CONTAINER */
 .dropdown-container {
   width: 100%;
   margin: auto;
   background-color: rgb(34, 33, 34);
-  border-radius: 40px 40px;
+  border-radius: 20px;
 }
 
 .dropdown-button {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: rgb(34, 33, 34);
   color: rgb(226, 220, 203);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
   border: none;
   cursor: pointer;
   font-size: 2rem;
   font-weight: bold;
-  justify-content: center;
-  border-radius: 40px;
+  border-radius: 20px;
 }
 
 .dropdown-panel {
-  max-height: 0;
   width: 100%;
+  background-color: rgba(34, 33, 34, 0.2);
+  color: rgb(226, 220, 203);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 20px;
+
+  width: auto;
   overflow: hidden;
   transition: 0.3s ease;
-  background-color: rgb(34, 33, 34);
-  padding: 0 1rem;
-  border-radius: 40px;
 }
+
 .dropdown-panel p {
   color: rgb(226, 220, 203);
   font-size: 1.2rem;
   margin: 0%;
 }
 
- .dropdown-panel ul{
+.dropdown-panel ul {
   color: rgb(226, 220, 203);
   font-size: 1.2rem;
   padding: 0.5rem;
@@ -48,52 +181,81 @@
   margin-left: 2rem;
 }
 
-.dropdown-panel.active {
-  max-height: 300px;
+/*  DROPDOWN  */
+.dropdown-panel,
+.dropdown-panel2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.dropdown-panel.active,
+.dropdown-panel2.active {
+  max-height: 300vh;
 }
 
 /* completed goals */
 .completed-goals {
-  width: 45%;
+  width: 98%;
   height: auto;
+  margin: 2rem 0;
   grid-area: completed;
+
   background-color: rgb(34, 33, 34);
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 1rem;
 }
+
 .completed-goals h2 {
   color: rgb(226, 220, 203);
   font-size: 2rem;
+  text-transform: uppercase;
   font-weight: bold;
   text-align: center;
+  margin-top: 0.8rem;
   margin-bottom: 1rem;
 }
+
 .completed-goals p {
   color: rgb(226, 220, 203);
   font-size: 1.2rem;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 0%;
+  text-align: center;
 }
 
 /*create goals*/
+#deadline {
+  margin-top: 1.1rem;
+}
+
+#create-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+#add-goal {
+  width: 5rem;
+  height: auto;
+}
+
 .dropdown-container2 {
   width: 100%;
   margin: auto;
   background-color: rgb(34, 33, 34);
-  border-radius: 40px;
+  border-radius: 20px;
 }
+
 .dropdown-container2 p {
-  font-size: 2rem;
   font-weight: bold;
-  color: rgb(226, 220, 203);
-  padding-left: 43%;
-  margin-bottom: 0%;
 }
 
 .dropdown-button2 {
   width: 100%;
   padding-bottom: 1rem;
   background-color: rgb(34, 33, 34);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: rgb(226, 220, 203);
   border: none;
   cursor: pointer;
@@ -103,124 +265,76 @@
 }
 
 .dropdown-panel2 {
-  max-height: 0;
-  width: 100%;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: rgb(226, 220, 203);
-  padding: 0 1rem;
-  border-radius: 0, 0, 40px, 40px;
-}
-
-.goal-form {
-  padding: 1rem;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: column;
+  background-color: rgb(34, 33, 34);
+  border-radius: 20px;
+  color: rgb(226, 220, 203);
+  font-weight: bold;
+  font-size: 1.4rem;
+  max-width: 80vw;
+  margin: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .goal-form p {
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(34, 33, 34);
-  padding-left: 1%;
-  margin: 0%;
-}
-
-.goal-form input[type="radio"] {
-  accent-color: #0047cc;
-}
-
-input[type="text"],
-input[type="date"] {
-  width: 20%;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.dropdown-panel2.active {
-  max-height: 300px;
-}
-
-#submit {
-  width: 20%;
-  margin: 0%;
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
-  padding: 10px 20px;
-
-  background-color: rgb(226, 220, 203);
-  color: black;
-  border: 3px solid #222122;
-  border-radius: 40px;
-  cursor: pointer;
-}
-#submit:hover {
-  background-color: rgb(125, 120, 48);
-}
-
-/*
-.goal-form {
-  background: #ffffff;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.goal-form p {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: rgb(226, 220, 203);
 }
 
 .goal-form label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.95rem;
-  cursor: pointer;
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: rgba(166, 163, 149, 1);
+  margin: 0;
+}
+
+#goal {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.goal-form input[type="radio"] {
+  margin-right: 0.6rem;
+  accent-color: #7d7830;
 }
 
 .goal-form input[type="text"],
 .goal-form input[type="date"] {
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 100%;
-  transition: border-color 0.2s;
+  width: 80vw;
+  padding: 0.6rem 0.8rem;
+  font-size: 1.2rem;
+  border: 1px solid rgb(226, 220, 203);
+  border-radius: 12px;
+  background-color: rgb(50, 50, 50);
+  color: rgb(226, 220, 203);
+  margin-bottom: 1.2rem;
+  box-sizing: border-box;
 }
 
-.goal-form input[type="text"]:focus,
-.goal-form input[type="date"]:focus {
-  border-color: #0077cc;
-  outline: none;
+.goal-form input[type="text"]::placeholder {
+  color: rgb(180, 180, 160);
+  font-style: italic;
 }
 
-.goal-form input[type="radio"] {
-  accent-color: #0077cc;
-}
-
-.goal-form button {
-  padding: 12px;
-  background-color: #0077cc;
-  color: white;
+#submit {
+  width: 50%;
+  margin: 1.5rem auto;
+  display: block;
+  padding: 0.8rem;
+  background-color: rgb(226, 220, 203);
+  color: rgb(34, 33, 34);
   border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 20px;
   font-weight: bold;
+  font-size: 1.4rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.goal-form button:hover {
-  background-color: #005fa3;
+#submit:hover {
+  background-color: rgb(226, 220, 203);
+  color: black;
 }
-*/

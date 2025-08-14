@@ -89,11 +89,11 @@ h2 {
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease;
 }
 
 .remove-btn:hover {
-  background-color: rgb(226, 106, 69);
+  border: 5px solid rgb(226, 220, 203);
 }
 
 #save-workout,
