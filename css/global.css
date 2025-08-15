@@ -516,7 +516,7 @@ footer p {
   .nav-bar {
     flex-direction: column;
     height: 4.7rem;
-    gap: 0.5rem;
+    gap: 2rem;
   }
 
   .ham-menu {
@@ -530,6 +530,21 @@ footer p {
 
   footer {
     height: 30vh;
+  }
+
+  .contact-footer {
+    gap: 1rem;
+    justify-content: end;
+  }
+
+  #finalname {
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin-top: auto;
   }
 
   #logo-footer {
@@ -589,6 +604,7 @@ footer p {
   #nav-bar-background {
     margin-top: 1.5rem;
   }
+
   .nav-links {
     display: none;
   }
@@ -601,8 +617,35 @@ footer p {
     display: block;
   }
 
+  #footer-place {
+    padding-left: 0vw;
+    top: 8.5vh;
+  }
+
+  #finalname {
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin-top: auto;
+  }
+
   footer {
-    height: 30vh;
+    height: 28vh;
+  }
+
+  .contact-footer {
+    align-items: center;
+    gap: 1rem;
+    margin-top: -57rem;
+    margin-left: 5rem;
+  }
+
+  .navigation-container {
+    padding-top: 4vh;
+    gap: 12rem;
   }
 
   .explore-panels {
@@ -680,23 +723,32 @@ footer p {
   }
 
   #footer-place {
-    position: relative;
-    padding-left: 13.5vw;
+    padding-left: 0vw;
     top: 8.5vh;
   }
 
   #finalname {
     font-size: 8rem;
-    max-width: 90vw;
+    width: 100%;
+    text-align: center;
     overflow-wrap: break-word;
     word-break: break-word;
     white-space: normal;
-    margin: 0 auto;
-    padding-top: 2vh;
+    margin-top: auto;
   }
 
   footer {
-    height: 40vh;
+    height: 36vh;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .navigation-container {
+    padding-top: 5vh;
   }
 
   #logo-footer {
@@ -736,6 +788,10 @@ footer p {
     margin-bottom: 20vh;
   }
 
+  .contact-footer {
+    gap: 4rem;
+  }
+
   footer {
     height: 40vh;
   }
@@ -756,6 +812,10 @@ footer p {
 
   .popular-panels {
     height: 50vh;
+  }
+
+  .contact-footer {
+    gap: 8rem;
   }
 
   footer {
