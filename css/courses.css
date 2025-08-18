@@ -6,36 +6,6 @@ body {
   height: 100%;
 }
 
-/* NAV */
-.ham-menu-button {
-  top: -1.4rem;
-}
-
-.search {
-  margin-left: 55rem;
-  height: 2rem;
-}
-
-.person-icon {
-  color: white;
-}
-
-.settings-icon {
-  color: white;
-}
-
-#nav-bar-background {
-  color: #222122;
-}
-
-#nav-logo {
-  color: white;
-}
-
-.background-rect {
-  margin-top: 0 !important;
-}
-
 .exercise-img {
   width: 100%;
 }
