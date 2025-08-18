@@ -66,6 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const searchForm = document.getElementById("search-form");
+  if (searchForm) {
+    searchForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form from reloading the page
+      searchPage();
+    });
+  }
+
   // search page redirection
   function searchPage() {
     const searchBox = document.getElementById("search-box");
@@ -76,11 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
       about: "about.html",
       account: "Account.html",
       workouts: "workouts.html",
-      community: "Community.html",
+      courses: "courses.html",
       exercise: "exercise.html",
       favorite: "favorite.html",
       inspiration: "inspiration.html",
-      products: "products.html",
+      register: "Register.html",
       goals: "Goals.html",
     };
     window.location.href = routes[query] || "search.html";

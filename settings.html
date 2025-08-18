@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLNCE 丨 SETTINGS</title>
+
     <link rel="stylesheet" href="css/global.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
       rel="stylesheet"
@@ -83,21 +85,23 @@
         </div>
 
         <!-- Search box -->
-        <form>
-          <div class="search">
-            <span
-              class="search-icon material-symbols-outlined"
-              onclick="searchPage()"
-            >
-              search
-            </span>
-            <input
-              class="search-input"
-              id="search-box"
-              type="search"
-              placeholder="search..."
-            />
-          </div>
+        <form class="search" role="search" id="search-form">
+          <label for="search-box" class="visually-hidden">Search</label>
+          <input
+            class="search-input"
+            id="search-box"
+            type="search"
+            name="query"
+            placeholder="Search..."
+            aria-label="Search site"
+          />
+          <button
+            type="submit"
+            class="search-button"
+            aria-label="Submit search"
+          >
+            <span class="material-symbols-outlined">search</span>
+          </button>
         </form>
 
         <!-- Account and settings icons -->

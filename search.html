@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search</title>
-    <link rel="stylesheet" href="css/style.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -54,14 +54,25 @@
           <img src="img/blnce-logo.png" alt="blnce logo" />
         </a>
 
-        <!-- Search bar -->
-
-        <input
-          type="text"
-          placeholder="Search.."
-          id="search-box"
-          class="search"
-        />
+        <!-- Search box -->
+        <form class="search" role="search" id="search-form">
+          <label for="search-box" class="visually-hidden">Search</label>
+          <input
+            class="search-input"
+            id="search-box"
+            type="search"
+            name="query"
+            placeholder="Search..."
+            aria-label="Search site"
+          />
+          <button
+            type="submit"
+            class="search-button"
+            aria-label="Submit search"
+          >
+            <span class="material-symbols-outlined">search</span>
+          </button>
+        </form>
 
         <span class="person-icon material-symbols-outlined">
           account_circle

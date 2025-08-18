@@ -122,24 +122,22 @@
       <section class="goals-intro">
         <h2>Let's take a look at your goals</h2>
       </section>
-      <!-- Search box -->
-      <section class="top-bar">
-        <form>
-          <div class="search">
-            <span
-              class="search-icon material-symbols-outlined"
-              onclick="searchPage()"
-            >
-              search
-            </span>
-            <input
-              class="search-input"
-              id="search-box"
-              type="search"
-              placeholder="search..."
-            />
-          </div>
-        </form>
+       <!-- Search box -->
+      <form class="search" role="search" id="search-form">
+        <label for="search-box" class="visually-hidden">Search</label>
+        <input
+          class="search-input"
+          id="search-box"
+          type="search"
+          name="query"
+          placeholder="Search..."
+          aria-label="Search site"
+        />
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </form>
+      
         <a href="Register.html">
           <button id="join-button">JOIN TODAY</button>
         </a>
