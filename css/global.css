@@ -591,18 +591,23 @@ footer p {
     visibility: visible;
   }
 
-  .content {
-    padding-top: 0rem;
-  }
-
   .popular-panels {
     height: 60vh;
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 768px) {
+  .content {
+    margin: 0 !important;
+  }
+
   #nav-bar-background {
-    margin-top: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  #back-button {
+    margin-left: 18rem;
+    border: 0;
   }
 
   .nav-links {
@@ -615,6 +620,10 @@ footer p {
 
   .ham-menu {
     display: block;
+  }
+
+  #logo-footer {
+    margin-bottom: 30vh;
   }
 
   #footer-place {
@@ -633,7 +642,7 @@ footer p {
   }
 
   footer {
-    height: 28vh;
+    height: 20vh;
   }
 
   .contact-footer {
@@ -648,18 +657,91 @@ footer p {
     gap: 12rem;
   }
 
-  .explore-panels {
-    height: 28vh;
+  #popular-emoji {
+    width: 10vw !important;
+  }
+
+  .explore,
+  .popular {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .explore-panels,
+  .popular-panels {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .explore a,
+  .popular a {
+    padding-top: 1rem;
+    font-size: 0.5rem;
+  }
+
+  .explore h1,
+  .popular h1 {
+    padding-top: 2rem;
+    font-size: 2rem !important;
+  }
+
+  .panel {
+    flex: none;
+    width: 100%;
+  }
+
+  .explore-panels:hover .panel,
+  .popular-panels:hover .panel {
+    flex: none;
+  }
+
+  .panel:hover {
+    flex: none;
+  }
+
+  .panel .panel-text {
+    opacity: 1;
+    visibility: visible;
   }
 
   .popular-panels {
-    height: 35vh;
+    height: 60vh;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 968px) {
+  .joinrect h2 {
+    font-size: 3.3rem !important;
+  }
+
+  .joinrect p {
+    font-size: 1.8rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .joinrect button {
+    font-size: 1.7rem !important;
+  }
+
+  .panel h3 {
+    margin-top: 38rem !important;
+    font-size: 3rem !important;
+  }
+
+  .panel p {
+    font-size: 1.4rem !important;
+  }
+
   #nav-bar-background {
-    margin-top: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  #about-vector {
+    width: 6vw !important;
+    padding-bottom: 1vh;
   }
 
   .nav-links {
@@ -738,7 +820,7 @@ footer p {
   }
 
   footer {
-    height: 36vh;
+    height: 25vh;
   }
 
   .contact-footer {
@@ -749,10 +831,11 @@ footer p {
 
   .navigation-container {
     padding-top: 5vh;
+    gap: 45vw;
   }
 
   #logo-footer {
-    margin-bottom: 20vh;
+    margin-bottom: 12vh;
   }
 
   .explore-panels {
@@ -765,8 +848,30 @@ footer p {
 }
 
 @media screen and (min-width: 969px) and (max-width: 1819px) {
+  .joinrect h2 {
+    font-size: 3.3rem !important;
+  }
+
+  .joinrect p {
+    font-size: 1.8rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .joinrect button {
+    font-size: 1.7rem !important;
+  }
+
+  .panel h3 {
+    margin-top: 38rem !important;
+    font-size: 3rem !important;
+  }
+
+  .panel p {
+    font-size: 1.4rem !important;
+  }
+
   #nav-bar-background {
-    margin-top: 1.5rem;
+    margin-top: 4rem;
   }
 
   .nav-links {
@@ -784,6 +889,11 @@ footer p {
     top: 25%;
   }
 
+  #about-vector {
+    width: 4vw !important;
+    padding-bottom: 1vh;
+  }
+
   #logo-footer {
     margin-bottom: 20vh;
   }
@@ -793,7 +903,12 @@ footer p {
   }
 
   footer {
-    height: 40vh;
+    height: 33vh;
+  }
+
+  .navigation-container {
+    padding-top: 5vh;
+    gap: 50vw;
   }
 
   .explore-panels {
@@ -806,6 +921,28 @@ footer p {
 }
 
 @media screen and (min-width: 1820px) {
+  .joinrect h2 {
+    font-size: 3.3rem !important;
+  }
+
+  .joinrect p {
+    font-size: 1.8rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .joinrect button {
+    font-size: 1.7rem !important;
+  }
+
+  .panel h3 {
+    margin-top: 35rem !important;
+    font-size: 3rem !important;
+  }
+
+  .panel p {
+    font-size: 1.4rem !important;
+  }
+
   .explore-panels {
     height: 25vh;
   }
@@ -819,7 +956,11 @@ footer p {
   }
 
   footer {
-    height: 40vh;
+    height: 38vh;
+  }
+
+  .navigation-container {
+    padding-top: 8vh;
   }
 
   #logo-footer {
@@ -827,7 +968,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 1.4rem;
+    margin-top: 4.1rem;
   }
 
   .search {
