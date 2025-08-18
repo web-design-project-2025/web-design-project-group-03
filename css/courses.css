@@ -6,6 +6,40 @@ body {
   height: 100%;
 }
 
+/* NAV */
+.ham-menu-button {
+  top: -1.4rem;
+}
+
+.search {
+  margin-left: 55rem;
+  height: 2rem;
+}
+
+.person-icon {
+  color: white;
+}
+
+.settings-icon {
+  color: white;
+}
+
+#nav-bar-background {
+  color: #222122;
+}
+
+#nav-logo {
+  color: white;
+}
+
+.background-rect {
+  margin-top: 0 !important;
+}
+
+.exercise-img {
+  width: 100%;
+}
+
 /*  TOP, BACKGROUND  */
 .background-rect {
   position: relative;
@@ -18,17 +52,28 @@ body {
 }
 
 /*  EXERCISE TYPE CONTAINER INFO  */
-.exercise-container {
-  padding-top: 8%;
-  width: 95vw;
-  height: auto;
-  margin: 0 auto;
-  pointer-events: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3%;
-  justify-content: center;
+.workout-title {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  padding-top: 8%;
+
+  color: #e2dccb;
+  font-size: 1.5rem;
+}
+
+.exercise-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  width: 95vw;
+  margin: 0 auto;
+  gap: 2%;
 }
 
 .exercise-item {
@@ -232,14 +277,15 @@ body {
 
 .goals {
   background-color: #e2dccb;
-  position: absolute;
-  top: 90%;
+  position: relative;
+  background-color: #e2dccb;
+  position: absolute; /* instead of relative */
+  top: 110vh;
   left: 65%;
-  width: 20%;
-  height: 40%;
+  width: 20vw;
+  height: 28vh;
   z-index: 10;
   padding: 2rem;
-  margin-top: 13%;
 }
 
 .goalcube {
@@ -331,7 +377,7 @@ body {
 #popular-emoji {
   padding-left: 1%;
   width: 6%;
-  height: autos;
+  height: auto;
 }
 
 .panel {
