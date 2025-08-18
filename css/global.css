@@ -563,7 +563,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 1.2rem;
+    margin-top: 0.5rem;
   }
 
   #nav-logo {
@@ -636,7 +636,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 1.4rem;
+    margin-top: 0.1rem;
   }
 
   #back-button {
@@ -766,7 +766,7 @@ footer p {
   }
 
   .panel h3 {
-    margin-top: 38rem !important;
+    margin-top: 10rem !important;
     font-size: 3rem !important;
   }
 
@@ -775,7 +775,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 1.5rem;
+    margin-top: 0.3rem;
   }
 
   #about-vector {
@@ -859,7 +859,7 @@ footer p {
   }
 
   footer {
-    height: 35vh;
+    height: 50vh;
   }
 
   .contact-footer {
@@ -888,21 +888,17 @@ footer p {
 }
 
 @media screen and (min-width: 969px) and (max-width: 1819px) {
-  .joinrect h2 {
-    font-size: 3.3rem !important;
-  }
-
   .joinrect p {
-    font-size: 1.8rem !important;
+    font-size: 1rem !important;
     padding-bottom: 2rem !important;
   }
 
   .joinrect button {
-    font-size: 1.7rem !important;
+    font-size: 1rem !important;
   }
 
   .panel h3 {
-    margin-top: 38rem !important;
+    margin-top: 18rem !important;
     font-size: 3rem !important;
   }
 
@@ -911,7 +907,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 1.8rem;
+    margin-top: -1rem;
   }
 
   .nav-links {
@@ -935,19 +931,20 @@ footer p {
   }
 
   #logo-footer {
-    margin-bottom: 20vh;
+    margin-bottom: 50vh;
   }
 
   .contact-footer {
     gap: 4rem;
+    padding-top: 18vh;
   }
 
   footer {
-    height: 33vh;
+    height: 100vh;
   }
 
   .navigation-container {
-    padding-top: 5vh;
+    padding-top: 10vh;
     gap: 50vw;
   }
 
@@ -956,7 +953,7 @@ footer p {
   }
 
   .popular-panels {
-    height: 40vh;
+    height: 70vh;
   }
 }
 
@@ -975,7 +972,7 @@ footer p {
   }
 
   .panel h3 {
-    margin-top: 35rem !important;
+    margin-top: 28rem !important;
     font-size: 3rem !important;
   }
 
@@ -984,7 +981,7 @@ footer p {
   }
 
   .explore-panels {
-    height: 25vh;
+    height: 35vh;
   }
 
   .popular-panels {
@@ -996,7 +993,7 @@ footer p {
   }
 
   footer {
-    height: 38vh;
+    height: 60vh;
   }
 
   .navigation-container {
@@ -1004,11 +1001,11 @@ footer p {
   }
 
   #logo-footer {
-    margin-bottom: 20vh;
+    margin-bottom: 35vh;
   }
 
   #nav-bar-background {
-    margin-top: 1.5rem;
+    margin-top: 0.2rem;
   }
 
   .search {
