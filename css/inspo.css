@@ -448,3 +448,54 @@ footer p {
   margin-bottom: 10px;
   font-size: 1rem;
 }
+
+/*  MEDIA QUERIES / responsivenesss  */
+@media (max-width: 600px) {
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 968px) {
+}
+
+@media screen and (min-width: 969px) and (max-width: 1819px) {
+  .search {
+    margin-right: 10rem;
+  }
+
+  h1 {
+    top: 5.5vh;
+  }
+
+  .background-section {
+    margin-top: -5vh;
+  }
+
+  .img-p-container {
+    padding-top: 4.2vh;
+  }
+
+  #white-text-overlay {
+    top: -5vh;
+  }
+
+  #citation {
+    top: -4vh;
+  }
+
+  #weights-bw {
+    top: -2vh;
+  }
+
+  #bike-bw {
+    top: -8vh;
+  }
+
+  #running-bw {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1820px) {
+}
