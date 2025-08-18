@@ -599,7 +599,7 @@ footer p {
   }
 
   footer {
-    height: 20vh;
+    height: 30vh;
   }
 
   .contact-footer {
@@ -618,7 +618,7 @@ footer p {
   }
 
   #logo-footer {
-    margin-bottom: 15vh;
+    margin-bottom: 23vh;
   }
 }
 
@@ -676,13 +676,13 @@ footer p {
   }
 
   footer {
-    height: 20vh;
+    height: 30vh;
   }
 
   .contact-footer {
     align-items: center;
     gap: 1rem;
-    margin-top: -57rem;
+    margin-top: -30rem;
     margin-left: 5rem;
   }
 
@@ -859,10 +859,11 @@ footer p {
   }
 
   footer {
-    height: 25vh;
+    height: 35vh;
   }
 
   .contact-footer {
+    margin-top: -12vh;
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
