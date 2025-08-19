@@ -453,6 +453,61 @@ footer p {
 
 /*  MEDIA QUERIES / responsivenesss  */
 @media (max-width: 600px) {
+  .search {
+    margin-right: 10rem;
+  }
+
+  h1 {
+    top: 5.5vh;
+    font-size: 30px;
+  }
+
+  .background-section {
+    margin-top: -5vh;
+  }
+
+  .img-p-container {
+    padding-top: 5vh;
+    padding-left: 10vw;
+    width: 150vw;
+  }
+
+  #white-text-overlay {
+    top: -5vh;
+  }
+
+  #citation {
+    top: -4vh;
+  }
+
+  #indoor-climbing-bw {
+    display: none;
+  }
+
+  #weights-bw {
+    top: -2vh;
+  }
+
+  #bike-bw {
+    top: -8vh;
+  }
+
+  #running-bw {
+    margin: 0;
+  }
+
+  .larger-text-title {
+    font-size: 60px;
+  }
+
+  #white-text-overlay {
+    font-size: 20px;
+  }
+
+  #citation {
+    font-size: small;
+  }
+
   .navigation-container {
     display: block;
     padding-top: 3vh;
@@ -465,6 +520,7 @@ footer p {
   .contact-footer {
     gap: 1rem;
     justify-content: end;
+    margin-top: 8vh;
   }
 
   #finalname {
@@ -478,13 +534,55 @@ footer p {
   }
 
   #logo-footer {
-    margin-bottom: 23vh;
+    margin-bottom: 5vh;
   }
 }
 
 @media screen and (min-width: 601px) and (max-width: 768px) {
+  .search {
+    margin-right: 10rem;
+  }
+
+  h1 {
+    top: 5.5vh;
+  }
+
+  .background-section {
+    margin-top: -5vh;
+  }
+
+  .img-p-container {
+    padding-top: 5vh;
+    padding-left: 10vw;
+    width: 150vw;
+  }
+
+  #white-text-overlay {
+    top: -5vh;
+  }
+
+  #citation {
+    top: -4vh;
+  }
+
+  #indoor-climbing-bw {
+    display: none;
+  }
+
+  #weights-bw {
+    top: -2vh;
+  }
+
+  #bike-bw {
+    top: -8vh;
+  }
+
+  #running-bw {
+    margin: 0;
+  }
+
   #logo-footer {
-    margin-bottom: 55vh;
+    margin-bottom: 40vh;
   }
 
   #footer-place {
@@ -503,7 +601,7 @@ footer p {
   }
 
   footer {
-    height: 50vh;
+    height: 40vh;
   }
 
   .contact-footer {
@@ -520,6 +618,47 @@ footer p {
 }
 
 @media screen and (min-width: 769px) and (max-width: 968px) {
+  .search {
+    margin-right: 10rem;
+  }
+
+  h1 {
+    top: 5.5vh;
+  }
+
+  .larger-text-title {
+    font-size: 80px;
+  }
+
+  .background-section {
+    margin-top: -5vh;
+  }
+
+  .img-p-container {
+    padding-top: 4.2vh;
+    gap: 4rem;
+  }
+
+  #white-text-overlay {
+    top: -5vh;
+  }
+
+  #citation {
+    top: -4vh;
+  }
+
+  #weights-bw {
+    top: -2vh;
+  }
+
+  #bike-bw {
+    top: -8vh;
+  }
+
+  #running-bw {
+    margin: 0;
+  }
+
   #footer-place {
     padding-left: 0vw;
     top: 8.5vh;
@@ -540,7 +679,6 @@ footer p {
   }
 
   .contact-footer {
-    margin-top: -12vh;
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
@@ -570,7 +708,7 @@ footer p {
   }
 
   .img-p-container {
-    padding-top: 4.2vh;
+    padding-top: 10vh;
   }
 
   #white-text-overlay {
@@ -594,16 +732,15 @@ footer p {
   }
 
   #logo-footer {
-    margin-bottom: 50vh;
+    margin-bottom: 5vh;
   }
 
   .contact-footer {
     gap: 4rem;
-    padding-top: 18vh;
   }
 
   footer {
-    height: 100vh;
+    height: 60vh;
   }
 
   .navigation-container {
