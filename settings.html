@@ -18,94 +18,44 @@
     <script src="js/global.js" defer></script>
   </head>
   <body>
-    <div class="nav-bar">
-      <nav>
-        <div class="off-screen-menu">
-          <li><a href="about.html">about</a></li>
-          <li><a href="courses.html">workout</a></li>
-          <li><a href="Account.html">set goals</a></li>
-          <li><a href="inspiration.html">Inspiration</a></li>
-        </div>
-        <!-- Hamburger menu -->
-        <div class="nav-controls">
-          <div class="ham-menu">
-            <button class="ham-menu-button">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-          <button onclick="goBack()" id="back-button">← Back</button>
-        </div>
-
-        <div class="logo-wrapper">
-          <a href="index.html" id="nav-bar-background">
-            <!-- Trapezoid SVG background -->
-            <svg
-              width="1440"
-              height="104"
-              viewBox="0 0 1440 104"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M647.704 93.6193L618.668 44.1193C610.847 30.7865 620.461 14 635.919 14H803.075C818.642 14 828.242 31.0025 820.199 44.3321L790.333 93.8321C786.713 99.8323 780.216 103.5 773.209 103.5H664.955C657.859 103.5 651.294 99.74 647.704 93.6193Z"
-                fill="white"
-              />
-              <path d="M0 0H1467V40H0V0Z" fill="white" />
-            </svg>
-          </a>
-          <a href="index.html">
-            <svg
-              width="54"
-              height="77"
-              viewBox="0 0 54 77"
-              fill="none"
-              id="nav-logo"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3.35152 6.03937C5.03382 0.746634 11.0621 -0.175586 13.8659 0.0248971C13.8659 0.0248971 20.914 1.5285 19.8741 6.03937C17.7111 15.422 10.5615 15.863 7.25698 15.0611C5.25424 14.1589 1.66922 11.3321 3.35152 6.03937Z"
-                fill="#222122"
-              />
-              <path
-                d="M44.2075 19.8727C40.8429 17.4669 27.1842 15.6625 20.7755 15.0611C19.2734 15.0611 14.1062 14.2191 15.0677 20.4741C16.0291 26.7292 21.4765 29.8968 24.08 30.6987C31.1897 32.7036 46.5507 36.5929 51.117 36.1118C55.6832 35.6306 53.8206 31.3002 52.3186 29.1951C51.0168 27.09 47.5721 22.2785 44.2075 19.8727Z"
-                fill="#222122"
-              />
-              <path
-                d="M7.25698 40.6226C12.5409 30.3546 27.2844 32.904 33.0923 34.9089C36.4569 37.4136 36.3968 42.0672 35.796 43.9306L30.6891 56.8617L24.6808 72.1986C24.08 73.5018 22.2775 76.0479 19.8742 75.8073C16.8701 75.5066 12.9648 76.4088 4.85367 72.1986C-1.63521 68.8305 0.0472183 63.1769 0.647991 58.9668C0.647991 58.9668 2.15009 50.5465 7.25698 40.6226Z"
-                fill="#222122"
-              />
-              <path
-                d="M38.1994 42.1262C40.7334 36.3282 43.4065 36.9137 45.7097 38.2168C45.7097 38.2168 46.9113 38.8183 47.5121 40.6226C48.6419 44.0155 47.2117 60.7711 45.4093 68.8907C43.9072 74.6044 37.9817 82.0451 35.796 72.1986C33.9936 64.0791 36.0965 46.9378 38.1994 42.1262Z"
-                fill="#222122"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Search box -->
-        <form class="search" role="search" id="search-form">
-          <label for="search-box" class="visually-hidden">Search</label>
-          <input
-            class="search-input"
-            id="search-box"
-            type="search"
-            name="query"
-            placeholder="Search..."
-            aria-label="Search site"
-          />
-          <button
-            type="submit"
-            class="search-button"
-            aria-label="Submit search"
-          >
-            <span class="material-symbols-outlined">search</span>
+    <nav class="nav-bar">
+      <div class="off-screen-menu">
+        <li><a href="about.html">about</a></li>
+        <li><a href="courses.html">workout</a></li>
+        <li><a href="account.html">set goals</a></li>
+        <li><a href="inspiration.html">Inspiration</a></li>
+      </div>
+      <!-- Hamburger menu -->
+      <div class="nav-controls">
+        <div class="ham-menu">
+          <button class="ham-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-        </form>
+        </div>
+        <button onclick="goBack()" id="back-button">← Back</button>
+      </div>
 
-        <!-- Account and settings icons -->
-        <a href="Account.html" class="person-icon" aria-label="Account">
+      <!-- Search box -->
+      <form class="search" role="search" id="search-form">
+        <label for="search-box" class="visually-hidden">Search</label>
+        <input
+          class="search-input"
+          id="search-box"
+          type="search"
+          name="query"
+          placeholder="Search..."
+          aria-label="Search site"
+        />
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <span class="material-symbols-outlined"></span>
+        </button>
+      </form>
+
+      <!-- Account and settings icons -->
+      <section class="right-controls">
+        <a href="account.html" class="person-icon" aria-label="Account">
           <svg
             width="46"
             height="46"
@@ -136,10 +86,57 @@
             />
           </svg>
         </a>
-      </nav>
-    </div>
-    <main id="settings">
-      <h1>NO AVAILABLE SETTINGS FOR YOU</h1>
+      </section>
+
+      <div class="logo-wrapper">
+        <a href="index.html" id="nav-bar-background">
+          <!-- Trapezoid SVG background -->
+          <svg
+            width="2940"
+            height="105"
+            viewBox="0 0 2967 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1411.204 93.6193L1382.168 44.1193C1374.347 30.7865 1383.961 14 1399.419 14H1566.575C1582.142 14 1591.742 31.0025 1583.699 44.3321L1553.833 93.8321C1550.213 99.8323 1543.716 103.5 1536.709 103.5H1428.455C1421.359 103.5 1414.794 99.74 1411.204 93.6193Z"
+              fill="white"
+            />
+            <path d="M0 0H2967V40H0V0Z" fill="white" />
+          </svg>
+        </a>
+        <a href="index.html">
+          <svg
+            width="54"
+            height="77"
+            viewBox="0 0 54 77"
+            fill="none"
+            id="nav-logo"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.35152 6.03937C5.03382 0.746634 11.0621 -0.175586 13.8659 0.0248971C13.8659 0.0248971 20.914 1.5285 19.8741 6.03937C17.7111 15.422 10.5615 15.863 7.25698 15.0611C5.25424 14.1589 1.66922 11.3321 3.35152 6.03937Z"
+              fill="#222122"
+            />
+            <path
+              d="M44.2075 19.8727C40.8429 17.4669 27.1842 15.6625 20.7755 15.0611C19.2734 15.0611 14.1062 14.2191 15.0677 20.4741C16.0291 26.7292 21.4765 29.8968 24.08 30.6987C31.1897 32.7036 46.5507 36.5929 51.117 36.1118C55.6832 35.6306 53.8206 31.3002 52.3186 29.1951C51.0168 27.09 47.5721 22.2785 44.2075 19.8727Z"
+              fill="#222122"
+            />
+            <path
+              d="M7.25698 40.6226C12.5409 30.3546 27.2844 32.904 33.0923 34.9089C36.4569 37.4136 36.3968 42.0672 35.796 43.9306L30.6891 56.8617L24.6808 72.1986C24.08 73.5018 22.2775 76.0479 19.8742 75.8073C16.8701 75.5066 12.9648 76.4088 4.85367 72.1986C-1.63521 68.8305 0.0472183 63.1769 0.647991 58.9668C0.647991 58.9668 2.15009 50.5465 7.25698 40.6226Z"
+              fill="#222122"
+            />
+            <path
+              d="M38.1994 42.1262C40.7334 36.3282 43.4065 36.9137 45.7097 38.2168C45.7097 38.2168 46.9113 38.8183 47.5121 40.6226C48.6419 44.0155 47.2117 60.7711 45.4093 68.8907C43.9072 74.6044 37.9817 82.0451 35.796 72.1986C33.9936 64.0791 36.0965 46.9378 38.1994 42.1262Z"
+              fill="#222122"
+            />
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <h1 id="settings">NO AVAILABLE SETTINGS FOR YOU</h1>
     </main>
     <footer>
       <section class="navigation-container">
