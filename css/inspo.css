@@ -764,11 +764,11 @@ footer p {
 
   #nav-logo {
     width: 2.5rem;
-    top: 2.5rem;
+    top: 2rem;
   }
 
   #nav-bar-background {
-    margin-top: 0.9rem;
+    margin-top: -0.5rem;
   }
 
   h1 {
