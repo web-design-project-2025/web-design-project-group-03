@@ -56,9 +56,8 @@ h1 {
 }
 
 .larger-text-title {
-  font-style: black;
   font-weight: 900;
-  font-size: 96px;
+  font-size: 6rem;
 }
 
 #body-text {
@@ -453,6 +452,10 @@ footer p {
 
 /*  MEDIA QUERIES / responsivenesss  */
 @media (max-width: 600px) {
+  .larger-text-title {
+    font-size: 2rem;
+  }
+
   .search {
     margin-right: 10rem;
   }
@@ -474,6 +477,8 @@ footer p {
 
   #white-text-overlay {
     top: -5vh;
+    font-size: 20px;
+    text-align: center;
   }
 
   #citation {
@@ -494,14 +499,6 @@ footer p {
 
   #running-bw {
     margin: 0;
-  }
-
-  .larger-text-title {
-    font-size: 60px;
-  }
-
-  #white-text-overlay {
-    font-size: 20px;
   }
 
   #citation {
@@ -539,6 +536,9 @@ footer p {
 }
 
 @media screen and (min-width: 601px) and (max-width: 768px) {
+  .larger-text-title {
+    font-size: 1rem;
+  }
   .search {
     margin-right: 10rem;
   }
@@ -618,6 +618,9 @@ footer p {
 }
 
 @media screen and (min-width: 769px) and (max-width: 968px) {
+  .larger-text-title {
+    font-size: 1rem;
+  }
   .search {
     margin-right: 10rem;
   }
