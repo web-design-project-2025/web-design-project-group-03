@@ -452,6 +452,9 @@ footer p {
 
 /*  MEDIA QUERIES / responsivenesss  */
 @media (max-width: 600px) {
+  #inspo-hero {
+    margin-top: 20vh;
+  }
   .larger-text-title {
     font-size: 2rem;
   }
