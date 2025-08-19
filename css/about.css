@@ -163,15 +163,6 @@
     top: 16%;
   }
 
-  #nav-logo {
-    width: 20rem;
-    margin-top: 10px;
-    height: 60px;
-  }
-  #nav-bar-background svg {
-    height: 0vh;
-    width: 0;
-  }
   .aboutBlnceLogo {
     width: 0;
   }
@@ -189,5 +180,18 @@
 
   .aboutSpan {
     margin-top: 2rem;
+  }
+}
+
+@media (max-width: 781px) {
+  #nav-bar-background {
+    display: none !important;
+  }
+
+  #nav-logo {
+    display: block !important;
+    height: 90px;
+    width: 40px;
+    margin-top: -5px;
   }
 }
