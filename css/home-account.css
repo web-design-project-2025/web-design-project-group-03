@@ -55,6 +55,7 @@ nav,
   font-weight: 300;
   margin: 0;
   text-transform: capitalize;
+  width: 100%;
 }
 
 nav h2 {
@@ -77,8 +78,7 @@ nav h2 {
 }
 
 #join-button {
-  margin-top: 0.4rem;
-  margin-left: 39rem;
+  margin-top: 2rem;
   display: block;
   float: right;
   font-size: 1rem;
@@ -99,12 +99,9 @@ nav h2 {
 }
 
 .settings-icon {
-  top: 1.8rem;
+  top: 3rem;
   width: 3rem;
   height: auto;
-
-  float: right;
-  margin-right: -0.2rem;
 }
 
 /*  FAVORITES  */
@@ -237,7 +234,7 @@ nav h2 {
   background-color: rgba(226, 220, 203, 1);
   border-radius: 20px;
   padding: 1.5rem;
-  width: 54rem;
+  width: auto;
   margin-top: 1rem;
 }
 
