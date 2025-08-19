@@ -178,7 +178,7 @@ h1 {
   left: 0;
   width: 380px;
   height: 240px;
-  background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+  background: rgb(0, 0, 0, 0.8); /* semi-transparent background */
   backdrop-filter: blur(10px); /* glass effect */
   /* glass effect */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -454,11 +454,15 @@ footer p {
 @media (max-width: 600px) {
   #nav-logo {
     width: 2.5rem;
-    top: 2.5rem;
+    top: 10%;
+  }
+
+  .off-screen-menu a {
+    transform: translate(20px);
   }
 
   .person-icon {
-    right: 5rem;
+    right: 35%;
     top: 1.3rem;
   }
 
@@ -468,7 +472,7 @@ footer p {
 
   .settings-icon {
     position: relative;
-    right: 10rem;
+    right: 15%;
     top: 0.1rem;
   }
 
@@ -570,11 +574,19 @@ footer p {
 @media screen and (min-width: 601px) and (max-width: 768px) {
   #nav-logo {
     width: 2.5rem;
-    top: 2.5rem;
+    top: 1rem;
   }
 
+  .search {
+    display: none;
+  }
   #nav-bar-background {
-    margin-top: 0.9rem;
+    margin-top: 0.1rem;
+  }
+
+  #nav-bar-background svg {
+    height: 15vh;
+    width: 200rem;
   }
 
   .settings-icon {
@@ -670,11 +682,12 @@ footer p {
 @media screen and (min-width: 769px) and (max-width: 968px) {
   #nav-logo {
     width: 2.5rem;
-    top: 2.5rem;
+    top: 22%;
   }
 
-  #nav-bar-background {
-    margin-top: 0.9rem;
+  #nav-bar-background svg {
+    height: 15vh;
+    width: 245vw;
   }
 
   .larger-text-title {
