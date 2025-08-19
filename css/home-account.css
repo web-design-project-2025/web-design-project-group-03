@@ -293,3 +293,49 @@ nav h2 {
     gap: 1rem;
   }
 }
+
+@media screen and (max-width: 400px) {
+  #account-home-logo,
+  #nav-bar-background,
+  #goal-button,
+  #home-nav-bar,
+  #favorites-logo {
+    width: 4rem;
+    height: auto;
+    position: fixed;
+  }
+
+  #account-home-logo {
+    top: 1vh;
+    left: 1vw;
+  }
+
+  #nav-bar-background {
+    top: 8rem;
+    left: 1vw;
+  }
+
+  #goal-button {
+    top: 6rem;
+    left: 1vw;
+  }
+
+  #home-nav-bar {
+    top: 12rem;
+    left: 2vw;
+  }
+
+  #favorites-logo {
+    top: 18.6rem;
+    left: 2vw;
+  }
+  #latest.panel {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #nav-bar-background rect {
+    transform: rotate(90deg);
+    transform-origin: top left;
+    opacity: 1;
+  }
+}
