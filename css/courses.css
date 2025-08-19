@@ -681,7 +681,7 @@ body {
 footer {
   background-color: #222122;
   width: 95vw;
-  height: 80vh;
+  height: 110vh;
   display: block;
   bottom: 0;
   left: 0;
@@ -698,5 +698,9 @@ footer {
   .description p {
     margin-left: 3rem;
     width: auto;
+  }
+
+  footer {
+    height: 130vh;
   }
 }
