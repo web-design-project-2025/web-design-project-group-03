@@ -521,7 +521,7 @@ footer p {
   }
 
   #finalname {
-    font-size: 6rem;
+    font-size: 5rem;
     width: 100%;
     text-align: center;
     overflow-wrap: break-word;
@@ -530,6 +530,9 @@ footer p {
     margin-top: auto;
   }
 
+  #footer-email {
+    align-items: center;
+  }
   #logo-footer {
     margin-bottom: 5vh;
   }
@@ -592,7 +595,7 @@ footer p {
 
   #finalname {
     font-size: 8rem;
-    width: 100%;
+    width: 80%;
     text-align: center;
     overflow-wrap: break-word;
     word-break: break-word;
