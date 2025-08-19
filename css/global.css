@@ -509,65 +509,6 @@ footer p {
 
 /*  MEDIA QUERIES / responsivenesss  */
 @media (max-width: 600px) {
-  #nav-bar-background {
-    margin-top: 4rem;
-  }
-
-  #nav-logo {
-    width: 2.5rem;
-  }
-
-  .nav-bar {
-    width: 100%;
-    height: 4.7rem;
-    gap: 2rem;
-  }
-
-  .ham-menu {
-    left: -1rem;
-  }
-
-  #back-button {
-    margin-left: 1rem;
-    border: 0;
-  }
-
-  .settings-icon {
-    position: relative;
-  }
-
-  .right-controls {
-    padding-right: 7rem !important;
-  }
-
-  .navigation-container {
-    display: block;
-    padding-top: 3vh;
-  }
-
-  footer {
-    height: 20vh;
-  }
-
-  .contact-footer {
-    gap: 1rem;
-    justify-content: end;
-  }
-
-  #finalname {
-    font-size: 6rem;
-    width: 100%;
-    text-align: center;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    white-space: normal;
-    margin-top: auto;
-  }
-
-  #logo-footer {
-    margin-bottom: 15vh;
-  }
-
   .explore,
   .popular {
     flex-direction: column;
@@ -620,6 +561,65 @@ footer p {
   #popular-emoji {
     width: 5rem !important;
   }
+
+  #nav-bar-background {
+    margin-top: 0.5rem;
+  }
+
+  #nav-logo {
+    width: 2.5rem;
+  }
+
+  .nav-bar {
+    width: 100%;
+    height: 4.7rem;
+    gap: 2rem;
+  }
+
+  .ham-menu {
+    left: -1rem;
+  }
+
+  #back-button {
+    margin-left: 1rem;
+    border: 0;
+  }
+
+  .settings-icon {
+    position: relative;
+  }
+
+  .right-controls {
+    padding-right: 7rem !important;
+  }
+
+  .navigation-container {
+    display: block;
+    padding-top: 3vh;
+  }
+
+  footer {
+    height: 30vh;
+  }
+
+  .contact-footer {
+    gap: 1rem;
+    justify-content: end;
+  }
+
+  #finalname {
+    font-size: 6rem;
+    width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    margin-top: auto;
+  }
+
+  #logo-footer {
+    margin-bottom: 23vh;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 768px) {
@@ -636,7 +636,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 4rem;
+    margin-top: 0.1rem;
   }
 
   #back-button {
@@ -676,13 +676,13 @@ footer p {
   }
 
   footer {
-    height: 20vh;
+    height: 30vh;
   }
 
   .contact-footer {
     align-items: center;
     gap: 1rem;
-    margin-top: -57rem;
+    margin-top: -30rem;
     margin-left: 5rem;
   }
 
@@ -766,7 +766,7 @@ footer p {
   }
 
   .panel h3 {
-    margin-top: 38rem !important;
+    margin-top: 10rem !important;
     font-size: 3rem !important;
   }
 
@@ -775,7 +775,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 4rem;
+    margin-top: 0.3rem;
   }
 
   #about-vector {
@@ -859,10 +859,11 @@ footer p {
   }
 
   footer {
-    height: 25vh;
+    height: 50vh;
   }
 
   .contact-footer {
+    margin-top: -12vh;
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
@@ -887,21 +888,17 @@ footer p {
 }
 
 @media screen and (min-width: 969px) and (max-width: 1819px) {
-  .joinrect h2 {
-    font-size: 3.3rem !important;
-  }
-
   .joinrect p {
-    font-size: 1.8rem !important;
+    font-size: 1rem !important;
     padding-bottom: 2rem !important;
   }
 
   .joinrect button {
-    font-size: 1.7rem !important;
+    font-size: 1rem !important;
   }
 
   .panel h3 {
-    margin-top: 38rem !important;
+    margin-top: 18rem !important;
     font-size: 3rem !important;
   }
 
@@ -910,7 +907,7 @@ footer p {
   }
 
   #nav-bar-background {
-    margin-top: 4rem;
+    margin-top: -1rem;
   }
 
   .nav-links {
@@ -934,19 +931,20 @@ footer p {
   }
 
   #logo-footer {
-    margin-bottom: 20vh;
+    margin-bottom: 50vh;
   }
 
   .contact-footer {
     gap: 4rem;
+    padding-top: 18vh;
   }
 
   footer {
-    height: 33vh;
+    height: 100vh;
   }
 
   .navigation-container {
-    padding-top: 5vh;
+    padding-top: 10vh;
     gap: 50vw;
   }
 
@@ -955,7 +953,7 @@ footer p {
   }
 
   .popular-panels {
-    height: 40vh;
+    height: 70vh;
   }
 }
 
@@ -974,7 +972,7 @@ footer p {
   }
 
   .panel h3 {
-    margin-top: 35rem !important;
+    margin-top: 28rem !important;
     font-size: 3rem !important;
   }
 
@@ -983,11 +981,11 @@ footer p {
   }
 
   .explore-panels {
-    height: 25vh;
+    height: 60vh;
   }
 
   .popular-panels {
-    height: 50vh;
+    height: 80vh;
   }
 
   .contact-footer {
@@ -995,7 +993,7 @@ footer p {
   }
 
   footer {
-    height: 38vh;
+    height: 60vh;
   }
 
   .navigation-container {
@@ -1003,11 +1001,11 @@ footer p {
   }
 
   #logo-footer {
-    margin-bottom: 20vh;
+    margin-bottom: 35vh;
   }
 
   #nav-bar-background {
-    margin-top: 4.1rem;
+    margin-top: 0.2rem;
   }
 
   .search {
