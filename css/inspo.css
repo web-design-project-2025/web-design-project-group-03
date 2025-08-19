@@ -534,7 +534,9 @@ footer p {
     align-items: center;
   }
   #logo-footer {
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
+    padding-top: 10vh;
+    width: 20vw;
   }
 }
 
@@ -584,18 +586,24 @@ footer p {
     margin: 0;
   }
 
-  #logo-footer {
-    margin-bottom: 40vh;
-  }
-
   #footer-place {
     padding-left: 0vw;
     top: 8.5vh;
   }
 
+  footer {
+    height: 30vh;
+  }
+
+  .contact-footer {
+    gap: 1rem;
+    justify-content: end;
+    margin-top: 8vh;
+  }
+
   #finalname {
     font-size: 8rem;
-    width: 80%;
+    width: 100%;
     text-align: center;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -603,20 +611,13 @@ footer p {
     margin-top: auto;
   }
 
-  footer {
-    height: 40vh;
-  }
-
-  .contact-footer {
+  #footer-email {
     align-items: center;
-    gap: 1rem;
-    margin-top: -30rem;
-    margin-left: 5rem;
   }
-
-  .navigation-container {
-    padding-top: 4vh;
-    gap: 12rem;
+  #logo-footer {
+    margin-bottom: 2vh;
+    padding-top: 10vh;
+    width: 20vw;
   }
 }
 
