@@ -452,6 +452,30 @@ footer p {
 
 /*  MEDIA QUERIES / responsivenesss  */
 @media (max-width: 600px) {
+  #nav-logo {
+    width: 2.5rem;
+    top: 2.5rem;
+  }
+
+  .person-icon {
+    right: 5rem;
+    top: 1.3rem;
+  }
+
+  #nav-bar-background {
+    margin-top: 0.9rem;
+  }
+
+  .settings-icon {
+    position: relative;
+    right: 10rem;
+    top: 0.1rem;
+  }
+
+  .right-controls {
+    padding-right: 10rem !important;
+  }
+
   #inspo-hero {
     margin-top: 20vh;
   }
@@ -544,8 +568,27 @@ footer p {
 }
 
 @media screen and (min-width: 601px) and (max-width: 768px) {
+  #nav-logo {
+    width: 2.5rem;
+    top: 2.5rem;
+  }
+
+  #nav-bar-background {
+    margin-top: 0.9rem;
+  }
+
+  .settings-icon {
+    position: relative;
+    right: 10rem;
+    top: 0.1rem;
+  }
+
+  .right-controls {
+    padding-right: 10rem !important;
+  }
+
   .larger-text-title {
-    font-size: 1rem;
+    font-size: 4rem;
   }
   .search {
     margin-right: 10rem;
@@ -625,6 +668,15 @@ footer p {
 }
 
 @media screen and (min-width: 769px) and (max-width: 968px) {
+  #nav-logo {
+    width: 2.5rem;
+    top: 2.5rem;
+  }
+
+  #nav-bar-background {
+    margin-top: 0.9rem;
+  }
+
   .larger-text-title {
     font-size: 1rem;
   }
@@ -707,6 +759,16 @@ footer p {
 @media screen and (min-width: 969px) and (max-width: 1819px) {
   .search {
     margin-right: 10rem;
+    width: 12vw;
+  }
+
+  #nav-logo {
+    width: 2.5rem;
+    top: 2.5rem;
+  }
+
+  #nav-bar-background {
+    margin-top: 0.9rem;
   }
 
   h1 {
@@ -760,6 +822,43 @@ footer p {
 }
 
 @media screen and (min-width: 1820px) {
+  .search {
+    margin-right: 20rem;
+  }
+
+  h1 {
+    top: 5.5vh;
+  }
+
+  .background-section {
+    margin-top: -5vh;
+  }
+
+  .img-p-container {
+    padding-top: 10vh;
+    gap: 25rem;
+  }
+
+  #white-text-overlay {
+    top: -5vh;
+  }
+
+  #citation {
+    top: -4vh;
+  }
+
+  #weights-bw {
+    top: -2vh;
+  }
+
+  #bike-bw {
+    top: -8vh;
+  }
+
+  #running-bw {
+    margin: 0;
+  }
+
   .contact-footer {
     gap: 8rem;
   }
