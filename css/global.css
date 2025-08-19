@@ -599,16 +599,17 @@ footer p {
   }
 
   footer {
-    height: 30vh;
+    height: 110vh;
   }
 
   .contact-footer {
     gap: 1rem;
     justify-content: end;
+    margin-top: 8vh;
   }
 
   #finalname {
-    font-size: 6rem;
+    font-size: 5rem;
     width: 100%;
     text-align: center;
     overflow-wrap: break-word;
@@ -617,8 +618,13 @@ footer p {
     margin-top: auto;
   }
 
+  #footer-email {
+    align-items: center;
+  }
   #logo-footer {
-    margin-bottom: 23vh;
+    margin-bottom: 2vh;
+    padding-top: 10vh;
+    width: 20vw;
   }
 }
 
@@ -656,13 +662,19 @@ footer p {
     display: block;
   }
 
-  #logo-footer {
-    margin-bottom: 55vh;
-  }
-
   #footer-place {
     padding-left: 0vw;
     top: 8.5vh;
+  }
+
+  footer {
+    height: 150vh;
+  }
+
+  .contact-footer {
+    gap: 1rem;
+    justify-content: end;
+    margin-top: 8vh;
   }
 
   #finalname {
@@ -675,20 +687,13 @@ footer p {
     margin-top: auto;
   }
 
-  footer {
-    height: 50vh;
-  }
-
-  .contact-footer {
+  #footer-email {
     align-items: center;
-    gap: 1rem;
-    margin-top: -30rem;
-    margin-left: 5rem;
   }
-
-  .navigation-container {
-    padding-top: 4vh;
-    gap: 12rem;
+  #logo-footer {
+    margin-bottom: 2vh;
+    padding-top: 10vh;
+    width: 20vw;
   }
 
   #popular-emoji {
@@ -859,7 +864,7 @@ footer p {
   }
 
   footer {
-    height: 60vh;
+    height: 100vh;
   }
 
   .contact-footer {
