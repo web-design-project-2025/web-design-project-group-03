@@ -247,14 +247,8 @@ body {
 
 .goals {
   background-color: #e2dccb;
-  position: relative;
-  background-color: #e2dccb;
-  position: absolute; /* instead of relative */
-  top: 110vh;
-  left: 65%;
-  width: 20vw;
-  height: 28vh;
-  z-index: 10;
+  align-items: center;
+  height: 32vh;
   padding: 2rem;
 }
 
@@ -276,7 +270,7 @@ body {
   transition: border 0.3s ease, color 0.3s ease;
   text-align: center;
   text-transform: uppercase;
-  margin: 1rem;
+  margin: 1rem auto;
   box-sizing: border-box;
   word-wrap: break-word;
   text-wrap: balance;
@@ -461,9 +455,6 @@ body {
   }
   #exercise-benefits {
     width: 60vw;
-  }
-  .goals {
-    margin-top: -10vh;
   }
 }
 
@@ -678,4 +669,11 @@ footer {
   margin-top: 30px;
   border: 4px solid #e2dccb;
   border-bottom: none;
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .description p {
+    margin-left: 3rem;
+    width: auto;
+  }
 }
