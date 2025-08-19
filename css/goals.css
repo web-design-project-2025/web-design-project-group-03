@@ -78,7 +78,7 @@ nav h2 {
 
 #join-button {
   margin-top: 0.4rem;
-  margin-left: 42rem;
+  margin-left: 70%;
   display: block;
   float: right;
   font-size: 1rem;
@@ -337,4 +337,39 @@ nav h2 {
 #submit:hover {
   background-color: rgb(226, 220, 203);
   color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  h2 {
+    margin: 0%;
+  }
+  .content {
+    width: 85%;
+    margin-left: 5rem;
+    margin-right: auto;
+  }
+
+  .dropdown-panel,
+  .dropdown-panel2 {
+    max-height: none;
+  }
+  .completed-goals {
+    width: 100%;
+    padding: 0%;
+  }
+  .goal-form {
+    padding: 5%;
+  }
+  .goal-form input [type="text"],
+  .goal-form input [type="date"] {
+    width: 50%;
+  }
 }

@@ -157,3 +157,15 @@ input[type="submit"]:hover {
   height: auto;
   transform: none;
 }
+@media (max-width: 600px) {
+  .accountBlnceLogo {
+    max-width: 30%;
+  }
+  .centerLog {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .txtField input {
+    width: 90%;
+  }
+}
